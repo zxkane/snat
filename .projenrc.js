@@ -6,7 +6,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.96.0',
   defaultReleaseBranch: 'main',
   compileBeforeTest: true, // since we want to run the cli in tests
-  jsiiFqn: "projen.AwsCdkConstructLibrary",
+  jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'simple-nat-construct',
   description: 'A CDK construct to build Simple NAT instance on AWS.',
   repositoryUrl: 'git@github.com:zxkane/snat.git',
@@ -17,7 +17,7 @@ const project = new AwsCdkConstructLibrary({
   // cdkDependencies: undefined,                                               /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkDependenciesAsDeps: true,                                              /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
-  cdkVersionPinning: true,                                                 /* Use pinned version instead of caret version for CDK. */
+  cdkVersionPinning: true, /* Use pinned version instead of caret version for CDK. */
 
   /* ConstructLibraryOptions */
   // catalog: undefined,                                                       /* Libraries will be picked up by the construct catalog when they are published to npm as jsii modules and will be published under:. */
@@ -38,8 +38,8 @@ const project = new AwsCdkConstructLibrary({
 
   /* NodePackageOptions */
   // allowLibraryDependencies: true,                                           /* Allow the project to include `peerDependencies` and `bundledDependencies`. */
-  authorEmail: 'me@kane.mx',                                                   /* Author's e-mail. */
-  authorName: 'Kane Zhu',                                                    /* Author's name. */
+  authorEmail: 'me@kane.mx', /* Author's e-mail. */
+  authorName: 'Kane Zhu', /* Author's name. */
   // authorOrganization: undefined,                                            /* Author's Organization. */
   // autoDetectBin: true,                                                      /* Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. */
   // bin: undefined,                                                           /* Binary programs vended with your module. */
@@ -55,9 +55,9 @@ const project = new AwsCdkConstructLibrary({
     'cdk',
     'cdk-construct',
     'nat',
-  ],                                                      /* Keywords to include in `package.json`. */
-  license: 'Apache-2.0',                                                    /* License's SPDX identifier. */
-  licensed: true,                                                           /* Indicates if a license should be added. */
+  ], /* Keywords to include in `package.json`. */
+  license: 'Apache-2.0', /* License's SPDX identifier. */
+  licensed: true, /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                /* Minimum node.js version to require via `engines` (inclusive). */
   // minNodeVersion: undefined,                                                /* Minimum Node.js version to require via package.json `engines` (inclusive). */
   // npmAccess: undefined,                                                     /* Access level of the npm package. */
@@ -78,7 +78,7 @@ const project = new AwsCdkConstructLibrary({
   // antitamper: true,                                                         /* Checks that after build there are no modified files on git. */
   // artifactsDirectory: 'dist',                                               /* A directory which will contain artifacts to be published to npm. */
   // buildWorkflow: undefined,                                                 /* Define a GitHub workflow for building PRs. */
-  codeCov: true,                                                           /* Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret. */
+  codeCov: true, /* Define a GitHub workflow step for sending code coverage metrics to https://codecov.io/ Uses codecov/codecov-action@v1 A secret is required for private repos. Configured with @codeCovTokenSecret. */
   // codeCovTokenSecret: undefined,                                            /* Define the secret name for a specified https://codecov.io/ token A secret is required to send coverage for private repositories. */
   // copyrightOwner: undefined,                                                /* License copyright owner. */
   // copyrightPeriod: undefined,                                               /* The copyright years to put in the LICENSE file. */
@@ -116,7 +116,7 @@ const project = new AwsCdkConstructLibrary({
   /* ProjectOptions */
   // clobber: true,                                                            /* Add a `clobber` task which resets the repo to origin. */
   // devContainer: false,                                                      /* Add a VSCode development environment (used for GitHub Codespaces). */
-  gitpod: true,                                                            /* Add a Gitpod development environment. */
+  gitpod: true, /* Add a Gitpod development environment. */
   // logging: {},                                                              /* Configure logging options such as verbosity. */
   // outdir: '.',                                                              /* The root directory of the project. */
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
