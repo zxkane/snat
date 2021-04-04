@@ -1,9 +1,16 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
+
+const cdkVersion = '1.96.0';
+
+const tsCustomConfig = {
+  exclude: ['example'],
+  include: ['src/'],
+};
 
 const project = new AwsCdkConstructLibrary({
   author: 'Kane Zhu',
   authorAddress: 'me@kane.mx',
-  cdkVersion: '1.96.0',
+  cdkVersion: cdkVersion,
   defaultReleaseBranch: 'main',
   compileBeforeTest: true, // since we want to run the cli in tests
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
@@ -11,10 +18,15 @@ const project = new AwsCdkConstructLibrary({
   description: 'A CDK construct to build Simple NAT instance on AWS.',
   repositoryUrl: 'git@github.com:zxkane/snat.git',
 
+  tsconfig: tsCustomConfig,
   buildWorkflowMutable: true,
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
-  // cdkDependencies: undefined,                                               /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
+  cdkDependencies: [
+    '@aws-cdk/aws-ec2',
+    '@aws-cdk/aws-iam',
+    '@aws-cdk/core',
+  ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkDependenciesAsDeps: true,                                              /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
   cdkVersionPinning: true, /* Use pinned version instead of caret version for CDK. */
@@ -43,10 +55,15 @@ const project = new AwsCdkConstructLibrary({
   // authorOrganization: undefined,                                            /* Author's Organization. */
   // autoDetectBin: true,                                                      /* Automatically add all executables under the `bin` directory to your `package.json` file under the `bin` section. */
   // bin: undefined,                                                           /* Binary programs vended with your module. */
-  // bundledDeps: undefined,                                                   /* List of dependencies to bundle into this module. */
-  // deps: [],                                                                 /* Runtime dependencies of this module. */
+  bundledDeps: [
+    'sync-fetch@^0.3.0',
+    'mustache@^4.2.0',
+  ], /* List of dependencies to bundle into this module. */
+  // deps: undefined,                                                                 /* Runtime dependencies of this module. */
   // description: undefined,                                                   /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                                                              /* Build dependencies for this module. */
+  devDeps: [
+    '@types/mustache',
+  ], /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                               /* Module entrypoint (`main` in `package.json`). */
   // homepage: undefined,                                                      /* Package's Homepage / Website. */
   keywords: [
@@ -122,6 +139,25 @@ const project = new AwsCdkConstructLibrary({
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
   // projectType: ProjectType.UNKNOWN,                                         /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
+});
+
+new AwsCdkTypeScriptApp({
+  cdkVersion: cdkVersion,
+  name: 'simple-nat-example',
+  cdkDependencies: [
+    '@aws-cdk/aws-ec2',
+  ] /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */,
+  cdkVersionPinning: true /* Use pinned version instead of caret version for CDK. */,
+  description:
+    'An example CDK app uses SimpleNAT construct.' /* The description is just a string that helps people understand the purpose of the package. */,
+  license: 'Apache-2.0' /* License's SPDX identifier. */,
+  licensed: false /* Indicates if a license should be added. */,
+  defaultReleaseBranch: 'main',
+  outdir: 'example',
+  parent: project,
+  gitignore: [
+    'cdk.context.json',
+  ],
 });
 
 project.synth();
