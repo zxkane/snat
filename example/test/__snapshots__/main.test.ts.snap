@@ -1,0 +1,1324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+Object {
+  "Parameters": Object {
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
+    },
+  },
+  "Resources": Object {
+    "NatRoleBAD10ABB": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "ec2.",
+                      Object {
+                        "Ref": "AWS::URLSuffix",
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/AmazonSSMManagedInstanceCore",
+              ],
+            ],
+          },
+        ],
+        "Policies": Array [
+          Object {
+            "PolicyDocument": Object {
+              "Statement": Array [
+                Object {
+                  "Action": "ssm:GetParameter",
+                  "Effect": "Allow",
+                  "Resource": Array [
+                    Object {
+                      "Fn::Join": Array [
+                        "",
+                        Array [
+                          "arn:",
+                          Object {
+                            "Ref": "AWS::Partition",
+                          },
+                          ":ssm:",
+                          Object {
+                            "Ref": "AWS::Region",
+                          },
+                          ":",
+                          Object {
+                            "Ref": "AWS::AccountId",
+                          },
+                          ":parameter/remote-key",
+                        ],
+                      ],
+                    },
+                    Object {
+                      "Fn::Join": Array [
+                        "",
+                        Array [
+                          "arn:",
+                          Object {
+                            "Ref": "AWS::Partition",
+                          },
+                          ":ssm:",
+                          Object {
+                            "Ref": "AWS::Region",
+                          },
+                          ":",
+                          Object {
+                            "Ref": "AWS::AccountId",
+                          },
+                          ":parameter/remote-host",
+                        ],
+                      ],
+                    },
+                  ],
+                },
+              ],
+              "Version": "2012-10-17",
+            },
+            "PolicyName": "ssm",
+          },
+          Object {
+            "PolicyDocument": Object {
+              "Statement": Array [
+                Object {
+                  "Action": "kms:Decrypt",
+                  "Effect": "Allow",
+                  "Resource": "*",
+                },
+              ],
+              "Version": "2012-10-17",
+            },
+            "PolicyName": "kms",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "NatRoleDefaultPolicy3E758D0D": Object {
+      "Properties": Object {
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "ec2:AttachNetworkInterface",
+                "ec2:DetachNetworkInterface",
+                "ec2:DescribeNetworkInterfaces",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            Object {
+              "Action": Array [
+                "cloudformation:DescribeStackResource",
+                "cloudformation:SignalResource",
+              ],
+              "Effect": "Allow",
+              "Resource": Object {
+                "Ref": "AWS::StackId",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "NatRoleDefaultPolicy3E758D0D",
+        "Roles": Array [
+          Object {
+            "Ref": "NatRoleBAD10ABB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "NatSecurityGroupEE8043DB": Object {
+      "Properties": Object {
+        "GroupDescription": "Security Group for NAT instances",
+        "SecurityGroupEgress": Array [
+          Object {
+            "CidrIp": "0.0.0.0/0",
+            "Description": "Allow all outbound traffic by default",
+            "IpProtocol": "-1",
+          },
+        ],
+        "SecurityGroupIngress": Array [
+          Object {
+            "CidrIp": Object {
+              "Fn::GetAtt": Array [
+                "Vpc8378EB38",
+                "CidrBlock",
+              ],
+            },
+            "Description": Object {
+              "Fn::Join": Array [
+                "",
+                Array [
+                  "from ",
+                  Object {
+                    "Fn::GetAtt": Array [
+                      "Vpc8378EB38",
+                      "CidrBlock",
+                    ],
+                  },
+                  ":ALL TRAFFIC",
+                ],
+              ],
+            },
+            "IpProtocol": "-1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::SecurityGroup",
+    },
+    "Vpc8378EB38": Object {
+      "Properties": Object {
+        "CidrBlock": "10.0.0.0/16",
+        "EnableDnsHostnames": true,
+        "EnableDnsSupport": true,
+        "InstanceTenancy": "default",
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::VPC",
+    },
+    "VpcIGWD7BA715C": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::InternetGateway",
+    },
+    "VpcPrivateSubnet1DefaultRouteBE02A9ED": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": Object {
+          "Ref": "VpcPublicSubnet1NATGateway4D7517AA",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet1Route1722170016A1B74269": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "172.217.0.0/16",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet1Route7412500163A14B2F0": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "74.125.0.0/16",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet1RouteTableAssociation70C59FA6": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPrivateSubnet1Subnet536B997A",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "VpcPrivateSubnet1RouteTableB2C5B500": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PrivateSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "VpcPrivateSubnet1Subnet536B997A": Object {
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            0,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "CidrBlock": "10.0.128.0/18",
+        "MapPublicIpOnLaunch": false,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PrivateSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "VpcPrivateSubnet2DefaultRoute060D2087": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "NatGatewayId": Object {
+          "Ref": "VpcPublicSubnet2NATGateway9182C01D",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2Route1722170016CC4BAE7D": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "172.217.0.0/16",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2Route741250016CCD45344": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "74.125.0.0/16",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2RouteTableA678073B": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PrivateSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "VpcPrivateSubnet2RouteTableAssociationA89CAD56": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPrivateSubnet2Subnet3788AAA1",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "VpcPrivateSubnet2Subnet3788AAA1": Object {
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            1,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "CidrBlock": "10.0.192.0/18",
+        "MapPublicIpOnLaunch": false,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Private",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PrivateSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "VpcPublicSubnet1DefaultRoute3DA9E72A": Object {
+      "DependsOn": Array [
+        "VpcVPCGWBF912B6E",
+      ],
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": Object {
+          "Ref": "VpcIGWD7BA715C",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPublicSubnet1RouteTable6C95E38E",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPublicSubnet1EIPAssocation158EAA22": Object {
+      "Properties": Object {
+        "AllocationId": Object {
+          "Fn::GetAtt": Array [
+            "VpcPublicSubnet1NatInstanceEIP5F3BB883",
+            "AllocationId",
+          ],
+        },
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+      },
+      "Type": "AWS::EC2::EIPAssociation",
+    },
+    "VpcPublicSubnet1EIPD7E02669": Object {
+      "Properties": Object {
+        "Domain": "vpc",
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::EIP",
+    },
+    "VpcPublicSubnet1ENI19CFC6EA2": Object {
+      "Properties": Object {
+        "Description": "ENI for binding EIP",
+        "GroupSet": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "NatSecurityGroupEE8043DB",
+              "GroupId",
+            ],
+          },
+        ],
+        "SourceDestCheck": false,
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::NetworkInterface",
+    },
+    "VpcPublicSubnet1NATGateway4D7517AA": Object {
+      "Properties": Object {
+        "AllocationId": Object {
+          "Fn::GetAtt": Array [
+            "VpcPublicSubnet1EIPD7E02669",
+            "AllocationId",
+          ],
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::NatGateway",
+    },
+    "VpcPublicSubnet1NatInstance57B636B8f0730c6c9f8459a4": Object {
+      "CreationPolicy": Object {
+        "ResourceSignal": Object {
+          "Count": 1,
+          "Timeout": "PT15M",
+        },
+      },
+      "DependsOn": Array [
+        "NatRoleDefaultPolicy3E758D0D",
+        "NatRoleBAD10ABB",
+      ],
+      "Metadata": Object {
+        "AWS::CloudFormation::Init": Object {
+          "config": Object {
+            "commands": Object {
+              "000": Object {
+                "command": "/opt/nat/runonce.sh",
+              },
+              "001": Object {
+                "command": "/opt/nat/custom.sh",
+              },
+            },
+            "files": Object {
+              "/etc/systemd/system/snat.service": Object {
+                "content": "[Unit]
+Description = SNAT via ENI eth1
+
+[Service]
+ExecStart = /opt/nat/snat.sh
+Type = oneshot
+
+[Install]
+WantedBy = multi-user.target",
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000644",
+                "owner": "root",
+              },
+              "/opt/nat/custom.sh": Object {
+                "content": Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "#!/bin/bash -x
+yum install -y python3-pip gcc python3-devel
+pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle
+groupadd sshuttle
+useradd -d /home/sshuttle -g sshuttle sshuttle
+mkdir /home/sshuttle/.ssh
+chmod 700 /home/sshuttle/.ssh
+aws ssm get-parameter --name remote-key --region ",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      " --with-decryption|jq -r '.Parameter.Value' > /home/sshuttle/.ssh/id_rsa_remote
+REMOTE_HOST=$(aws ssm get-parameter --name remote-host --region ",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      " --with-decryption|jq -r '.Parameter.Value')
+chmod 400 /home/sshuttle/.ssh/id_rsa_remote
+chown -R sshuttle:sshuttle /home/sshuttle
+sshuttle --sudoers --sudoers-user sshuttle
+cat > /usr/lib/systemd/system/sshuttle.service << EOF
+[Unit]
+Description=sshuttle service
+After=network.target
+[Service]
+User=sshuttle
+Restart=always
+Type=forking
+WorkingDirectory=/home/sshuttle
+ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 74.125.0.0/16 172.217.0.0/16
+ExecStop=killall sshuttle
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+systemctl start sshuttle
+      ",
+                    ],
+                  ],
+                },
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+              "/opt/nat/runonce.sh": Object {
+                "content": Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "#!/bin/bash -x
+
+attachmentId=$(aws ec2 describe-network-interfaces --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" --network-interface-ids \\"",
+                      Object {
+                        "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+                      },
+                      "\\" --output json | jq -r '.NetworkInterfaces[].Attachment.AttachmentId')
+
+# detach if the eni is attached
+if [ \\"$attachmentId\\" != \\"null\\" ]; then
+    aws ec2 detach-network-interface --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" --attachment-id \\"$attachmentId\\"
+fi
+
+# attach the ENI
+for i in {1..10}; do 
+    aws ec2 attach-network-interface \\\\
+      --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" \\\\
+      --instance-id \\"$(/opt/aws/bin/ec2-metadata -i | cut -d' ' -f2)\\" \\\\
+      --device-index 1 \\\\
+      --network-interface-id \\"",
+                      Object {
+                        "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+                      },
+                      "\\"
+    if [ $? -ne 0 ]; then
+        sleep 5
+    else
+        break
+    fi
+done
+
+  
+# start SNAT
+systemctl enable snat
+systemctl start snat",
+                    ],
+                  ],
+                },
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+              "/opt/nat/snat.sh": Object {
+                "content": "#!/bin/bash -x
+
+# Copied from https://github.com/int128/terraform-aws-nat-instance/blob/master/snat.sh
+
+# wait for eth1
+while ! ip link show dev eth1; do
+  sleep 1
+done
+
+# enable IP forwarding and NAT
+sysctl -q -w net.ipv4.ip_forward=1
+sysctl -q -w net.ipv4.conf.eth1.send_redirects=0
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+# switch the default route to eth1
+ip route del default dev eth0
+
+# wait for network connection
+curl --retry 10 --retry-delay 10 http://www.example.com
+
+# reestablish connections
+systemctl restart amazon-ssm-agent.service",
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+            },
+          },
+          "configSets": Object {
+            "default": Array [
+              "yumPreinstall",
+              "config",
+            ],
+          },
+          "yumPreinstall": Object {
+            "packages": Object {
+              "yum": Object {
+                "jq": Array [],
+              },
+            },
+          },
+        },
+      },
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            0,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "IamInstanceProfile": Object {
+          "Ref": "VpcPublicSubnet1NatInstanceInstanceProfileEE10C485",
+        },
+        "ImageId": Object {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+        },
+        "InstanceType": "t3.micro",
+        "SecurityGroupIds": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "NatSecurityGroupEE8043DB",
+              "GroupId",
+            ],
+          },
+        ],
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1/NatInstance",
+          },
+        ],
+        "UserData": Object {
+          "Fn::Base64": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "#!/bin/bash
+# fingerprint: 331ec88f3d91061c
+(
+  set +e
+  /opt/aws/bin/cfn-init -v --region ",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                " --stack ",
+                Object {
+                  "Ref": "AWS::StackName",
+                },
+                " --resource VpcPublicSubnet1NatInstance57B636B8f0730c6c9f8459a4 -c default
+  /opt/aws/bin/cfn-signal -e $? --region ",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                " --stack ",
+                Object {
+                  "Ref": "AWS::StackName",
+                },
+                " --resource VpcPublicSubnet1NatInstance57B636B8f0730c6c9f8459a4
+  cat /var/log/cfn-init.log >&2
+)",
+              ],
+            ],
+          },
+        },
+      },
+      "Type": "AWS::EC2::Instance",
+    },
+    "VpcPublicSubnet1NatInstanceEIP5F3BB883": Object {
+      "DeletionPolicy": "Retain",
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::EIP",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "VpcPublicSubnet1NatInstanceInstanceProfileEE10C485": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "NatRoleBAD10ABB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
+    },
+    "VpcPublicSubnet1RouteTable6C95E38E": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "VpcPublicSubnet1RouteTableAssociation97140677": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "VpcPublicSubnet1RouteTable6C95E38E",
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet1Subnet5C2D37C4",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "VpcPublicSubnet1Subnet5C2D37C4": Object {
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            0,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "CidrBlock": "10.0.0.0/18",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet1",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "VpcPublicSubnet2DefaultRoute97F91067": Object {
+      "DependsOn": Array [
+        "VpcVPCGWBF912B6E",
+      ],
+      "Properties": Object {
+        "DestinationCidrBlock": "0.0.0.0/0",
+        "GatewayId": Object {
+          "Ref": "VpcIGWD7BA715C",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPublicSubnet2RouteTable94F7E489",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPublicSubnet2EIP3C605A87": Object {
+      "Properties": Object {
+        "Domain": "vpc",
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::EIP",
+    },
+    "VpcPublicSubnet2EIPAssocation584A511B": Object {
+      "Properties": Object {
+        "AllocationId": Object {
+          "Fn::GetAtt": Array [
+            "VpcPublicSubnet2NatInstanceEIP818399E1",
+            "AllocationId",
+          ],
+        },
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+      },
+      "Type": "AWS::EC2::EIPAssociation",
+    },
+    "VpcPublicSubnet2ENI1B54F9B30": Object {
+      "Properties": Object {
+        "Description": "ENI for binding EIP",
+        "GroupSet": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "NatSecurityGroupEE8043DB",
+              "GroupId",
+            ],
+          },
+        ],
+        "SourceDestCheck": false,
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet2Subnet691E08A3",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::NetworkInterface",
+    },
+    "VpcPublicSubnet2NATGateway9182C01D": Object {
+      "Properties": Object {
+        "AllocationId": Object {
+          "Fn::GetAtt": Array [
+            "VpcPublicSubnet2EIP3C605A87",
+            "AllocationId",
+          ],
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet2Subnet691E08A3",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::NatGateway",
+    },
+    "VpcPublicSubnet2NatInstance746890A7551f0563e6bdd3f7": Object {
+      "CreationPolicy": Object {
+        "ResourceSignal": Object {
+          "Count": 1,
+          "Timeout": "PT15M",
+        },
+      },
+      "DependsOn": Array [
+        "NatRoleDefaultPolicy3E758D0D",
+        "NatRoleBAD10ABB",
+      ],
+      "Metadata": Object {
+        "AWS::CloudFormation::Init": Object {
+          "config": Object {
+            "commands": Object {
+              "000": Object {
+                "command": "/opt/nat/runonce.sh",
+              },
+              "001": Object {
+                "command": "/opt/nat/custom.sh",
+              },
+            },
+            "files": Object {
+              "/etc/systemd/system/snat.service": Object {
+                "content": "[Unit]
+Description = SNAT via ENI eth1
+
+[Service]
+ExecStart = /opt/nat/snat.sh
+Type = oneshot
+
+[Install]
+WantedBy = multi-user.target",
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000644",
+                "owner": "root",
+              },
+              "/opt/nat/custom.sh": Object {
+                "content": Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "#!/bin/bash -x
+yum install -y python3-pip gcc python3-devel
+pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle
+groupadd sshuttle
+useradd -d /home/sshuttle -g sshuttle sshuttle
+mkdir /home/sshuttle/.ssh
+chmod 700 /home/sshuttle/.ssh
+aws ssm get-parameter --name remote-key --region ",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      " --with-decryption|jq -r '.Parameter.Value' > /home/sshuttle/.ssh/id_rsa_remote
+REMOTE_HOST=$(aws ssm get-parameter --name remote-host --region ",
+                      Object {
+                        "Ref": "AWS::Region",
+                      },
+                      " --with-decryption|jq -r '.Parameter.Value')
+chmod 400 /home/sshuttle/.ssh/id_rsa_remote
+chown -R sshuttle:sshuttle /home/sshuttle
+sshuttle --sudoers --sudoers-user sshuttle
+cat > /usr/lib/systemd/system/sshuttle.service << EOF
+[Unit]
+Description=sshuttle service
+After=network.target
+[Service]
+User=sshuttle
+Restart=always
+Type=forking
+WorkingDirectory=/home/sshuttle
+ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 74.125.0.0/16 172.217.0.0/16
+ExecStop=killall sshuttle
+[Install]
+WantedBy=multi-user.target
+EOF
+systemctl daemon-reload
+systemctl start sshuttle
+      ",
+                    ],
+                  ],
+                },
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+              "/opt/nat/runonce.sh": Object {
+                "content": Object {
+                  "Fn::Join": Array [
+                    "",
+                    Array [
+                      "#!/bin/bash -x
+
+attachmentId=$(aws ec2 describe-network-interfaces --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" --network-interface-ids \\"",
+                      Object {
+                        "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+                      },
+                      "\\" --output json | jq -r '.NetworkInterfaces[].Attachment.AttachmentId')
+
+# detach if the eni is attached
+if [ \\"$attachmentId\\" != \\"null\\" ]; then
+    aws ec2 detach-network-interface --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" --attachment-id \\"$attachmentId\\"
+fi
+
+# attach the ENI
+for i in {1..10}; do 
+    aws ec2 attach-network-interface \\\\
+      --region \\"$(/opt/aws/bin/ec2-metadata -z  | sed 's/placement: \\\\(.*\\\\).$/\\\\1/')\\" \\\\
+      --instance-id \\"$(/opt/aws/bin/ec2-metadata -i | cut -d' ' -f2)\\" \\\\
+      --device-index 1 \\\\
+      --network-interface-id \\"",
+                      Object {
+                        "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+                      },
+                      "\\"
+    if [ $? -ne 0 ]; then
+        sleep 5
+    else
+        break
+    fi
+done
+
+  
+# start SNAT
+systemctl enable snat
+systemctl start snat",
+                    ],
+                  ],
+                },
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+              "/opt/nat/snat.sh": Object {
+                "content": "#!/bin/bash -x
+
+# Copied from https://github.com/int128/terraform-aws-nat-instance/blob/master/snat.sh
+
+# wait for eth1
+while ! ip link show dev eth1; do
+  sleep 1
+done
+
+# enable IP forwarding and NAT
+sysctl -q -w net.ipv4.ip_forward=1
+sysctl -q -w net.ipv4.conf.eth1.send_redirects=0
+iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
+
+# switch the default route to eth1
+ip route del default dev eth0
+
+# wait for network connection
+curl --retry 10 --retry-delay 10 http://www.example.com
+
+# reestablish connections
+systemctl restart amazon-ssm-agent.service",
+                "encoding": "plain",
+                "group": "root",
+                "mode": "000755",
+                "owner": "root",
+              },
+            },
+          },
+          "configSets": Object {
+            "default": Array [
+              "yumPreinstall",
+              "config",
+            ],
+          },
+          "yumPreinstall": Object {
+            "packages": Object {
+              "yum": Object {
+                "jq": Array [],
+              },
+            },
+          },
+        },
+      },
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            1,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "IamInstanceProfile": Object {
+          "Ref": "VpcPublicSubnet2NatInstanceInstanceProfile549888F0",
+        },
+        "ImageId": Object {
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+        },
+        "InstanceType": "t3.micro",
+        "SecurityGroupIds": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "NatSecurityGroupEE8043DB",
+              "GroupId",
+            ],
+          },
+        ],
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet2Subnet691E08A3",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2/NatInstance",
+          },
+        ],
+        "UserData": Object {
+          "Fn::Base64": Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "#!/bin/bash
+# fingerprint: 6dae05a92d0607ad
+(
+  set +e
+  /opt/aws/bin/cfn-init -v --region ",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                " --stack ",
+                Object {
+                  "Ref": "AWS::StackName",
+                },
+                " --resource VpcPublicSubnet2NatInstance746890A7551f0563e6bdd3f7 -c default
+  /opt/aws/bin/cfn-signal -e $? --region ",
+                Object {
+                  "Ref": "AWS::Region",
+                },
+                " --stack ",
+                Object {
+                  "Ref": "AWS::StackName",
+                },
+                " --resource VpcPublicSubnet2NatInstance746890A7551f0563e6bdd3f7
+  cat /var/log/cfn-init.log >&2
+)",
+              ],
+            ],
+          },
+        },
+      },
+      "Type": "AWS::EC2::Instance",
+    },
+    "VpcPublicSubnet2NatInstanceEIP818399E1": Object {
+      "DeletionPolicy": "Retain",
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+      },
+      "Type": "AWS::EC2::EIP",
+      "UpdateReplacePolicy": "Retain",
+    },
+    "VpcPublicSubnet2NatInstanceInstanceProfile549888F0": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "NatRoleBAD10ABB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
+    },
+    "VpcPublicSubnet2RouteTable94F7E489": Object {
+      "Properties": Object {
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::RouteTable",
+    },
+    "VpcPublicSubnet2RouteTableAssociationDD5762D8": Object {
+      "Properties": Object {
+        "RouteTableId": Object {
+          "Ref": "VpcPublicSubnet2RouteTable94F7E489",
+        },
+        "SubnetId": Object {
+          "Ref": "VpcPublicSubnet2Subnet691E08A3",
+        },
+      },
+      "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "VpcPublicSubnet2Subnet691E08A3": Object {
+      "Properties": Object {
+        "AvailabilityZone": Object {
+          "Fn::Select": Array [
+            1,
+            Object {
+              "Fn::GetAZs": "",
+            },
+          ],
+        },
+        "CidrBlock": "10.0.64.0/18",
+        "MapPublicIpOnLaunch": true,
+        "Tags": Array [
+          Object {
+            "Key": "aws-cdk:subnet-name",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "aws-cdk:subnet-type",
+            "Value": "Public",
+          },
+          Object {
+            "Key": "Name",
+            "Value": "test/Vpc/PublicSubnet2",
+          },
+        ],
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::Subnet",
+    },
+    "VpcVPCGWBF912B6E": Object {
+      "Properties": Object {
+        "InternetGatewayId": Object {
+          "Ref": "VpcIGWD7BA715C",
+        },
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::VPCGatewayAttachment",
+    },
+    "Vpcdynamodb291BDE25": Object {
+      "Properties": Object {
+        "RouteTableIds": Array [
+          Object {
+            "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+          },
+          Object {
+            "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+          },
+          Object {
+            "Ref": "VpcPublicSubnet1RouteTable6C95E38E",
+          },
+          Object {
+            "Ref": "VpcPublicSubnet2RouteTable94F7E489",
+          },
+        ],
+        "ServiceName": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "com.amazonaws.",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ".dynamodb",
+            ],
+          ],
+        },
+        "VpcEndpointType": "Gateway",
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::VPCEndpoint",
+    },
+    "Vpcs3AD7F1CA6": Object {
+      "Properties": Object {
+        "RouteTableIds": Array [
+          Object {
+            "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+          },
+          Object {
+            "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+          },
+          Object {
+            "Ref": "VpcPublicSubnet1RouteTable6C95E38E",
+          },
+          Object {
+            "Ref": "VpcPublicSubnet2RouteTable94F7E489",
+          },
+        ],
+        "ServiceName": Object {
+          "Fn::Join": Array [
+            "",
+            Array [
+              "com.amazonaws.",
+              Object {
+                "Ref": "AWS::Region",
+              },
+              ".s3",
+            ],
+          ],
+        },
+        "VpcEndpointType": "Gateway",
+        "VpcId": Object {
+          "Ref": "Vpc8378EB38",
+        },
+      },
+      "Type": "AWS::EC2::VPCEndpoint",
+    },
+  },
+}
+`;
