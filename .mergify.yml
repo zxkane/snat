@@ -12,7 +12,7 @@ pull_request_rules:
     conditions:
       - "#approved-reviews-by>=1"
       - status-success=build
-  - name: Automatic merge PRs with auto-merge label upon successful build
+  - name: Automatic merge PRs with dependencies label upon successful build
     actions:
       merge:
         method: squash
@@ -21,7 +21,7 @@ pull_request_rules:
         strict_method: merge
       delete_head_branch: {}
     conditions:
-      - label=auto-merge
+      - label=dependencies
       - status-success=build
   - name: Merge pull requests from dependabot if CI passes
     conditions:
