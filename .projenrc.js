@@ -40,7 +40,9 @@ const project = new AwsCdkConstructLibrary({
   // docgen: true,                                                             /* Automatically generate API.md from jsii. */
   // eslint: true,                                                             /* Install eslint. */
   // eslintOptions: undefined,                                                 /* Eslint options. */
-  // excludeTypescript: undefined,                                             /* Accepts a list of glob patterns. */
+  excludeTypescript: [
+    'example',
+  ], /* Accepts a list of glob patterns. */
   // publishToGo: undefined,                                                   /* Publish Go bindings to a git repository. */
   // publishToMaven: undefined,                                                /* Publish to maven. */
   // publishToNuget: undefined,                                                /* Publish to NuGet. */
@@ -105,8 +107,8 @@ const project = new AwsCdkConstructLibrary({
   // jest: true,                                                               /* Setup jest unit tests. */
   // jestOptions: undefined,                                                   /* Jest options. */
   // jsiiReleaseVersion: 'latest',                                             /* Version requirement of `jsii-release` which is used to publish modules to npm. */
-  // mergify: true,                                                            /* Adds mergify configuration. */
-  // mergifyAutoMergeLabel: 'auto-merge',                                      /* Automatically merge PRs that build successfully and have this label. */
+  mergify: true, /* Adds mergify configuration. */
+  mergifyAutoMergeLabel: 'dependencies', /* Automatically merge PRs that build successfully and have this label. */
   // mergifyOptions: undefined,                                                /* Options for mergify. */
   // mutableBuild: true,                                                       /* Automatically update files modified during builds to pull-request branches. */
   // npmignore: undefined,                                                     /* Additional entries to .npmignore. */
