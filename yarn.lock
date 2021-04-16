@@ -692,7 +692,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.16.0", "@jsii/spec@^1.26.0", "@jsii/spec@^1.28.0":
+"@jsii/spec@^1.16.0", "@jsii/spec@^1.28.0":
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.28.0.tgz#47db1102fc0291dbffffb3adb7f8ee0671e15ef3"
   integrity sha512-5mcupuCCXyhZwNmX/RDBn3WUYtd0oPXEDa3E+qOSjT30vaO8u9ZQ+mxwl4qsecx3m51LhXKnR1C9U9t4VlAmqA==
@@ -3899,13 +3899,13 @@ jsesc@^2.5.1:
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
 jsii-diff@^1.26.0:
-  version "1.26.0"
-  resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.26.0.tgz#41ba434b298771b7542a3a2eb18241ba6cf82a73"
-  integrity sha512-RWu1AFYE8+U+75yZMSKrn5JFj6G21yiKR2Won+XbggD+DveHDGNbopWi9lDHuB5ec04kfiUB7og0yXkanIO4wg==
+  version "1.28.0"
+  resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.28.0.tgz#16f889559f3d2679154f93eae004704db1e6c62d"
+  integrity sha512-SJUzVY7sXg3esBeuvj3tQGzeRYEkpmrqbC1lIHd8VdXpPybYWU958z3hlJJkvaM1AomQpiMyXK6Ev+2XOp741g==
   dependencies:
-    "@jsii/spec" "^1.26.0"
+    "@jsii/spec" "^1.28.0"
     fs-extra "^9.1.0"
-    jsii-reflect "^1.26.0"
+    jsii-reflect "^1.28.0"
     log4js "^6.3.0"
     typescript "~3.9.9"
     yargs "^16.2.0"
@@ -3938,7 +3938,7 @@ jsii-pacmak@^1.26.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.16.0, jsii-reflect@^1.26.0, jsii-reflect@^1.28.0:
+jsii-reflect@^1.16.0, jsii-reflect@^1.28.0:
   version "1.28.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.28.0.tgz#d03276499702115ff0582f82ede7bd40f1a4b6b9"
   integrity sha512-jFu9dUy5D0PrxVnaDilb50agbSr0wZRya6StwHyw8Wly3ruzS8uuSB1aWmEwN371m5ewDD4m9nPEQ9zMmKFvMQ==
@@ -5979,9 +5979,9 @@ trim-off-newlines@^1.0.0:
   integrity sha1-n5up2e+odkw4dpi8v+sshI8RrbM=
 
 ts-jest@^26.5.4:
-  version "26.5.4"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.4.tgz#207f4c114812a9c6d5746dd4d1cdf899eafc9686"
-  integrity sha512-I5Qsddo+VTm94SukBJ4cPimOoFZsYTeElR2xy6H2TOVs+NsvgYglW8KuQgKoApOKuaU/Ix/vrF9ebFZlb5D2Pg==
+  version "26.5.5"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-26.5.5.tgz#e40481b6ee4dd162626ba481a2be05fa57160ea5"
+  integrity sha512-7tP4m+silwt1NHqzNRAPjW1BswnAhopTdc2K3HEkRZjF0ZG2F/e/ypVH0xiZIMfItFtD3CX0XFbwPzp9fIEUVg==
   dependencies:
     bs-logger "0.x"
     buffer-from "1.x"
