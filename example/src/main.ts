@@ -1,5 +1,5 @@
 import { App, Construct, Stack, StackProps, Arn, Aws } from '@aws-cdk/core';
-import { SimpleNAT } from '../../src';
+import { SimpleNAT } from 'cdk-construct-simple-nat';
 import { Vpc, GatewayVpcEndpointAwsService, SubnetType } from '@aws-cdk/aws-ec2';
 import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from '@aws-cdk/aws-iam';
 
