@@ -8,6 +8,7 @@
 /.versionrc.json
 /.vscode
 /coverage
+/example
 /src
 /test
 /test-reports/
