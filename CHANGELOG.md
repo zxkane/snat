@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/zxkane/snat/compare/v0.0.13...v0.0.14) (2021-04-21)
+
+
+### Bug Fixes
+
+* package artifact files for dist ([#22](https://github.com/zxkane/snat/issues/22)) ([2732f82](https://github.com/zxkane/snat/commit/2732f828ff77336beefd8fa9485be76c41190c19))
+
 ### [0.0.13](https://github.com/zxkane/snat/compare/v0.0.12...v0.0.13) (2021-04-21)
 
 ### [0.0.12](https://github.com/zxkane/snat/compare/v0.0.11...v0.0.12) (2021-04-16)
