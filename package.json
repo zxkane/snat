@@ -1,5 +1,5 @@
 {
-  "name": "simple-nat-construct",
+  "name": "cdk-construct-simple-nat",
   "description": "A CDK construct to build Simple NAT instance on AWS.",
   "repository": {
     "type": "git",

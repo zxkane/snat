@@ -88,6 +88,12 @@
         },
         {
           "spawn": "package"
+        },
+        {
+          "exec": "cp src/snat.* src/runonce.sh lib/"
+        },
+        {
+          "spawn": "package"
         }
       ]
     },
