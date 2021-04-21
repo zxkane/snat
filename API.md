@@ -4,18 +4,18 @@
 
 Name|Description
 ----|-----------
-[SimpleNAT](#simple-nat-construct-simplenat)|Simple NAT instaces construct.
+[SimpleNAT](#cdk-construct-simple-nat-simplenat)|Simple NAT instaces construct.
 
 
 **Structs**
 
 Name|Description
 ----|-----------
-[SimpleNATProps](#simple-nat-construct-simplenatprops)|Properties for NAT instances.
+[SimpleNATProps](#cdk-construct-simple-nat-simplenatprops)|Properties for NAT instances.
 
 
 
-## class SimpleNAT  <a id="simple-nat-construct-simplenat"></a>
+## class SimpleNAT  <a id="cdk-construct-simple-nat-simplenat"></a>
 
 Simple NAT instaces construct.
 
@@ -33,7 +33,7 @@ new SimpleNAT(scope: Construct, id: string, props: SimpleNATProps)
 
 * **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
-* **props** (<code>[SimpleNATProps](#simple-nat-construct-simplenatprops)</code>)  *No description*
+* **props** (<code>[SimpleNATProps](#cdk-construct-simple-nat-simplenatprops)</code>)  *No description*
   * **vpc** (<code>[IVpc](#aws-cdk-aws-ec2-ivpc)</code>)  The VPC the NAT instances will reside. 
   * **customScripts** (<code>string</code>)  The custom script when provisioning the NAT instances. __*Default*__: no custom script.
   * **instanceType** (<code>[InstanceType](#aws-cdk-aws-ec2-instancetype)</code>)  The instance type of NAT instances. __*Default*__: t3.MICRO.
@@ -46,7 +46,7 @@ new SimpleNAT(scope: Construct, id: string, props: SimpleNATProps)
 ### Methods
 
 
-#### addV4Route(v4CIDR) <a id="simple-nat-construct-simplenat-addv4route"></a>
+#### addV4Route(v4CIDR) <a id="cdk-construct-simple-nat-simplenat-addv4route"></a>
 
 
 
@@ -57,9 +57,9 @@ addV4Route(v4CIDR: string): SimpleNAT
 * **v4CIDR** (<code>string</code>)  *No description*
 
 __Returns__:
-* <code>[SimpleNAT](#simple-nat-construct-simplenat)</code>
+* <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
-#### addV6Route(v6CIDR) <a id="simple-nat-construct-simplenat-addv6route"></a>
+#### addV6Route(v6CIDR) <a id="cdk-construct-simple-nat-simplenat-addv6route"></a>
 
 
 
@@ -70,9 +70,9 @@ addV6Route(v6CIDR: string): SimpleNAT
 * **v6CIDR** (<code>string</code>)  *No description*
 
 __Returns__:
-* <code>[SimpleNAT](#simple-nat-construct-simplenat)</code>
+* <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
-#### withGithubRoute() <a id="simple-nat-construct-simplenat-withgithubroute"></a>
+#### withGithubRoute() <a id="cdk-construct-simple-nat-simplenat-withgithubroute"></a>
 
 
 
@@ -82,9 +82,9 @@ withGithubRoute(): SimpleNAT
 
 
 __Returns__:
-* <code>[SimpleNAT](#simple-nat-construct-simplenat)</code>
+* <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
-#### withGoogleRoute() <a id="simple-nat-construct-simplenat-withgoogleroute"></a>
+#### withGoogleRoute() <a id="cdk-construct-simple-nat-simplenat-withgoogleroute"></a>
 
 
 
@@ -94,11 +94,11 @@ withGoogleRoute(): SimpleNAT
 
 
 __Returns__:
-* <code>[SimpleNAT](#simple-nat-construct-simplenat)</code>
+* <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
 
 
-## struct SimpleNATProps  <a id="simple-nat-construct-simplenatprops"></a>
+## struct SimpleNATProps  <a id="cdk-construct-simple-nat-simplenatprops"></a>
 
 
 Properties for NAT instances.

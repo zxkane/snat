@@ -14,7 +14,7 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   compileBeforeTest: true, // since we want to run the cli in tests
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
-  name: 'simple-nat-construct',
+  name: 'cdk-construct-simple-nat',
   description: 'A CDK construct to build Simple NAT instance on AWS.',
   repositoryUrl: 'git@github.com:zxkane/snat.git',
 
@@ -113,6 +113,9 @@ const project = new AwsCdkConstructLibrary({
   // mutableBuild: true,                                                       /* Automatically update files modified during builds to pull-request branches. */
   npmignore: [
     '/example',
+    '/*.md',
+    '/*.png',
+    '/version.json',
   ], /* Additional entries to .npmignore. */
   npmignoreEnabled: true, /* Defines an .npmignore file. Normally this is only needed for libraries that are packaged as tarballs. */
   // projenDevDependency: true,                                                /* Indicates of "projen" should be installed as a devDependency. */
@@ -144,6 +147,8 @@ const project = new AwsCdkConstructLibrary({
   // projectType: ProjectType.UNKNOWN,                                         /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
 });
+project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
+project.buildTask.spawn(project.packageTask);
 
 new AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
