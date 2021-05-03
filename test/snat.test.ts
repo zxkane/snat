@@ -1,8 +1,8 @@
 /* eslint @typescript-eslint/no-require-imports: "off" */
 import '@aws-cdk/assert/jest';
 import { ResourcePart } from '@aws-cdk/assert/lib/assertions/have-resource';
-import { Vpc, SubnetType, InstanceType, InstanceSize, InstanceClass } from '@aws-cdk/aws-ec2';
-import { App, Stack } from '@aws-cdk/core';
+import { App, Stack } from 'aws-cdk-lib';
+import { Vpc, SubnetType, InstanceType, InstanceSize, InstanceClass } from 'aws-cdk-lib/aws-ec2';
 import { SimpleNAT } from '../src';
 const fetch = require('sync-fetch');
 

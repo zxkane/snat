@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
 
-const cdkVersion = '1.96.0';
+const cdkVersion = '2.0.0-rc.1';
 
 const tsCustomConfig = {
   exclude: ['example'],
@@ -23,9 +23,6 @@ const project = new AwsCdkConstructLibrary({
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
   cdkDependencies: [
-    '@aws-cdk/aws-ec2',
-    '@aws-cdk/aws-iam',
-    '@aws-cdk/core',
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkDependenciesAsDeps: true,                                              /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
@@ -64,6 +61,8 @@ const project = new AwsCdkConstructLibrary({
   // deps: undefined,                                                                 /* Runtime dependencies of this module. */
   // description: undefined,                                                   /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
+    'aws-cdk-lib@2.0.0-rc.1',
+    'constructs@^10.0.5',
     '@types/mustache',
   ], /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                               /* Module entrypoint (`main` in `package.json`). */
@@ -86,7 +85,9 @@ const project = new AwsCdkConstructLibrary({
   // packageManager: NodePackageManager.YARN,                                  /* The Node Package Manager used to execute scripts. */
   // packageName: undefined,                                                   /* The "name" in package.json. */
   // peerDependencyOptions: undefined,                                         /* Options for `peerDeps`. */
-  // peerDeps: [],                                                             /* Peer dependencies for this module. */
+  peerDeps: [
+    'aws-cdk-lib@^2.0.0-rc.1',
+  ], /* Peer dependencies for this module. */
   // projenCommand: 'npx projen',                                              /* The shell command to use in order to run the projen CLI. */
   // repository: undefined,                                                    /* The repository is the location where the actual code for your package lives. */
   // repositoryDirectory: undefined,                                           /* If the package.json for your package is not in the root directory (for example if it is part of a monorepo), you can specify the directory in which it lives. */
@@ -122,7 +123,7 @@ const project = new AwsCdkConstructLibrary({
   // projenUpgradeAutoMerge: undefined,                                        /* Automatically merge projen upgrade PRs when build passes. */
   // projenUpgradeSchedule: [ '0 6 * * *' ],                                   /* Customize the projenUpgrade schedule in cron expression. */
   // projenUpgradeSecret: undefined,                                           /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
-  // projenVersion: undefined,                                                 /* Version of projen to install. */
+  projenVersion: '^0.17.75', /* Version of projen to install. */
   // pullRequestTemplate: true,                                                /* Include a GitHub pull request template. */
   pullRequestTemplateContents: [
     '---',
@@ -151,14 +152,13 @@ project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.buildTask.spawn(project.packageTask);
 
 new AwsCdkTypeScriptApp({
-  cdkVersion: cdkVersion,
+  cdkVersion: '1.96.0',
   name: 'simple-nat-example',
   cdkDependencies: [
-    '@aws-cdk/aws-ec2',
   ] /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */,
   cdkVersionPinning: true /* Use pinned version instead of caret version for CDK. */,
   deps: [
-    'cdk-construct-simple-nat@^0.0.14',
+    'cdk-construct-simple-nat@^0.0.24',
   ],
   description:
     'An example CDK app uses SimpleNAT construct.' /* The description is just a string that helps people understand the purpose of the package. */,

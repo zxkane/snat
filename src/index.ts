@@ -1,6 +1,7 @@
 /* eslint @typescript-eslint/no-require-imports: "off" */
 import * as fs from 'fs';
 import * as path from 'path';
+import { Resource, RemovalPolicy, Duration, Tags, Annotations } from 'aws-cdk-lib';
 import {
   IVpc, SubnetSelection, Instance, InstanceClass, InstanceSize,
   InstanceType, SubnetType, Peer, SecurityGroup, ISecurityGroup, Port,
@@ -8,9 +9,8 @@ import {
   MachineImage, AmazonLinuxGeneration, AmazonLinuxStorage, AmazonLinuxCpuType,
   CfnNetworkInterface, CfnEIP, CfnEIPAssociation,
   CloudFormationInit, InitConfig, InitFile, InitPackage, InitCommand,
-} from '@aws-cdk/aws-ec2';
-import { ManagedPolicy, Role, ServicePrincipal, PolicyStatement, IRole } from '@aws-cdk/aws-iam';
-import { Resource, RemovalPolicy, Duration, Tags } from '@aws-cdk/core';
+} from 'aws-cdk-lib/aws-ec2';
+import { ManagedPolicy, Role, ServicePrincipal, PolicyStatement, IRole } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
 import * as Mustache from 'mustache';
 const fetch = require('sync-fetch');
@@ -283,7 +283,7 @@ export class SimpleNAT extends Resource {
 
       this._routeTablesLimit.set(subnet.routeTable.routeTableId, stats);
       const totalRoutes = (isIpv4 ? stats.ipv4 : stats.ipv6);
-      if (totalRoutes > this._defaultRoutesPerTable) {this.stack.node.addWarning(`The current routes in route table '${subnet.routeTable.routeTableId}' is ${totalRoutes} which exceeds the default limit ${this._defaultRoutesPerTable}. You can open ticket to increase it.`);}
+      if (totalRoutes > this._defaultRoutesPerTable) {Annotations.of(this).addWarning(`The current routes in route table '${subnet.routeTable.routeTableId}' is ${totalRoutes} which exceeds the default limit ${this._defaultRoutesPerTable}. You can open ticket to increase it.`);}
     } else {
       this._routeTablesLimit.set(subnet.routeTable.routeTableId, {
         ipv4: isIpv4 ? 1 : 0,
