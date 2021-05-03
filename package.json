@@ -7,15 +7,16 @@
   },
   "scripts": {
     "clobber": "npx projen clobber",
+    "bump": "npx projen bump",
+    "unbump": "npx projen unbump",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",
     "test": "npx projen test",
     "build": "npx projen build",
-    "bump": "npx projen bump",
-    "release": "npx projen release",
     "test:watch": "npx projen test:watch",
     "test:update": "npx projen test:update",
     "projen:upgrade": "npx projen projen:upgrade",
+    "default": "npx projen default",
     "watch": "npx projen watch",
     "package": "npx projen package",
     "eslint": "npx projen eslint",
@@ -30,12 +31,14 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "1.96.0",
+    "@aws-cdk/assert": "2.0.0-rc.1",
     "@types/jest": "^26.0.22",
     "@types/mustache": "^4.1.1",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
     "@typescript-eslint/parser": "^4.20.0",
+    "aws-cdk-lib": "2.0.0-rc.1",
+    "constructs": "^10.0.5",
     "eslint": "^7.23.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -47,21 +50,16 @@
     "jsii-docgen": "^1.8.67",
     "jsii-pacmak": "^1.26.0",
     "json-schema": "^0.3.0",
-    "projen": "^0.17.37",
+    "projen": "^0.17.75",
     "standard-version": "^9",
     "ts-jest": "^26.5.4",
     "typescript": "^4.2.3"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-ec2": "1.96.0",
-    "@aws-cdk/aws-iam": "1.96.0",
-    "@aws-cdk/core": "1.96.0",
-    "constructs": "^3.2.27"
+    "aws-cdk-lib": "^2.0.0-rc.1",
+    "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-ec2": "1.96.0",
-    "@aws-cdk/aws-iam": "1.96.0",
-    "@aws-cdk/core": "1.96.0",
     "mustache": "^4.2.0",
     "sync-fetch": "^0.3.0"
   },
@@ -78,7 +76,7 @@
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "version": "0.0.24",
+  "version": "0.0.0",
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.ts?(x)",

@@ -1573,10 +1573,10 @@ cdk-assets@1.96.0:
     glob "^7.1.6"
     yargs "^16.2.0"
 
-cdk-construct-simple-nat@^0.0.14:
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.0.14.tgz#9d35240c15597a5d62527f20c7a3444fbd7b105f"
-  integrity sha512-ytq82h6vjiIrS5rkX9Rd4Uci9bUUeNEowuW1a3S1H+v7DfvCDTIl2CjIytwmHTPwnR55BhVeCQV9ERGtd5cT8A==
+cdk-construct-simple-nat@^0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.0.24.tgz#61fc93385ca3815ca498789f0fa81354181f294b"
+  integrity sha512-oRdb9VOaoEER44vgIPo7vm9vHi+8h9yK233oY/cQmM8HaM8q87NoUr6NZl6pmDOPdB4kPOQLuHGWcGNqG+4GAw==
   dependencies:
     "@aws-cdk/aws-ec2" "1.96.0"
     "@aws-cdk/aws-iam" "1.96.0"
@@ -5092,10 +5092,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.17.37:
-  version "0.17.37"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.17.37.tgz#7eaeb6aba8484147aeadd4521d5af902a36732c5"
-  integrity sha512-alIcnqPrwKnXq4Em/TaKZytrTLL88V4VeXYhguJPB9tk+YRwj4JaB3PxcUgNxWRDd1D33Wz3H1o4Jz8hkryMEA==
+projen@^0.17.75:
+  version "0.17.75"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.17.75.tgz#b242fd0ef4345ba8d2145fdea60e2e4f2b2ca7b0"
+  integrity sha512-OrJd7t4Bo8/x3uaclwIjHQ1CHiQbNrBeZVv4QMISbnTe05MjjgnxdfyFdaTaezl9iLBkSdGrcczdfyYDvyx7IQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.0"
@@ -6025,7 +6025,7 @@ sync-fetch@^0.3.0:
     buffer "^5.7.0"
     node-fetch "^2.6.1"
 
-table@^6.0.4, table@^6.0.9:
+table@^6.0.4:
   version "6.0.9"
   resolved "https://registry.yarnpkg.com/table/-/table-6.0.9.tgz#790a12bf1e09b87b30e60419bafd6a1fd85536fb"
   integrity sha512-F3cLs9a3hL1Z7N4+EkSscsel3z55XT950AvB05bwayrNg5T1/gykXtigioTAjbltvbMSJvvhFCbnf6mX+ntnJQ==
@@ -6039,6 +6039,19 @@ table@^6.0.4, table@^6.0.9:
     lodash.truncate "^4.4.2"
     slice-ansi "^4.0.0"
     string-width "^4.2.0"
+
+table@^6.0.9:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/table/-/table-6.6.0.tgz#905654b79df98d9e9a973de1dd58682532c40e8e"
+  integrity sha512-iZMtp5tUvcnAdtHpZTWLPF0M7AgiQsURR2DwmxnJwSy8I3+cY+ozzVvYha3BOLG2TB+L0CqjIz+91htuj6yCXg==
+  dependencies:
+    ajv "^8.0.1"
+    lodash.clonedeep "^4.5.0"
+    lodash.flatten "^4.4.0"
+    lodash.truncate "^4.4.2"
+    slice-ansi "^4.0.0"
+    string-width "^4.2.0"
+    strip-ansi "^6.0.0"
 
 tar-stream@^2.2.0:
   version "2.2.0"
