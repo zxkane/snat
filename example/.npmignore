@@ -16,6 +16,7 @@
 cdk.out/
 dist
 junit.xml
+tsconfig.tsbuildinfo
 !/lib
 !/lib/**/*.d.ts
 !/lib/**/*.js
