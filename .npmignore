@@ -19,6 +19,7 @@
 /version.json
 dist
 junit.xml
+tsconfig.tsbuildinfo
 !.jsii
 !/lib
 !/lib/**/*.d.ts
