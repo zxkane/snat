@@ -152,13 +152,13 @@ project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.buildTask.spawn(project.packageTask);
 
 new AwsCdkTypeScriptApp({
-  cdkVersion: '1.96.0',
+  cdkVersion: cdkVersion,
   name: 'simple-nat-example',
   cdkDependencies: [
   ] /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */,
   cdkVersionPinning: true /* Use pinned version instead of caret version for CDK. */,
   deps: [
-    'cdk-construct-simple-nat@^0.0.24',
+    'cdk-construct-simple-nat@^0.1.4',
   ],
   description:
     'An example CDK app uses SimpleNAT construct.' /* The description is just a string that helps people understand the purpose of the package. */,

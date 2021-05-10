@@ -1,7 +1,8 @@
-import { App, Construct, Stack, StackProps, Arn, Aws } from '@aws-cdk/core';
+import { Construct } from 'constructs';
+import { App, Stack, StackProps, Arn, Aws } from 'aws-cdk-lib';
 import { SimpleNAT } from 'cdk-construct-simple-nat';
-import { Vpc, GatewayVpcEndpointAwsService, SubnetType } from '@aws-cdk/aws-ec2';
-import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from '@aws-cdk/aws-iam';
+import { Vpc, GatewayVpcEndpointAwsService, SubnetType } from 'aws-cdk-lib/aws-ec2';
+import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 
 export class SimpleNATStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {

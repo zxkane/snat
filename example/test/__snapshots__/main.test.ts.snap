@@ -2,12 +2,6 @@
 
 exports[`Snapshot 1`] = `
 Object {
-  "Parameters": Object {
-    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
-      "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
-    },
-  },
   "Resources": Object {
     "NatRoleBAD10ABB": Object {
       "Properties": Object {
@@ -686,9 +680,7 @@ systemctl restart amazon-ssm-agent.service",
         "IamInstanceProfile": Object {
           "Ref": "VpcPublicSubnet1NatInstanceInstanceProfileEE10C485",
         },
-        "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "ImageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
         "InstanceType": "t3.micro",
         "SecurityGroupIds": Array [
           Object {
@@ -1101,9 +1093,7 @@ systemctl restart amazon-ssm-agent.service",
         "IamInstanceProfile": Object {
           "Ref": "VpcPublicSubnet2NatInstanceInstanceProfile549888F0",
         },
-        "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
-        },
+        "ImageId": "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2}}",
         "InstanceType": "t3.micro",
         "SecurityGroupIds": Array [
           Object {
