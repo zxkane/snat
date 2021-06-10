@@ -123,7 +123,7 @@ const project = new AwsCdkConstructLibrary({
   // projenUpgradeAutoMerge: undefined,                                        /* Automatically merge projen upgrade PRs when build passes. */
   // projenUpgradeSchedule: [ '0 6 * * *' ],                                   /* Customize the projenUpgrade schedule in cron expression. */
   // projenUpgradeSecret: undefined,                                           /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
-  projenVersion: '^0.17.75', /* Version of projen to install. */
+  // projenVersion: '^0.23.0', /* Version of projen to install. */
   // pullRequestTemplate: true,                                                /* Include a GitHub pull request template. */
   pullRequestTemplateContents: [
     '---',

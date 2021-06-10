@@ -3,8 +3,6 @@
   "description": "An example CDK app uses SimpleNAT construct.",
   "scripts": {
     "clobber": "npx projen clobber",
-    "bump": "npx projen bump",
-    "unbump": "npx projen unbump",
     "compile": "npx projen compile",
     "test:compile": "npx projen test:compile",
     "test": "npx projen test",
@@ -36,8 +34,7 @@
     "jest-junit": "^12",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.17.95",
-    "standard-version": "^9",
+    "projen": "^0.23.2",
     "ts-jest": "^26.5.4",
     "ts-node": "^9",
     "typescript": "^4.2.3"
