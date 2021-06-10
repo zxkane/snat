@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
 
-const cdkVersion = '2.0.0-rc.1';
+const cdkVersion = '2.0.0-rc.7';
 
 const tsCustomConfig = {
   exclude: ['example'],
@@ -61,7 +61,7 @@ const project = new AwsCdkConstructLibrary({
   // deps: undefined,                                                                 /* Runtime dependencies of this module. */
   // description: undefined,                                                   /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
-    'aws-cdk-lib@2.0.0-rc.1',
+    'aws-cdk-lib@' + cdkVersion,
     'constructs@^10.0.5',
     '@types/mustache',
   ], /* Build dependencies for this module. */
@@ -86,7 +86,7 @@ const project = new AwsCdkConstructLibrary({
   // packageName: undefined,                                                   /* The "name" in package.json. */
   // peerDependencyOptions: undefined,                                         /* Options for `peerDeps`. */
   peerDeps: [
-    'aws-cdk-lib@^2.0.0-rc.1',
+    'aws-cdk-lib@^' + cdkVersion,
   ], /* Peer dependencies for this module. */
   // projenCommand: 'npx projen',                                              /* The shell command to use in order to run the projen CLI. */
   // repository: undefined,                                                    /* The repository is the location where the actual code for your package lives. */
