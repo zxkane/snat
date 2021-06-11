@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
+const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
 
 const cdkVersion = '2.0.0-rc.7';
 
@@ -147,6 +147,15 @@ const project = new AwsCdkConstructLibrary({
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
   // projectType: ProjectType.UNKNOWN,                                         /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    workflowOptions: {
+      labels: ['auto-approve', 'auto-merge'],
+      secret: 'PROJEN_GITHUB_TOKEN',
+    },
+  }),
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+  },
 });
 project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.buildTask.spawn(project.packageTask);
