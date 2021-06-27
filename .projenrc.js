@@ -150,7 +150,6 @@ const project = new AwsCdkConstructLibrary({
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      secret: 'PROJEN_GITHUB_TOKEN',
     },
   }),
   autoApproveOptions: {
