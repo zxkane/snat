@@ -152,7 +152,7 @@ const project = new AwsCdkConstructLibrary({
   autoApproveUpgrades: true,
   autoApproveOptions: {
     allowedUsernames: ['github-actions'],
-    secret: 'GITHUB_TOKEN',
+    secret: 'REPO_SCOPED_TOKEN',
   },
 });
 project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
