@@ -108,9 +108,6 @@ const project = new AwsCdkConstructLibrary({
   // jest: true,                                                               /* Setup jest unit tests. */
   // jestOptions: undefined,                                                   /* Jest options. */
   // jsiiReleaseVersion: 'latest',                                             /* Version requirement of `jsii-release` which is used to publish modules to npm. */
-  mergify: true, /* Adds mergify configuration. */
-  mergifyAutoMergeLabel: 'dependencies', /* Automatically merge PRs that build successfully and have this label. */
-  // mergifyOptions: undefined,                                                /* Options for mergify. */
   // mutableBuild: true,                                                       /* Automatically update files modified during builds to pull-request branches. */
   npmignore: [
     '/example',
@@ -152,7 +149,9 @@ const project = new AwsCdkConstructLibrary({
       labels: ['auto-approve', 'auto-merge'],
     },
   }),
+  autoApproveUpgrades: true,
   autoApproveOptions: {
+    allowedUsernames: ['github-actions'],
     secret: 'GITHUB_TOKEN',
   },
 });
