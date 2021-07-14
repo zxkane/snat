@@ -22,7 +22,9 @@
     "package": "npx projen package",
     "eslint": "npx projen eslint",
     "compat": "npx projen compat",
+    "publish:npm": "npx projen publish:npm",
     "docgen": "npx projen docgen",
+    "release": "npx projen release",
     "projen": "npx projen",
     "start": "npx projen start"
   },
@@ -52,7 +54,7 @@
     "jsii-pacmak": "^1.30.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.24.12",
+    "projen": "^0.27.1",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
     "typescript": "^4.3.4"
