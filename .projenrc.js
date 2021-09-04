@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
 
-const cdkVersion = '2.0.0-rc.11';
+const cdkVersion = '2.0.0-rc.20';
 
 const tsCustomConfig = {
   exclude: ['example'],

@@ -109,7 +109,7 @@ systemctl start sshuttle
       `,
       role,
     })
-    //.withGithubRoute()
+    .withGithubRoute()
     // .withGoogleRoute();
     
     gIPs.forEach(ip => { nat.addV4Route(ip)});
