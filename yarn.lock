@@ -821,10 +821,15 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.10.tgz#7aa732cc47341c12a16b7d562f519c2383b6d4fc"
   integrity sha512-S63Dlv4zIPb8x6MMTgDq5WWRJQe56iBEY0O3SOFA9JrRienkOVDXSXBjjJw6HTNQYSE2JI6GMCR6LVbIMHJVvA==
 
-"@types/node@^10.17.0", "@types/node@^10.17.60":
+"@types/node@^10.17.60":
   version "10.17.60"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.60.tgz#35f3d6213daed95da7f0f73e75bcc6980e90597b"
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
+
+"@types/node@^12.0.0":
+  version "12.20.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.23.tgz#d0d5885bb885ee9b1ed114a04ea586540a1b2e2a"
+  integrity sha512-FW0q7NI8UnjbKrJK8NGr6QXY69ATw9IFe6ItIo5yozPwA9DU/xkhiPddctUVyrmFXvyFYerYgQak/qu200UBDw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -5567,10 +5572,10 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.27.42:
-  version "0.27.42"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.27.42.tgz#22b04154dc9ea55f1bfe2dd7517e4ef9ad907c6d"
-  integrity sha512-VniOhT+wCNi72gVv3hVIBz+ejt9Af9wFMTyzAK0oIAgoiuzUiKFf8qaMkv07GfsorIvuFedgGyTVLJ1/vtsTcw==
+projen@^0.27.50:
+  version "0.27.50"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.27.50.tgz#f8bb845624184fc427eb31be24f276b6b6ecbb39"
+  integrity sha512-tia69y1Tj7IBV5Gf8N6jRFvF60tpai0HC+FzKbXLG4vy7FeU/3fWH0NqKlCfKX0Va0ZFhpcg2mnf9i5+h+uHgA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.2"
