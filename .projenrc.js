@@ -77,7 +77,7 @@ const project = new AwsCdkConstructLibrary({
   license: 'Apache-2.0', /* License's SPDX identifier. */
   licensed: true, /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                /* Minimum node.js version to require via `engines` (inclusive). */
-  minNodeVersion: '12.0.0',                                                /* Minimum Node.js version to require via package.json `engines` (inclusive). */
+  minNodeVersion: '12.0.0', /* Minimum Node.js version to require via package.json `engines` (inclusive). */
   // npmAccess: undefined,                                                     /* Access level of the npm package. */
   // npmDistTag: 'latest',                                                     /* Tags can be used to provide an alias instead of version numbers. */
   // npmRegistryUrl: 'https://registry.npmjs.org',                             /* The base URL of the npm package registry. */
@@ -161,8 +161,8 @@ const project = new AwsCdkConstructLibrary({
     rules: [
       {
         name: 'rule1',
-        conditions: []
-      }
+        conditions: [],
+      },
     ],
   },
 });
