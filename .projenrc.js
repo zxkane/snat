@@ -147,6 +147,7 @@ const project = new AwsCdkConstructLibrary({
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
+      secret: 'PROJEN_GITHUB_TOKEN',
     },
   }),
   autoApproveUpgrades: true,
@@ -169,7 +170,7 @@ const project = new AwsCdkConstructLibrary({
 project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.buildTask.spawn(project.packageTask);
 
-new AwsCdkTypeScriptApp({
+const examplePrj = new AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
   name: 'simple-nat-example',
   cdkDependencies: [
@@ -188,6 +189,9 @@ new AwsCdkTypeScriptApp({
   gitignore: [
     'cdk.context.json',
   ],
+});
+examplePrj.package.addField('resolutions', {
+  'pac-resolver': '^5.0.0',
 });
 
 project.synth();
