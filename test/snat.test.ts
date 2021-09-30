@@ -31,7 +31,7 @@ describe('Simple NAT construct', () => {
     expect(() => new SimpleNAT(stack, 'nat', {
       vpc,
       natSubnetsSelection: {
-        subnetType: SubnetType.PRIVATE,
+        subnetType: SubnetType.PRIVATE_WITH_NAT,
       },
     })).toThrow('The custom NAT subnet selection MUST select PUBLIC subnets');
   });
@@ -46,7 +46,7 @@ describe('Simple NAT construct', () => {
         {
           cidrMask: 24,
           name: 'application',
-          subnetType: SubnetType.ISOLATED,
+          subnetType: SubnetType.PRIVATE_ISOLATED,
         },
       ],
     });
@@ -146,7 +146,7 @@ describe('Simple NAT construct', () => {
     new SimpleNAT(stack, 'nat', {
       vpc,
       privateSubnetsSelection: {
-        subnetType: SubnetType.ISOLATED,
+        subnetType: SubnetType.PRIVATE_ISOLATED,
       },
     }).addV4Route('0.0.0.0/0');
 
