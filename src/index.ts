@@ -34,7 +34,7 @@ export interface SimpleNATProps {
   /**
    * The subnet selection for updating route tables for selected subnets.
    *
-   * @default - subnetType is SubnetType.PRIVATE.
+   * @default - subnetType is SubnetType.PRIVATE_WITH_NAT.
    */
   readonly privateSubnetsSelection?: SubnetSelection;
   /**
@@ -201,7 +201,7 @@ export class SimpleNAT extends Resource {
     }
 
     this._routeMappingSubnets = props.vpc.selectSubnets(props.privateSubnetsSelection ?? {
-      subnetType: SubnetType.PRIVATE,
+      subnetType: SubnetType.PRIVATE_WITH_NAT,
     }).subnets.reduce((routeMapping, sub) => {
       if (routeMapping.has(sub.routeTable.routeTableId)) {
         routeMapping.get(sub.routeTable.routeTableId).push(sub);

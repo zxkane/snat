@@ -40,6 +40,7 @@ junit.xml
 /dist/version.txt
 !/.mergify.yml
 !/.github/workflows/upgrade.yml
+!/.github/workflows/upgrade-projen.yml
 !/.github/pull_request_template.md
 !/test/
 !/src/

@@ -1,6 +1,6 @@
 const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
 
-const cdkVersion = '2.0.0-rc.20';
+const cdkVersion = '2.0.0-rc.23';
 
 const tsCustomConfig = {
   exclude: ['example'],
@@ -26,7 +26,7 @@ const project = new AwsCdkConstructLibrary({
   ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkDependenciesAsDeps: true,                                              /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
-  cdkVersionPinning: true, /* Use pinned version instead of caret version for CDK. */
+  cdkVersionPinning: false, /* Use pinned version instead of caret version for CDK. */
 
   /* ConstructLibraryOptions */
   // catalog: undefined,                                                       /* Libraries will be picked up by the construct catalog when they are published to npm as jsii modules and will be published under:. */
@@ -62,7 +62,7 @@ const project = new AwsCdkConstructLibrary({
   // description: undefined,                                                   /* The description is just a string that helps people understand the purpose of the package. */
   devDeps: [
     'aws-cdk-lib@' + cdkVersion,
-    'constructs@^10.0.5',
+    'constructs@10.0.5',
     '@types/mustache',
   ], /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                               /* Module entrypoint (`main` in `package.json`). */
@@ -77,7 +77,7 @@ const project = new AwsCdkConstructLibrary({
   license: 'Apache-2.0', /* License's SPDX identifier. */
   licensed: true, /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                /* Minimum node.js version to require via `engines` (inclusive). */
-  minNodeVersion: '12.0.0', /* Minimum Node.js version to require via package.json `engines` (inclusive). */
+  minNodeVersion: '12.7.0', /* Minimum Node.js version to require via package.json `engines` (inclusive). */
   // npmAccess: undefined,                                                     /* Access level of the npm package. */
   // npmDistTag: 'latest',                                                     /* Tags can be used to provide an alias instead of version numbers. */
   // npmRegistryUrl: 'https://registry.npmjs.org',                             /* The base URL of the npm package registry. */
@@ -119,7 +119,7 @@ const project = new AwsCdkConstructLibrary({
   // projenDevDependency: true,                                                /* Indicates of "projen" should be installed as a devDependency. */
   // projenUpgradeAutoMerge: undefined,                                        /* Automatically merge projen upgrade PRs when build passes. */
   // projenUpgradeSchedule: [ '0 6 * * *' ],                                   /* Customize the projenUpgrade schedule in cron expression. */
-  // projenUpgradeSecret: undefined,                                           /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
+  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN', /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
   // projenVersion: '^0.23.0', /* Version of projen to install. */
   // pullRequestTemplate: true,                                                /* Include a GitHub pull request template. */
   pullRequestTemplateContents: [
@@ -167,6 +167,10 @@ const project = new AwsCdkConstructLibrary({
     ],
   },
 });
+project.package.addField('resolutions', {
+  'set-value': '^4.0.1',
+  'ansi-regex': '^5.0.1',
+});
 project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.buildTask.spawn(project.packageTask);
 
@@ -192,6 +196,8 @@ const examplePrj = new AwsCdkTypeScriptApp({
 });
 examplePrj.package.addField('resolutions', {
   'pac-resolver': '^5.0.0',
+  'set-value': '^4.0.1',
+  'ansi-regex': '^5.0.1',
 });
 
 project.synth();
