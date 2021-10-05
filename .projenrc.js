@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp, DependenciesUpgradeMechanism } = require('projen');
+const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
 
 const cdkVersion = '2.0.0-rc.23';
 
@@ -144,12 +144,13 @@ const project = new AwsCdkConstructLibrary({
   // parent: undefined,                                                        /* The parent project, if this project is part of a bigger project. */
   // projectType: ProjectType.UNKNOWN,                                         /* Which type of project this is (library/app). */
   // readme: undefined,                                                        /* The README setup. */
-  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+  depsUpgradeOptions: {
+    ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
       secret: 'PROJEN_GITHUB_TOKEN',
     },
-  }),
+  },
   autoApproveUpgrades: true,
   autoApproveOptions: {
     allowedUsernames: ['github-actions'],
