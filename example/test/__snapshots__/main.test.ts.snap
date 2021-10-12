@@ -234,6 +234,30 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
+    "VpcPrivateSubnet1Route10213320224232B9B8062B": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "102.133.202.242/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet1Route102133202246323E19C932": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "102.133.202.246/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
     "VpcPrivateSubnet1Route131144048329F795ACC": Object {
       "Properties": Object {
         "DestinationCidrBlock": "13.114.40.48/32",
@@ -824,6 +848,30 @@ Object {
         "DestinationCidrBlock": "0.0.0.0/0",
         "NatGatewayId": Object {
           "Ref": "VpcPublicSubnet2NATGateway9182C01D",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2Route10213320224232987A4C17": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "102.133.202.242/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2Route1021332022463224AD5A29": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "102.133.202.246/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
         },
         "RouteTableId": Object {
           "Ref": "VpcPrivateSubnet2RouteTableA678073B",
