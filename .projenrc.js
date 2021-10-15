@@ -182,7 +182,7 @@ const examplePrj = new AwsCdkTypeScriptApp({
   ] /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */,
   cdkVersionPinning: true /* Use pinned version instead of caret version for CDK. */,
   deps: [
-    'cdk-construct-simple-nat@^0.1.4',
+    'cdk-construct-simple-nat@^0.1.98',
   ],
   description:
     'An example CDK app uses SimpleNAT construct.' /* The description is just a string that helps people understand the purpose of the package. */,
