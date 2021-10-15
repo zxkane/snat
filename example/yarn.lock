@@ -1627,10 +1627,10 @@ cdk-assets@2.0.0-rc.23:
     mime "^2.5.2"
     yargs "^16.2.0"
 
-cdk-construct-simple-nat@^0.1.4:
-  version "0.1.64"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.1.64.tgz#56208cf1f89f76c69eafdbdd4e6ca45da7c775b1"
-  integrity sha512-y5m90n1yNQ1jPhDsMD4d2Ulp/BqutgOgO0yPfjt5zSuudtJNZRqfs42wQwzjfRziT3DFFJLohN0YHhFBlle+3g==
+cdk-construct-simple-nat@^0.1.98:
+  version "0.1.98"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.1.98.tgz#4a1f54938661ce6a57a403596adeb09f0705d47e"
+  integrity sha512-4cAFxM5GfzLd6IUv1p0hc+Q3Ea7NfFarFj1qZxcxGAu0/5JAaIin77Ef6++juSsH9cCMbZRqJ6aFZYHfv4WKUw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"

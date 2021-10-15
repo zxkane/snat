@@ -41,7 +41,7 @@
   "dependencies": {
     "@aws-cdk/assert": "2.0.0-rc.23",
     "aws-cdk-lib": "2.0.0-rc.23",
-    "cdk-construct-simple-nat": "^0.1.4",
+    "cdk-construct-simple-nat": "^0.1.98",
     "constructs": "^10.0.5"
   },
   "bundledDependencies": [],
