@@ -170,18 +170,6 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
-    "VPC1PrivateSubnet1Route1212802212D7C08B": Object {
-      "Properties": Object {
-        "DestinationCidrBlock": "1.2.128.0./22",
-        "NetworkInterfaceId": Object {
-          "Ref": "VPC1PublicSubnet1ENI1B5B83581",
-        },
-        "RouteTableId": Object {
-          "Ref": "VPC1PrivateSubnet1RouteTable0621C09F",
-        },
-      },
-      "Type": "AWS::EC2::Route",
-    },
     "VPC1PrivateSubnet1RouteTable0621C09F": Object {
       "Properties": Object {
         "Tags": Array [
@@ -206,6 +194,18 @@ Object {
         },
       },
       "Type": "AWS::EC2::SubnetRouteTableAssociation",
+    },
+    "VPC1PrivateSubnet1Routev412128022E8C20E52": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "1.2.128.0./22",
+        "NetworkInterfaceId": Object {
+          "Ref": "VPC1PublicSubnet1ENI1B5B83581",
+        },
+        "RouteTableId": Object {
+          "Ref": "VPC1PrivateSubnet1RouteTable0621C09F",
+        },
+      },
+      "Type": "AWS::EC2::Route",
     },
     "VPC1PrivateSubnet1SubnetF1F3017C": Object {
       "Properties": Object {
@@ -251,18 +251,6 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
-    "VPC1PrivateSubnet2Route1212802246A3E803": Object {
-      "Properties": Object {
-        "DestinationCidrBlock": "1.2.128.0./22",
-        "NetworkInterfaceId": Object {
-          "Ref": "VPC1PublicSubnet2ENI1EB7B542A",
-        },
-        "RouteTableId": Object {
-          "Ref": "VPC1PrivateSubnet2RouteTableE015DA08",
-        },
-      },
-      "Type": "AWS::EC2::Route",
-    },
     "VPC1PrivateSubnet2RouteTableAssociation2EDAD2EE": Object {
       "Properties": Object {
         "RouteTableId": Object {
@@ -287,6 +275,18 @@ Object {
         },
       },
       "Type": "AWS::EC2::RouteTable",
+    },
+    "VPC1PrivateSubnet2Routev412128022920A0ACD": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "1.2.128.0./22",
+        "NetworkInterfaceId": Object {
+          "Ref": "VPC1PublicSubnet2ENI1EB7B542A",
+        },
+        "RouteTableId": Object {
+          "Ref": "VPC1PrivateSubnet2RouteTableE015DA08",
+        },
+      },
+      "Type": "AWS::EC2::Route",
     },
     "VPC1PrivateSubnet2SubnetF7D3D6D4": Object {
       "Properties": Object {

@@ -179,6 +179,7 @@ describe('Simple NAT construct', () => {
     });
   });
 
+  const ipV6Regex = new RegExp(SimpleNAT.Ipv6Regex);
   test('create NAT instances for github routes', () => {
 
     const stack = new Stack();
@@ -191,15 +192,27 @@ describe('Simple NAT construct', () => {
     const githubMeta = fetch('https://api.github.com/meta').json();
 
     for (const cidr of githubMeta.git) {
-      expect(stack).toHaveResourceLike('AWS::EC2::Route', {
-        DestinationCidrBlock: cidr,
-        NetworkInterfaceId: {
-          Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
-        },
-        RouteTableId: {
-          Ref: 'VPC1PrivateSubnet2RouteTableE015DA08',
-        },
-      });
+      if (ipV6Regex.test(cidr)) {
+        expect(stack).toHaveResourceLike('AWS::EC2::Route', {
+          DestinationIpv6CidrBlock: cidr,
+          NetworkInterfaceId: {
+            Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
+          },
+          RouteTableId: {
+            Ref: 'VPC1PrivateSubnet2RouteTableE015DA08',
+          },
+        });
+      } else {
+        expect(stack).toHaveResourceLike('AWS::EC2::Route', {
+          DestinationCidrBlock: cidr,
+          NetworkInterfaceId: {
+            Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
+          },
+          RouteTableId: {
+            Ref: 'VPC1PrivateSubnet2RouteTableE015DA08',
+          },
+        });
+      }
     }
 
     expect(stack).toCountResources('AWS::EC2::Route', 4 + githubMeta.git.length * 2);
