@@ -78,12 +78,15 @@ interface RouteStats {
  */
 export class SimpleNAT extends Resource {
 
+  static readonly Ipv6Regex = '^s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:)))(%.+)?s*(\/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?$';
+
   private gateways: PrefSet<NATInstance> = new PrefSet<NATInstance>();
   private _securityGroup: ISecurityGroup;
   private _routeMappingSubnets: Map<string, Subnet[]>;
   private _routeTablesLimit: Map<string, RouteStats> = new Map();
 
   private readonly _defaultRoutesPerTable = 50;
+  private readonly _ipV6Regex = new RegExp(SimpleNAT.Ipv6Regex);
 
   constructor(scope: Construct, id: string, props: SimpleNATProps) {
     super(scope, id);
@@ -234,7 +237,9 @@ export class SimpleNAT extends Resource {
     const githubMeta = fetch('https://api.github.com/meta').json();
     for (const cidr of githubMeta.git) {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
-        this._configureSubnet(routeId, subnets, cidr);
+        if (this._ipV6Regex.test(cidr)) {this._configureSubnet(routeId, subnets, undefined, cidr);} else {
+          this._configureSubnet(routeId, subnets, cidr);
+        }
       }
     }
     return this;
@@ -254,7 +259,7 @@ export class SimpleNAT extends Resource {
   private _configureSubnet(_routeId: string, subnets: Subnet[], v4CIDR?: string, v6CIDR?: string) : SimpleNAT {
     const az = subnets[0].availabilityZone;
     const natInstance = this.gateways.pick(az);
-    this._addRoute(`Route-${v4CIDR ? v4CIDR?.replace(/[\./]/gi, '-') : v6CIDR?.replace(/[:/]/gi, '-')}`, subnets[0], {
+    this._addRoute(`Route-${v4CIDR ? 'v4-' + v4CIDR?.replace(/[\./]/gi, '-') : 'v6-' + v6CIDR?.replace(/[:/]/gi, '-')}`, subnets[0], {
       destinationCidrBlock: v4CIDR,
       destinationIpv6CidrBlock: v6CIDR,
       routerType: RouterType.NETWORK_INTERFACE,

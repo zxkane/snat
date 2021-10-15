@@ -43,6 +43,14 @@ new SimpleNAT(scope: Construct, id: string, props: SimpleNATProps)
   * **role** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  The IAM role attached to NAT instances. __*Default*__: an IAM role is created.
 
 
+
+### Properties
+
+
+Name | Type | Description 
+-----|------|-------------
+*static* **Ipv6Regex** | <code>string</code> | <span></span>
+
 ### Methods
 
 
