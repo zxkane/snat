@@ -3,26 +3,26 @@
 
 
 "@aws-cdk/assert@^2.0.0-rc.25":
-  version "2.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-2.0.0-rc.25.tgz#2d244a2dcc8d0b295526ba565d21232e43a8bfc6"
-  integrity sha512-HOW/9rHfoK3RmO2C1iTrEzPEkjVuuepM687T7Ul9gYZ8BmWqeuaXrF7T+FLVLSXeT/0B64R/iwOg6QlsGxvCxg==
+  version "2.0.0-rc.26"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-2.0.0-rc.26.tgz#c02a76c2cb9a3976eb2cc1105d08bb8714a72f2e"
+  integrity sha512-IGnh2Zb0JPzebvS0q0mL8XGWrkcOi/Vas/Cj9JQ4LiebqQnAK9zSOvoiGzWA9wLkjdbhWqCcoRS0aqRJsqi1Tg==
   dependencies:
-    "@aws-cdk/cloudformation-diff" "2.0.0-rc.25"
+    "@aws-cdk/cloudformation-diff" "2.0.0-rc.26"
 
-"@aws-cdk/cfnspec@2.0.0-rc.25":
-  version "2.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-2.0.0-rc.25.tgz#7eafbbd019c194babec5438d9541f773bf82d7d1"
-  integrity sha512-Vk4Yc57DKqDMJiTITLKAh9fjo0DwfDf6ql5TSyJJREbIJpLzWpMMAKQB52pM9WqjrlldmpVtVDQMRJ+CT0fUjg==
+"@aws-cdk/cfnspec@2.0.0-rc.26":
+  version "2.0.0-rc.26"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cfnspec/-/cfnspec-2.0.0-rc.26.tgz#74bc8bd0de54cd790ba3d2bd640d12981f635890"
+  integrity sha512-QPSuXidpBtiAoe/uS9dSA7F8428ZwIyofUxtSlUbmsCNK49tbsoSZtybJXRYgRGqDzqkrcpnZN33Yz6XYue9Lg==
   dependencies:
     fs-extra "^9.1.0"
     md5 "^2.3.0"
 
-"@aws-cdk/cloudformation-diff@2.0.0-rc.25":
-  version "2.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/cloudformation-diff/-/cloudformation-diff-2.0.0-rc.25.tgz#14a6ac60df433dadf4dbb0ac31a172b6bee713f5"
-  integrity sha512-2K6IWFv98sDACNi7tDSmthqPMQZT1NEf5uZfyidY9GjG0IZjqci2KDfr4hUS9KSaZUxXeflvUbrjNL4e2kphxw==
+"@aws-cdk/cloudformation-diff@2.0.0-rc.26":
+  version "2.0.0-rc.26"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/cloudformation-diff/-/cloudformation-diff-2.0.0-rc.26.tgz#f5d3b0dabd8769b398b22a184f6c73f15b03f94d"
+  integrity sha512-hw6hpv+KwNMGPoMNXDaoQN+YjjXLQxXZCESj8fXHBkbO7fBqOV/YExzKpL5W277hdvgpCYb3PvQpkQovBQVfaA==
   dependencies:
-    "@aws-cdk/cfnspec" "2.0.0-rc.25"
+    "@aws-cdk/cfnspec" "2.0.0-rc.26"
     "@types/node" "^10.17.60"
     colors "^1.4.0"
     diff "^5.0.0"
@@ -2268,9 +2268,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.878:
-  version "1.3.879"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.879.tgz#4aba9700cfb241fb95c6ed69e31785e3d1605a43"
-  integrity sha512-zJo+D9GwbJvM31IdFmwcGvychhk4KKbKYo2GWlsn+C/dxz2NwmbhGJjWwTfFSF2+eFH7VvfA8MCZ8SOqTrlnpw==
+  version "1.3.880"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.880.tgz#58d1a298c5267f2faf440683d038c50ab39a6401"
+  integrity sha512-iwIP/6WoeSimzUKJIQtjtpVDsK8Ir8qQCMXsUBwg+rxJR2Uh3wTNSbxoYRfs+3UWx/9MAnPIxVZCyWkm8MT0uw==
 
 emittery@^0.7.1:
   version "0.7.2"
