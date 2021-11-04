@@ -3,6 +3,7 @@ import { App, Stack, StackProps, Arn, Aws } from 'aws-cdk-lib';
 import { SimpleNAT } from 'cdk-construct-simple-nat';
 import { Vpc, GatewayVpcEndpointAwsService, SubnetType } from 'aws-cdk-lib/aws-ec2';
 import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from 'aws-cdk-lib/aws-iam';
+const fetch = require('sync-fetch');
 
 export class SimpleNATStack extends Stack {
   constructor(scope: Construct, id: string, props: StackProps = {}) {
@@ -67,10 +68,18 @@ export class SimpleNATStack extends Stack {
       },
     });
     
-    const gIPs = [
-      '74.125.0.0/16',
-      '172.217.0.0/16',
+    const IPs = [
+      // '74.125.0.0/16',
+      // '172.217.0.0/16',
     ];
+    
+    const ipV6Regex = new RegExp(SimpleNAT.Ipv6Regex);
+    const githubMeta = fetch('https://api.github.com/meta').json();
+    for (const cidr of githubMeta.git) {
+      if (!ipV6Regex.test(cidr)) {
+        IPs.push(cidr);
+      }
+    }
     const nat = new SimpleNAT(this, 'SimpleNAT', {
       vpc,
       natSubnetsSelection: {
@@ -99,7 +108,7 @@ User=sshuttle
 Restart=always
 Type=forking
 WorkingDirectory=/home/sshuttle
-ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST ${gIPs.join(' ')}
+ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST ${IPs.join(' ')}
 ExecStop=killall sshuttle
 [Install]
 WantedBy=multi-user.target
@@ -108,11 +117,9 @@ systemctl daemon-reload
 systemctl start sshuttle
       `,
       role,
-    })
-    .withGithubRoute()
-    // .withGoogleRoute();
+    });
     
-    gIPs.forEach(ip => { nat.addV4Route(ip)});
+    IPs.forEach(ip => { nat.addV4Route(ip)});
   }
 }
 
