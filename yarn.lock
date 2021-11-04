@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/assert@^2.0.0-rc.25":
+"@aws-cdk/assert@^2.0.0-rc.27":
   version "2.0.0-rc.27"
   resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-2.0.0-rc.27.tgz#78e87fccfc9e5fcff8a2bdd2eaee5fcb93a8d92a"
   integrity sha512-Yw8wODVrAvZQ6uqfqkdEqFs69TnjBR7gB+hbhUpFXE6SSsfW4x0S6QZs/qxqbcGc5LdHkU0Q8v2PBul5fkviww==
@@ -1205,10 +1205,10 @@ available-typed-arrays@^1.0.5:
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
-aws-cdk-lib@2.0.0-rc.25:
-  version "2.0.0-rc.25"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.0.0-rc.25.tgz#ccfe75d89443c822988e826f348f8f7812fec657"
-  integrity sha512-UNIBl0wF6DZ5nn2VtaLz3hVUgEo6NC4ClOKyiAUTpnot8IIWFu1OjjgoDeLvCKn5ot7L4Kq1x69j+0NSmpNdlw==
+aws-cdk-lib@2.0.0-rc.27:
+  version "2.0.0-rc.27"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.0.0-rc.27.tgz#7eeb5dc0339dfd27a034a6b98f3e855a15be213d"
+  integrity sha512-yKiXhqvSgPWr8yeatL19J38bmrnzLQfuuSZbZwNEWjFj9XArj+U1b7K1EXPUyPYkC7JKv2AIB0UuYeiwcc00aA==
   dependencies:
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
