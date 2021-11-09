@@ -4,7 +4,10 @@ const cdkVersion = '2.0.0-rc.27';
 
 const tsCustomConfig = {
   exclude: ['example'],
-  include: ['src/'],
+  include: [
+    'src/*.sh',
+    'src/snat.service',
+  ],
 };
 
 const project = new AwsCdkConstructLibrary({
@@ -18,7 +21,7 @@ const project = new AwsCdkConstructLibrary({
   description: 'A CDK construct to build Simple NAT instance on AWS.',
   repositoryUrl: 'git@github.com:zxkane/snat.git',
 
-  tsconfig: tsCustomConfig,
+  tsconfigDev: tsCustomConfig,
   buildWorkflowMutable: true,
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
@@ -172,8 +175,9 @@ project.package.addField('resolutions', {
   'set-value': '^4.0.1',
   'ansi-regex': '^5.0.1',
 });
-project.buildTask.exec('cp src/snat.* src/runonce.sh lib/');
-project.buildTask.spawn(project.packageTask);
+// console.log(project)
+project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
+// project.releaseTask.spawn(project.packageTask);
 
 const examplePrj = new AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
