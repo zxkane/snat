@@ -28,7 +28,8 @@
     ".projenrc.js",
     "src/**/*.ts",
     "test/**/*.ts",
-    "src/"
+    "src/*.sh",
+    "src/snat.service"
   ],
   "exclude": [
     "node_modules",
