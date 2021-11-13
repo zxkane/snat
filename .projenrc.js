@@ -162,14 +162,6 @@ const project = new AwsCdkConstructLibrary({
   autoMergeOptions: {
     approvedReviews: 0,
   },
-  mergifyOptions: {
-    rules: [
-      {
-        name: 'rule1',
-        conditions: [],
-      },
-    ],
-  },
 });
 project.package.addField('resolutions', {
   'set-value': '^4.0.1',

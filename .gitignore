@@ -2,7 +2,6 @@
 !/.gitattributes
 !/.projen/tasks.json
 !/.projen/deps.json
-!/.mergify.yml
 !/.gitpod.yml
 !/.github/workflows/auto-approve.yml
 !/.github/workflows/stale.yml
@@ -39,6 +38,7 @@ junit.xml
 !/.github/workflows/build.yml
 /dist/changelog.md
 /dist/version.txt
+!/.mergify.yml
 !/.github/pull_request_template.md
 !/test/
 !/tsconfig.dev.json
