@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, AwsCdkTypeScriptApp } = require('projen');
+const { awscdk } = require('projen');
 
 const cdkVersion = '2.0.0';
 
@@ -10,7 +10,7 @@ const tsCustomConfig = {
   ],
 };
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kane Zhu',
   authorAddress: 'me@kane.mx',
   cdkVersion: cdkVersion,
@@ -171,7 +171,7 @@ project.package.addField('resolutions', {
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 // project.releaseTask.spawn(project.packageTask);
 
-const examplePrj = new AwsCdkTypeScriptApp({
+const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
   name: 'simple-nat-example',
   cdkDependencies: [
