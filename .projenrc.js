@@ -25,8 +25,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   buildWorkflowMutable: true,
   /* AwsCdkConstructLibraryOptions */
   // cdkAssert: true,                                                          /* Install the @aws-cdk/assert library? */
-  cdkDependencies: [
-  ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
   // cdkDependenciesAsDeps: true,                                              /* If this is enabled (default), all modules declared in `cdkDependencies` will be also added as normal `dependencies` (as well as `peerDependencies`). */
   // cdkTestDependencies: undefined,                                           /* AWS CDK modules required for testing. */
   cdkVersionPinning: false, /* Use pinned version instead of caret version for CDK. */
@@ -66,6 +64,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   devDeps: [
     'aws-cdk-lib@' + cdkVersion,
     'constructs@10.0.5',
+    '@aws-cdk/assert@^2.0.0',
     '@types/mustache',
   ], /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                               /* Module entrypoint (`main` in `package.json`). */
