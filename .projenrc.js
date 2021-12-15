@@ -13,7 +13,6 @@ const tsCustomConfig = {
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kane Zhu',
   authorAddress: 'me@kane.mx',
-  minorVersion: 2,
   cdkVersion: cdkVersion,
   defaultReleaseBranch: 'main',
   compileBeforeTest: true, // since we want to run the cli in tests
