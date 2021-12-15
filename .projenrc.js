@@ -174,7 +174,7 @@ const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   name: 'simple-nat-example',
   cdkVersionPinning: false /* Use pinned version instead of caret version for CDK. */,
   deps: [
-    'cdk-construct-simple-nat@^0.1.98',
+    'cdk-construct-simple-nat@^0.2',
   ],
   description:
     'An example CDK app uses SimpleNAT construct.' /* The description is just a string that helps people understand the purpose of the package. */,
