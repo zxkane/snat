@@ -13,6 +13,7 @@ const tsCustomConfig = {
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Kane Zhu',
   authorAddress: 'me@kane.mx',
+  minorVersion: 2,
   cdkVersion: cdkVersion,
   defaultReleaseBranch: 'main',
   compileBeforeTest: true, // since we want to run the cli in tests
@@ -79,7 +80,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   license: 'Apache-2.0', /* License's SPDX identifier. */
   licensed: true, /* Indicates if a license should be added. */
   // maxNodeVersion: undefined,                                                /* Minimum node.js version to require via `engines` (inclusive). */
-  minNodeVersion: '14.17.0', /* Minimum Node.js version to require via package.json `engines` (inclusive). */
   // npmAccess: undefined,                                                     /* Access level of the npm package. */
   // npmDistTag: 'latest',                                                     /* Tags can be used to provide an alias instead of version numbers. */
   // npmRegistryUrl: 'https://registry.npmjs.org',                             /* The base URL of the npm package registry. */
@@ -173,9 +173,7 @@ project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
   name: 'simple-nat-example',
-  cdkDependencies: [
-  ] /* Which AWS CDK modules (those that start with "@aws-cdk/") this app uses. */,
-  cdkVersionPinning: true /* Use pinned version instead of caret version for CDK. */,
+  cdkVersionPinning: false /* Use pinned version instead of caret version for CDK. */,
   deps: [
     'cdk-construct-simple-nat@^0.1.98',
   ],
