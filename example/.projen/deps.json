@@ -87,7 +87,7 @@
     },
     {
       "name": "cdk-construct-simple-nat",
-      "version": "^0.1.98",
+      "version": "^0.2",
       "type": "runtime"
     },
     {
