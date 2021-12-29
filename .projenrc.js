@@ -150,7 +150,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      secret: 'PROJEN_GITHUB_TOKEN',
     },
   },
   autoApproveUpgrades: true,
