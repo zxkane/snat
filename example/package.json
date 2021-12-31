@@ -49,7 +49,6 @@
     "cdk-construct-simple-nat": "^0.2",
     "constructs": "^10.0.5"
   },
-  "bundledDependencies": [],
   "license": "UNLICENSED",
   "version": "0.0.0",
   "jest": {
