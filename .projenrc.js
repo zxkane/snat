@@ -164,6 +164,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
 project.package.addField('resolutions', {
   'set-value': '^4.0.1',
   'ansi-regex': '^5.0.1',
+  'colors': '1.4.0',
 });
 // console.log(project)
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
@@ -192,6 +193,7 @@ examplePrj.package.addField('resolutions', {
   'set-value': '^4.0.1',
   'ansi-regex': '^5.0.1',
   'json-schema': '^0.4.0',
+  'colors': '1.4.0',
 });
 
 project.synth();
