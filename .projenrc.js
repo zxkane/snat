@@ -168,7 +168,7 @@ project.package.addField('resolutions', {
 });
 // console.log(project)
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
-// project.releaseTask.spawn(project.packageTask);
+project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade ');
 
 const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,

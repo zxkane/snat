@@ -164,7 +164,12 @@
     },
     "post-upgrade": {
       "name": "post-upgrade",
-      "description": "Runs after upgrading dependencies"
+      "description": "Runs after upgrading dependencies",
+      "steps": [
+        {
+          "exec": "yarn --cwd example upgrade "
+        }
+      ]
     },
     "pre-compile": {
       "name": "pre-compile",
