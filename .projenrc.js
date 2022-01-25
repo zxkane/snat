@@ -121,7 +121,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // projenDevDependency: true,                                                /* Indicates of "projen" should be installed as a devDependency. */
   // projenUpgradeAutoMerge: undefined,                                        /* Automatically merge projen upgrade PRs when build passes. */
   // projenUpgradeSchedule: [ '0 6 * * *' ],                                   /* Customize the projenUpgrade schedule in cron expression. */
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN', /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
+  // projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN', /* Periodically submits a pull request for projen upgrades (executes `yarn projen:upgrade`). */
   // projenVersion: '^0.23.0', /* Version of projen to install. */
   // pullRequestTemplate: true,                                                /* Include a GitHub pull request template. */
   pullRequestTemplateContents: [

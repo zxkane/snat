@@ -38,6 +38,7 @@ new SimpleNAT(scope: Construct, id: string, props: SimpleNATProps)
   * **customScripts** (<code>string</code>)  The custom script when provisioning the NAT instances. __*Default*__: no custom script.
   * **instanceType** (<code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code>)  The instance type of NAT instances. __*Default*__: t3.MICRO.
   * **keyName** (<code>string</code>)  The key name of ssh key of NAT instances. __*Default*__: No SSH access will be possible.
+  * **machineImage** (<code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code>)  The AMI of NAT instances. __*Default*__: Amazon Linux 2 for x86_64.
   * **natSubnetsSelection** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  The subnet selection for NAT instances, one NAT instance will be placed in the selected subnets. __*Default*__: subnetType is SubnetType.PUBLIC and onePerAZ is true.
   * **privateSubnetsSelection** (<code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code>)  The subnet selection for updating route tables for selected subnets. __*Default*__: subnetType is SubnetType.PRIVATE_WITH_NAT.
   * **role** (<code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code>)  The IAM role attached to NAT instances. __*Default*__: an IAM role is created.
@@ -119,6 +120,7 @@ Name | Type | Description
 **customScripts**? | <code>string</code> | The custom script when provisioning the NAT instances.<br/>__*Default*__: no custom script.
 **instanceType**? | <code>[aws_ec2.InstanceType](#aws-cdk-lib-aws-ec2-instancetype)</code> | The instance type of NAT instances.<br/>__*Default*__: t3.MICRO.
 **keyName**? | <code>string</code> | The key name of ssh key of NAT instances.<br/>__*Default*__: No SSH access will be possible.
+**machineImage**? | <code>[aws_ec2.IMachineImage](#aws-cdk-lib-aws-ec2-imachineimage)</code> | The AMI of NAT instances.<br/>__*Default*__: Amazon Linux 2 for x86_64.
 **natSubnetsSelection**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | The subnet selection for NAT instances, one NAT instance will be placed in the selected subnets.<br/>__*Default*__: subnetType is SubnetType.PUBLIC and onePerAZ is true.
 **privateSubnetsSelection**? | <code>[aws_ec2.SubnetSelection](#aws-cdk-lib-aws-ec2-subnetselection)</code> | The subnet selection for updating route tables for selected subnets.<br/>__*Default*__: subnetType is SubnetType.PRIVATE_WITH_NAT.
 **role**? | <code>[aws_iam.IRole](#aws-cdk-lib-aws-iam-irole)</code> | The IAM role attached to NAT instances.<br/>__*Default*__: an IAM role is created.

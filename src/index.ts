@@ -8,7 +8,7 @@ import {
   CfnRoute, ISubnet, Subnet, RouterType, AddRouteOptions,
   MachineImage, AmazonLinuxGeneration, AmazonLinuxStorage, AmazonLinuxCpuType,
   CfnNetworkInterface, CfnEIP, CfnEIPAssociation,
-  CloudFormationInit, InitConfig, InitFile, InitPackage, InitCommand,
+  CloudFormationInit, InitConfig, InitFile, InitPackage, InitCommand, IMachineImage, OperatingSystemType,
 } from 'aws-cdk-lib/aws-ec2';
 import { ManagedPolicy, Role, ServicePrincipal, PolicyStatement, IRole } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
@@ -43,6 +43,12 @@ export interface SimpleNATProps {
    * @default - t3.MICRO.
    */
   readonly instanceType?: InstanceType;
+  /**
+   * The AMI of NAT instances
+   *
+   * @default - Amazon Linux 2 for x86_64.
+   */
+  readonly machineImage?: IMachineImage;
   /**
    * The key name of ssh key of NAT instances.
    *
@@ -103,11 +109,14 @@ export class SimpleNAT extends Resource {
 
     if (!subnets.hasPublic) {throw new Error('The custom NAT subnet selection MUST select PUBLIC subnets.');}
 
-    const machineImage = MachineImage.latestAmazonLinux({
+    const machineImage = props.machineImage ?? MachineImage.latestAmazonLinux({
       generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
       storage: AmazonLinuxStorage.GENERAL_PURPOSE,
       cpuType: AmazonLinuxCpuType.X86_64,
     });
+
+    if (machineImage.getImage(this).osType != OperatingSystemType.LINUX) {throw new Error('The OS of custom AMI must be Linux.');}
+
     this._securityGroup = new SecurityGroup(scope, 'NatSecurityGroup', {
       vpc: props.vpc,
       description: 'Security Group for NAT instances',
