@@ -2,7 +2,7 @@
 import '@aws-cdk/assert/jest';
 import { ResourcePart } from '@aws-cdk/assert/lib/assertions/have-resource';
 import { App, Stack } from 'aws-cdk-lib';
-import { Vpc, SubnetType, InstanceType, InstanceSize, InstanceClass } from 'aws-cdk-lib/aws-ec2';
+import { Vpc, SubnetType, InstanceType, InstanceSize, InstanceClass, MachineImage, AmazonLinuxGeneration, AmazonLinuxCpuType } from 'aws-cdk-lib/aws-ec2';
 import { SimpleNAT } from '../src';
 const fetch = require('sync-fetch');
 
@@ -176,6 +176,28 @@ describe('Simple NAT construct', () => {
 
     expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
       InstanceType: 'c5.large',
+    });
+  });
+
+  test('create NAT instances with custom AMI', () => {
+
+    const stack = new Stack();
+    const vpc = new Vpc(stack, 'VPC-1');
+
+    new SimpleNAT(stack, 'nat', {
+      vpc,
+      instanceType: InstanceType.of(InstanceClass.C6G, InstanceSize.LARGE),
+      machineImage: MachineImage.latestAmazonLinux({
+        generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
+        cpuType: AmazonLinuxCpuType.ARM_64,
+      }),
+    }).addV4Route('1.1.0.0/24');
+
+    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+      InstanceType: 'c6g.large',
+      ImageId: {
+        Ref: 'SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmarm64gp2C96584B6F00A464EAD1953AFF4B05118Parameter',
+      },
     });
   });
 
