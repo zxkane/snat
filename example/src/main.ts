@@ -1,7 +1,7 @@
 import { Construct } from 'constructs';
 import { App, Stack, StackProps, Arn, Aws } from 'aws-cdk-lib';
 import { SimpleNAT } from 'cdk-construct-simple-nat';
-import { Vpc, GatewayVpcEndpointAwsService, SubnetType } from 'aws-cdk-lib/aws-ec2';
+import { Vpc, GatewayVpcEndpointAwsService, SubnetType, InstanceType, InstanceSize, InstanceClass, MachineImage, AmazonLinuxCpuType, AmazonLinuxGeneration } from 'aws-cdk-lib/aws-ec2';
 import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 const fetch = require('sync-fetch');
 
@@ -80,6 +80,7 @@ export class SimpleNATStack extends Stack {
         IPs.push(cidr);
       }
     }
+
     const nat = new SimpleNAT(this, 'SimpleNAT', {
       vpc,
       natSubnetsSelection: {
@@ -87,6 +88,11 @@ export class SimpleNATStack extends Stack {
         // availabilityZones: ['cn-northwest-1a'],
         onePerAz: true,
       },
+      instanceType: InstanceType.of(InstanceClass.T4G, InstanceSize.MICRO),
+      machineImage: MachineImage.latestAmazonLinux({
+        generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
+        cpuType: AmazonLinuxCpuType.ARM_64,
+      }),
       customScripts: `#!/bin/bash -x
 yum install -y python3-pip gcc python3-devel
 pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle
