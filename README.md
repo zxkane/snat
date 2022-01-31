@@ -2,6 +2,7 @@
 
 ![Release](https://github.com/zxkane/snat/workflows/Release/badge.svg)
 [![NPM version](http://img.shields.io/npm/v/cdk-construct-simple-nat.svg?style=flat-square)](https://www.npmjs.com/package/cdk-construct-simple-nat)
+[![pypi version](http://img.shields.io/pypi/v/zxkane.cdk-construct-simple-nat.svg?style=flat-square)](https://pypi.org/project/zxkane.cdk-construct-simple-nat/)
 
 It's a CDK construct to create NAT instances on AWS. 
 
