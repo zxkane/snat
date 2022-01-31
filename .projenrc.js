@@ -19,7 +19,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiFqn: 'projen.AwsCdkConstructLibrary',
   name: 'cdk-construct-simple-nat',
   description: 'A CDK construct to build Simple NAT instance on AWS.',
-  repositoryUrl: 'git@github.com:zxkane/snat.git',
+  repositoryUrl: 'https://github.com/zxkane/snat',
 
   tsconfigDev: tsCustomConfig,
   buildWorkflowMutable: true,
@@ -160,6 +160,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   autoMergeOptions: {
     approvedReviews: 0,
   },
+  publishToPypi: {
+    distName: 'zxkane.cdk-construct-simple-nat',
+    module: 'zxkane.cdk_construct_simple_nat',
+  },  
 });
 project.package.addField('resolutions', {
   'set-value': '^4.0.1',
