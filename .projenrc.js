@@ -163,7 +163,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   publishToPypi: {
     distName: 'zxkane.cdk-construct-simple-nat',
     module: 'zxkane.cdk_construct_simple_nat',
-  },  
+  },
 });
 project.package.addField('resolutions', {
   'set-value': '^4.0.1',
