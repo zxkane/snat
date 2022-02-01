@@ -129,3 +129,25 @@ jobs:
         env:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
+  release_npm_github:
+    name: Publish to npm-github
+    needs: release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    if: needs.release.outputs.latest_commit == github.sha
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Download build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifact
+          path: dist
+      - name: Release
+        run: npx -p jsii-release@latest jsii-release-npm
+        env:
+          NPM_DIST_TAG: latest
+          NPM_REGISTRY: npm.pkg.github.com
