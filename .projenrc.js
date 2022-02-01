@@ -1,4 +1,4 @@
-const { awscdk } = require('projen');
+const { awscdk, github } = require('projen');
 
 const cdkVersion = '2.0.0';
 
@@ -170,9 +170,37 @@ project.package.addField('resolutions', {
   'ansi-regex': '^5.0.1',
   'colors': '1.4.0',
 });
-// console.log(project)
+
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade ');
+
+const options = {
+  registry: 'npm.pkg.github.com',
+};
+project.release.publisher.addPublishJob((_branch, branchOptions) => {
+  return {
+    name: 'npm_github',
+    publishTools: {},
+    prePublishSteps: options.prePublishSteps ?? [],
+    run: project.release.publisher.jsiiReleaseCommand('jsii-release-npm'),
+    registryName: 'npm-github',
+    env: {
+      NPM_DIST_TAG: branchOptions.npmDistTag ?? options.distTag ?? 'latest',
+      NPM_REGISTRY: options.registry,
+    },
+    permissions: {
+      contents: github.workflows.JobPermission.READ,
+      packages: github.workflows.JobPermission.WRITE,
+    },
+    workflowEnv: {
+      NPM_TOKEN: undefined,
+      // if we are publishing to AWS CodeArtifact, pass AWS access keys that will be used to generate NPM_TOKEN using AWS CLI.
+      AWS_ACCESS_KEY_ID: undefined,
+      AWS_SECRET_ACCESS_KEY: undefined,
+      AWS_ROLE_TO_ASSUME: undefined,
+    },
+  };
+});
 
 const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
