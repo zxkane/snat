@@ -174,8 +174,28 @@ project.package.addField('resolutions', {
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade ');
 
+const target = 'js';
+const REPO_TEMP_DIRECTORY = '.repo';
 const options = {
   registry: 'npm.pkg.github.com',
+  prePublishSteps: [
+    {
+      name: 'Prepare Repository',
+      run: `mv ${project.artifactsDirectory} ${REPO_TEMP_DIRECTORY}`,
+    },
+    {
+      name: 'Install Dependencies',
+      run: `cd ${REPO_TEMP_DIRECTORY} && ${project.package.installCommand}`,
+    },
+    {
+      name: `Create ${target} artifact`,
+      run: `cd ${REPO_TEMP_DIRECTORY} && npx projen package:js`,
+    },
+    {
+      name: `Collect ${target} Artifact`,
+      run: `mv ${REPO_TEMP_DIRECTORY}/${project.artifactsDirectory} ${project.artifactsDirectory}`,
+    },
+  ],
 };
 project.release.publisher.addPublishJob((_branch, branchOptions) => {
   return {
