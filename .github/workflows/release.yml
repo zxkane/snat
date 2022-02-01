@@ -151,3 +151,4 @@ jobs:
         env:
           NPM_DIST_TAG: latest
           NPM_REGISTRY: npm.pkg.github.com
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
