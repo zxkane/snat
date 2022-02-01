@@ -189,7 +189,7 @@ const options = {
     },
     {
       name: 'Update package name',
-      run: 'sed -i "1,5s/\\"cdk-construct-simple-nat\\"/\\"@zxkane\\/cdk-construct-simple-nat\\"/g" package.json',
+      run: `cd ${REPO_TEMP_DIRECTORY} && sed -i "1,5s/\\"cdk-construct-simple-nat\\"/\\"@zxkane\\/cdk-construct-simple-nat\\"/g" package.json`,
     },
     {
       name: `Create ${target} artifact`,
