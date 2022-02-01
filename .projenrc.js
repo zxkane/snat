@@ -193,7 +193,7 @@ project.release.publisher.addPublishJob((_branch, branchOptions) => {
       packages: github.workflows.JobPermission.WRITE,
     },
     workflowEnv: {
-      NPM_TOKEN: `\${{ secrets.GITHUB_TOKEN }}`,
+      NPM_TOKEN: '${{ secrets.GITHUB_TOKEN }}',
       // if we are publishing to AWS CodeArtifact, pass AWS access keys that will be used to generate NPM_TOKEN using AWS CLI.
       AWS_ACCESS_KEY_ID: undefined,
       AWS_SECRET_ACCESS_KEY: undefined,
