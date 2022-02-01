@@ -150,6 +150,8 @@ jobs:
         run: mv dist .repo
       - name: Install Dependencies
         run: cd .repo && yarn install --check-files --frozen-lockfile
+      - name: Update package name
+        run: sed -i "1,5s/\"cdk-construct-simple-nat\"/\"@zxkane\/cdk-construct-simple-nat\"/g" package.json
       - name: Create js artifact
         run: cd .repo && npx projen package:js
       - name: Collect js Artifact
@@ -159,4 +161,4 @@ jobs:
         env:
           NPM_DIST_TAG: latest
           NPM_REGISTRY: npm.pkg.github.com
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.ZXKANE_GITHUB_REGISTRY }}
