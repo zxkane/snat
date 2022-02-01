@@ -151,7 +151,7 @@ jobs:
       - name: Install Dependencies
         run: cd .repo && yarn install --check-files --frozen-lockfile
       - name: Update package name
-        run: sed -i "1,5s/\"cdk-construct-simple-nat\"/\"@zxkane\/cdk-construct-simple-nat\"/g" package.json
+        run: cd .repo && sed -i "1,5s/\"cdk-construct-simple-nat\"/\"@zxkane\/cdk-construct-simple-nat\"/g" package.json
       - name: Create js artifact
         run: cd .repo && npx projen package:js
       - name: Collect js Artifact
