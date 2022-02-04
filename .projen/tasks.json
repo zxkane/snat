@@ -194,7 +194,7 @@
       "description": "Runs after upgrading dependencies",
       "steps": [
         {
-          "exec": "yarn --cwd example upgrade "
+          "exec": "yarn --cwd example upgrade && npx projen"
         }
       ]
     },
