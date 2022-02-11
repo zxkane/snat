@@ -206,7 +206,7 @@ project.release.publisher.addPublishJob((_branch, branchOptions) => {
     name: 'npm_github',
     publishTools: {},
     prePublishSteps: options.prePublishSteps ?? [],
-    run: project.release.publisher.jsiiReleaseCommand('jsii-release-npm'),
+    run: project.release.publisher.publibCommand('publib-npm'),
     registryName: 'npm-github',
     env: {
       NPM_DIST_TAG: branchOptions.npmDistTag ?? options.distTag ?? 'latest',
