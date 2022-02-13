@@ -3,8 +3,13 @@
 exports[`Snapshot 1`] = `
 Object {
   "Parameters": Object {
-    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+    "BootstrapVersion": Object {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmarm64gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-arm64-gp2",
       "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
     },
   },
@@ -1165,7 +1170,7 @@ Object {
       },
       "Type": "AWS::EC2::NatGateway",
     },
-    "VpcPublicSubnet1NatInstance57B636B8558ff468f2a0cf39": Object {
+    "VpcPublicSubnet1NatInstance57B636B84c5b5ab9e5893642": Object {
       "CreationPolicy": Object {
         "ResourceSignal": Object {
           "Count": 1,
@@ -1210,7 +1215,7 @@ WantedBy = multi-user.target",
                     Array [
                       "#!/bin/bash -x
 yum install -y python3-pip gcc python3-devel
-pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle
+pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle==1.0.5
 groupadd sshuttle
 useradd -d /home/sshuttle -g sshuttle sshuttle
 mkdir /home/sshuttle/.ssh
@@ -1359,9 +1364,9 @@ systemctl restart amazon-ssm-agent.service",
           "Ref": "VpcPublicSubnet1NatInstanceInstanceProfileEE10C485",
         },
         "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmarm64gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
         },
-        "InstanceType": "t3.micro",
+        "InstanceType": "t4g.micro",
         "SecurityGroupIds": Array [
           Object {
             "Fn::GetAtt": Array [
@@ -1385,7 +1390,7 @@ systemctl restart amazon-ssm-agent.service",
               "",
               Array [
                 "#!/bin/bash
-# fingerprint: 8a46cbe638f5967b
+# fingerprint: 9200d7e5d68baefe
 (
   set +e
   /opt/aws/bin/cfn-init -v --region ",
@@ -1396,7 +1401,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet1NatInstance57B636B8558ff468f2a0cf39 -c default
+                " --resource VpcPublicSubnet1NatInstance57B636B84c5b5ab9e5893642 -c default
   /opt/aws/bin/cfn-signal -e $? --region ",
                 Object {
                   "Ref": "AWS::Region",
@@ -1405,7 +1410,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet1NatInstance57B636B8558ff468f2a0cf39
+                " --resource VpcPublicSubnet1NatInstance57B636B84c5b5ab9e5893642
   cat /var/log/cfn-init.log >&2
 )",
               ],
@@ -1580,7 +1585,7 @@ systemctl restart amazon-ssm-agent.service",
       },
       "Type": "AWS::EC2::NatGateway",
     },
-    "VpcPublicSubnet2NatInstance746890A7b510b5e992d7303c": Object {
+    "VpcPublicSubnet2NatInstance746890A7a73917a939289577": Object {
       "CreationPolicy": Object {
         "ResourceSignal": Object {
           "Count": 1,
@@ -1625,7 +1630,7 @@ WantedBy = multi-user.target",
                     Array [
                       "#!/bin/bash -x
 yum install -y python3-pip gcc python3-devel
-pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle
+pip3 install -i https://opentuna.cn/pypi/web/simple sshuttle==1.0.5
 groupadd sshuttle
 useradd -d /home/sshuttle -g sshuttle sshuttle
 mkdir /home/sshuttle/.ssh
@@ -1774,9 +1779,9 @@ systemctl restart amazon-ssm-agent.service",
           "Ref": "VpcPublicSubnet2NatInstanceInstanceProfile549888F0",
         },
         "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmarm64gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
         },
-        "InstanceType": "t3.micro",
+        "InstanceType": "t4g.micro",
         "SecurityGroupIds": Array [
           Object {
             "Fn::GetAtt": Array [
@@ -1800,7 +1805,7 @@ systemctl restart amazon-ssm-agent.service",
               "",
               Array [
                 "#!/bin/bash
-# fingerprint: 6aafd79a191b06fb
+# fingerprint: 7fe130741d2a37a3
 (
   set +e
   /opt/aws/bin/cfn-init -v --region ",
@@ -1811,7 +1816,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet2NatInstance746890A7b510b5e992d7303c -c default
+                " --resource VpcPublicSubnet2NatInstance746890A7a73917a939289577 -c default
   /opt/aws/bin/cfn-signal -e $? --region ",
                 Object {
                   "Ref": "AWS::Region",
@@ -1820,7 +1825,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet2NatInstance746890A7b510b5e992d7303c
+                " --resource VpcPublicSubnet2NatInstance746890A7a73917a939289577
   cat /var/log/cfn-init.log >&2
 )",
               ],
@@ -1990,6 +1995,33 @@ systemctl restart amazon-ssm-agent.service",
         },
       },
       "Type": "AWS::EC2::VPCEndpoint",
+    },
+  },
+  "Rules": Object {
+    "CheckBootstrapVersion": Object {
+      "Assertions": Array [
+        Object {
+          "Assert": Object {
+            "Fn::Not": Array [
+              Object {
+                "Fn::Contains": Array [
+                  Array [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  Object {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
     },
   },
 }

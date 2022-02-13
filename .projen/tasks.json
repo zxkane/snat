@@ -235,6 +235,10 @@
         },
         {
           "spawn": "eslint"
+        },
+        {
+          "exec": "yarn test",
+          "cwd": "example"
         }
       ]
     },

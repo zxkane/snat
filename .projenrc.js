@@ -172,6 +172,9 @@ project.package.addField('resolutions', {
 
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade && npx projen');
+project.testTask.exec('yarn test', {
+  cwd: 'example',
+});
 
 const target = 'js';
 const REPO_TEMP_DIRECTORY = '.repo';
