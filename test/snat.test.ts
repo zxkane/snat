@@ -270,6 +270,26 @@ describe('Simple NAT construct', () => {
     })).toStrictEqual({});
   });
 
+  test('create NAT instances for cloudflare routes', () => {
+
+    const stack = new Stack();
+    const vpc = new Vpc(stack, 'VPC-1');
+
+    new SimpleNAT(stack, 'nat', {
+      vpc,
+    }).withCloudflareRoute();
+
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Route', {
+      DestinationIpv6CidrBlock: Match.anyValue(),
+      DestinationCidrBlock: Match.absent(),
+    });
+
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Route', {
+      DestinationIpv6CidrBlock: Match.absent(),
+      DestinationCidrBlock: Match.anyValue(),
+    });
+  });
+
   test('private subnets of imported vpc share one route table', () => {
 
     const stack = new Stack();

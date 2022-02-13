@@ -82,6 +82,22 @@ addV6Route(v6CIDR: string): SimpleNAT
 __Returns__:
 * <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
+#### withCloudflareRoute(props?) <a id="cdk-construct-simple-nat-simplenat-withcloudflareroute"></a>
+
+Add Cloudflare IPs to route table.
+
+See https://www.cloudflare.com/ips/ for details
+
+```ts
+withCloudflareRoute(props?: RouteProps): SimpleNAT
+```
+
+* **props** (<code>[RouteProps](#cdk-construct-simple-nat-routeprops)</code>)  *No description*
+  * **excludeIPv6** (<code>boolean</code>)  If excluding IPv6 when creating route. __*Default*__: false
+
+__Returns__:
+* <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
+
 #### withGithubRoute(props?) <a id="cdk-construct-simple-nat-simplenat-withgithubroute"></a>
 
 Add Github IPs to route table.
