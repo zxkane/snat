@@ -64,7 +64,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   devDeps: [
     'aws-cdk-lib@' + cdkVersion,
     'constructs@10.0.5',
-    '@aws-cdk/assert@^2.0.0',
     '@types/mustache',
   ], /* Build dependencies for this module. */
   // entrypoint: 'lib/index.js',                                               /* Module entrypoint (`main` in `package.json`). */

@@ -1,7 +1,6 @@
 /* eslint @typescript-eslint/no-require-imports: "off" */
-import '@aws-cdk/assert/jest';
-import { ResourcePart } from '@aws-cdk/assert/lib/assertions/have-resource';
 import { App, Stack } from 'aws-cdk-lib';
+import { Match, Template } from 'aws-cdk-lib/assertions';
 import { Vpc, SubnetType, InstanceType, InstanceSize, InstanceClass, MachineImage, AmazonLinuxGeneration, AmazonLinuxCpuType } from 'aws-cdk-lib/aws-ec2';
 import { SimpleNAT } from '../src';
 const fetch = require('sync-fetch');
@@ -68,12 +67,12 @@ describe('Simple NAT construct', () => {
       vpc,
     }).addV4Route('2.2.0.0/20');
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Instance', {
       InstanceType: 't3.micro',
     });
-    expect(stack).toCountResources('AWS::EC2::Instance', 2);
+    Template.fromStack(stack).resourceCountIs('AWS::EC2::Instance', 2);
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Route', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Route', {
       DestinationCidrBlock: '2.2.0.0/20',
       NetworkInterfaceId: {
         Ref: 'VPC1PublicSubnet1ENI1B5B83581',
@@ -82,13 +81,13 @@ describe('Simple NAT construct', () => {
         Ref: 'VPC1PrivateSubnet1RouteTable0621C09F',
       },
     });
-    expect(stack).toCountResources('AWS::EC2::Route', 6);
+    Template.fromStack(stack).resourceCountIs('AWS::EC2::Route', 6);
 
-    expect(stack).toHaveResourceLike('AWS::EC2::EIP', {
+    Template.fromStack(stack).hasResource('AWS::EC2::EIP', {
       UpdateReplacePolicy: 'Retain',
       DeletionPolicy: 'Retain',
-    }, ResourcePart.CompleteDefinition);
-    expect(stack).toHaveResourceLike('AWS::EC2::NetworkInterface', {
+    });
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::NetworkInterface', {
       GroupSet: [
         {
           'Fn::GetAtt': [
@@ -99,7 +98,7 @@ describe('Simple NAT construct', () => {
       ],
       SourceDestCheck: false,
     });
-    expect(stack).toHaveResourceLike('AWS::EC2::EIPAssociation', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::EIPAssociation', {
       AllocationId: {
         'Fn::GetAtt': [
           'VPC1PublicSubnet1NatInstanceEIPB467978E',
@@ -124,7 +123,7 @@ describe('Simple NAT construct', () => {
       vpc,
     }).addV4Route('2002::1234:abcd:ffff:c0a8:101/64');
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Route', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Route', {
       DestinationCidrBlock: '2002::1234:abcd:ffff:c0a8:101/64',
       NetworkInterfaceId: {
         Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
@@ -150,9 +149,9 @@ describe('Simple NAT construct', () => {
       },
     }).addV4Route('0.0.0.0/0');
 
-    expect(stack).toCountResources('AWS::EC2::Instance', 2);
+    Template.fromStack(stack).resourceCountIs('AWS::EC2::Instance', 2);
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Route', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Route', {
       DestinationCidrBlock: '0.0.0.0/0',
       NetworkInterfaceId: {
         Ref: 'VPC1PublicSubnet1ENI1B5B83581',
@@ -161,7 +160,7 @@ describe('Simple NAT construct', () => {
         Ref: 'VPC1IsolatedSubnet1RouteTable17554539',
       },
     });
-    expect(stack).toCountResources('AWS::EC2::Route', 4);
+    Template.fromStack(stack).resourceCountIs('AWS::EC2::Route', 4);
   });
 
   test('create NAT instances with custom instance type', () => {
@@ -174,7 +173,7 @@ describe('Simple NAT construct', () => {
       instanceType: InstanceType.of(InstanceClass.C5, InstanceSize.LARGE),
     }).addV4Route('1.1.0.0/24');
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Instance', {
       InstanceType: 'c5.large',
     });
   });
@@ -193,7 +192,7 @@ describe('Simple NAT construct', () => {
       }),
     }).addV4Route('1.1.0.0/24');
 
-    expect(stack).toHaveResourceLike('AWS::EC2::Instance', {
+    Template.fromStack(stack).hasResourceProperties('AWS::EC2::Instance', {
       InstanceType: 'c6g.large',
       ImageId: {
         Ref: 'SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmarm64gp2C96584B6F00A464EAD1953AFF4B05118Parameter',
@@ -211,12 +210,14 @@ describe('Simple NAT construct', () => {
       vpc,
     }).withGithubRoute();
 
+    const template = Template.fromStack(stack);
+
     const githubMeta = fetch('https://api.github.com/meta').json();
 
     for (const cidr of githubMeta.git) {
       if (ipV6Regex.test(cidr)) {
-        expect(stack).toHaveResourceLike('AWS::EC2::Route', {
-          DestinationIpv6CidrBlock: cidr,
+        template.hasResourceProperties('AWS::EC2::Route', {
+          DestinationIpv6CidrBlock: Match.exact(cidr),
           NetworkInterfaceId: {
             Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
           },
@@ -225,8 +226,8 @@ describe('Simple NAT construct', () => {
           },
         });
       } else {
-        expect(stack).toHaveResourceLike('AWS::EC2::Route', {
-          DestinationCidrBlock: cidr,
+        template.hasResourceProperties('AWS::EC2::Route', {
+          DestinationCidrBlock: Match.exact(cidr),
           NetworkInterfaceId: {
             Ref: 'VPC1PublicSubnet2ENI1EB7B542A',
           },
@@ -237,7 +238,36 @@ describe('Simple NAT construct', () => {
       }
     }
 
-    expect(stack).toCountResources('AWS::EC2::Route', 4 + githubMeta.git.length * 2);
+    template.resourceCountIs('AWS::EC2::Route', 4 + githubMeta.git.length * 2);
+  });
+
+  test('create NAT instances for google routes excluding IPv6 address', () => {
+
+    const stack = new Stack();
+    const vpc = new Vpc(stack, 'VPC-1');
+
+    new SimpleNAT(stack, 'nat', {
+      vpc,
+    }).withGoogleRoute({
+      excludeIPv6: true,
+    });
+
+    const googleMeta: {
+      prefixes: [
+        {
+          ipv4Prefix?: string;
+          ipv6Prefix?: string;
+        }
+      ];
+    } = fetch('https://www.gstatic.com/ipranges/goog.json').json();
+    const ipV6 = googleMeta.prefixes.filter(prefix => prefix.ipv6Prefix);
+    expect(ipV6.length).toBeGreaterThan(0);
+
+    expect(Template.fromStack(stack).findResources('AWS::EC2::Route', {
+      Properties: {
+        DestinationIpv6CidrBlock: Match.anyValue(),
+      },
+    })).toStrictEqual({});
   });
 
   test('private subnets of imported vpc share one route table', () => {
@@ -277,6 +307,6 @@ describe('Simple NAT construct', () => {
       vpc,
     }).addV4Route('1.1.1.0/20');
 
-    expect(stack).toCountResources('AWS::EC2::Route', 1);
+    Template.fromStack(stack).resourceCountIs('AWS::EC2::Route', 1);
   });
 });

@@ -37,7 +37,6 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^2.0.0",
     "@types/jest": "^26.0.24",
     "@types/mustache": "^4.1.2",
     "@types/node": "^14",

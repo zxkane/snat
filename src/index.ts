@@ -80,6 +80,18 @@ interface RouteStats {
 }
 
 /**
+ * Properties for how adding IPs to route
+ */
+export interface RouteProps {
+  /**
+   * If excluding IPv6 when creating route
+   *
+   * @default - false
+   */
+  readonly excludeIPv6?: boolean;
+}
+
+/**
  * Simple NAT instaces construct.
  */
 export class SimpleNAT extends Resource {
@@ -242,11 +254,17 @@ export class SimpleNAT extends Resource {
     return this;
   }
 
-  public withGithubRoute(): SimpleNAT {
+  /**
+   * Add Github IPs to route table
+   */
+  public withGithubRoute(props?: RouteProps): SimpleNAT {
     const githubMeta = fetch('https://api.github.com/meta').json();
     for (const cidr of githubMeta.git) {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
-        if (this._ipV6Regex.test(cidr)) {this._configureSubnet(routeId, subnets, undefined, cidr);} else {
+        if (this._ipV6Regex.test(cidr)) {
+          const excludeIPv6 = props?.excludeIPv6 ?? false;
+          if (!excludeIPv6) {this._configureSubnet(routeId, subnets, undefined, cidr);}
+        } else {
           this._configureSubnet(routeId, subnets, cidr);
         }
       }
@@ -254,12 +272,16 @@ export class SimpleNAT extends Resource {
     return this;
   }
 
-  public withGoogleRoute(): SimpleNAT {
+  /**
+   * Add Google IPs to route table
+   */
+  public withGoogleRoute(props?: RouteProps): SimpleNAT {
     const googleMeta = fetch('https://www.gstatic.com/ipranges/goog.json').json();
+    const excludeIPv6 = props?.excludeIPv6 ?? false;
     for (const cidr of googleMeta.prefixes) {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
         if (cidr.ipv4Prefix) {this._configureSubnet(routeId, subnets, cidr.ipv4Prefix);}
-        if (cidr.ipv6Prefix) {this._configureSubnet(routeId, subnets, undefined, cidr.ipv6Prefix);}
+        if (cidr.ipv6Prefix && !excludeIPv6) {this._configureSubnet(routeId, subnets, undefined, cidr.ipv6Prefix);}
       }
     }
     return this;

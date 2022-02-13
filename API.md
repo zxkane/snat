@@ -11,6 +11,7 @@ Name|Description
 
 Name|Description
 ----|-----------
+[RouteProps](#cdk-construct-simple-nat-routeprops)|Properties for how adding IPs to route.
 [SimpleNATProps](#cdk-construct-simple-nat-simplenatprops)|Properties for NAT instances.
 
 
@@ -81,29 +82,46 @@ addV6Route(v6CIDR: string): SimpleNAT
 __Returns__:
 * <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
-#### withGithubRoute() <a id="cdk-construct-simple-nat-simplenat-withgithubroute"></a>
+#### withGithubRoute(props?) <a id="cdk-construct-simple-nat-simplenat-withgithubroute"></a>
 
-
+Add Github IPs to route table.
 
 ```ts
-withGithubRoute(): SimpleNAT
+withGithubRoute(props?: RouteProps): SimpleNAT
 ```
 
+* **props** (<code>[RouteProps](#cdk-construct-simple-nat-routeprops)</code>)  *No description*
+  * **excludeIPv6** (<code>boolean</code>)  If excluding IPv6 when creating route. __*Default*__: false
 
 __Returns__:
 * <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
 
-#### withGoogleRoute() <a id="cdk-construct-simple-nat-simplenat-withgoogleroute"></a>
+#### withGoogleRoute(props?) <a id="cdk-construct-simple-nat-simplenat-withgoogleroute"></a>
 
-
+Add Google IPs to route table.
 
 ```ts
-withGoogleRoute(): SimpleNAT
+withGoogleRoute(props?: RouteProps): SimpleNAT
 ```
 
+* **props** (<code>[RouteProps](#cdk-construct-simple-nat-routeprops)</code>)  *No description*
+  * **excludeIPv6** (<code>boolean</code>)  If excluding IPv6 when creating route. __*Default*__: false
 
 __Returns__:
 * <code>[SimpleNAT](#cdk-construct-simple-nat-simplenat)</code>
+
+
+
+## struct RouteProps  <a id="cdk-construct-simple-nat-routeprops"></a>
+
+
+Properties for how adding IPs to route.
+
+
+
+Name | Type | Description 
+-----|------|-------------
+**excludeIPv6**? | <code>boolean</code> | If excluding IPv6 when creating route.<br/>__*Default*__: false
 
 
 
