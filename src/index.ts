@@ -287,6 +287,30 @@ export class SimpleNAT extends Resource {
     return this;
   }
 
+  /**
+   * Add Cloudflare IPs to route table
+   *
+   * See https://www.cloudflare.com/ips/ for details
+   */
+  public withCloudflareRoute(props?: RouteProps): SimpleNAT {
+    const ipV4 = fetch('https://www.cloudflare.com/ips-v4').text().split(/\r?\n/);
+    for (const cidr of ipV4) {
+      for (const [routeId, subnets] of this._routeMappingSubnets) {
+        this._configureSubnet(routeId, subnets, cidr);
+      }
+    }
+    const excludeIPv6 = props?.excludeIPv6 ?? false;
+    if (!excludeIPv6) {
+      const ipV6 = fetch('https://www.cloudflare.com/ips-v6').text().split(/\r?\n/);
+      for (const cidr of ipV6) {
+        for (const [routeId, subnets] of this._routeMappingSubnets) {
+          this._configureSubnet(routeId, subnets, undefined, cidr);
+        }
+      }
+    }
+    return this;
+  }
+
   private _configureSubnet(_routeId: string, subnets: Subnet[], v4CIDR?: string, v6CIDR?: string) : SimpleNAT {
     const az = subnets[0].availabilityZone;
     const natInstance = this.gateways.pick(az);
