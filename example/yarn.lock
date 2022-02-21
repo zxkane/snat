@@ -1601,9 +1601,9 @@ cdk-assets@2.13.0:
     yargs "^16.2.0"
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.71"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.71.tgz#f0af336b1fc71ec5cec3a42a69d506b6eba1c8a4"
-  integrity sha512-ja6U3MSkO0k7cRecxaed5nRoMK7OE+nuSoi/1/qprdenklYrF15MdKgFhWJW9tWRR0czxoMej6FXwAoWYzT/HA==
+  version "0.2.72"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.72.tgz#35693e8878250735a94578db8e47e8b63019aa29"
+  integrity sha512-zWsehOlsttJVGHMoYHaObrIx5X7aHQfQVBBpKkYXnqajdmotY3dhohyNUrKJf66N8n5zt5ziNPeX7pMQsQgk5w==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1852,9 +1852,9 @@ console-control-strings@^1.0.0, console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.5:
-  version "10.0.66"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.66.tgz#a3182be52479a6f784ea5e12e20f8e69ff5a6ae5"
-  integrity sha512-luFprSllFDm8iEt/irxsWnm8PHNKNNnZ3pV+5PRXDUOnLaWCv6Vwm+7E0IX6pfgiSphOSsWqhA4ReJA+xe0YHg==
+  version "10.0.67"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.67.tgz#6240eced1489ff8116cb655c2d3dc594f16333bb"
+  integrity sha512-23Rpdo5EkO57p+O8JVPN6mGKC+Qg9Sc7r/pkN77awuXZOlExwbp8v92l6VAmxksudUI3rrCxLA2Jdoyp9it5ww==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -4944,9 +4944,9 @@ npm-bundled@^1.1.1:
     npm-normalize-package-bin "^1.0.1"
 
 npm-check-updates@^12:
-  version "12.3.1"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.3.1.tgz#48339da0331e9c857b94be04b33dfe7f5ec34fbd"
-  integrity sha512-rvXyiUnc9zw3WXakqv0LsdFDc1V4T8DHG8AdWEjJiqfOZdBI4q8ekTt/BFqLQAtcXo5Pu6WGqjA9oDnFi4UV3g==
+  version "12.4.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-12.4.0.tgz#67e8e1b88551167368ec246dfd4302ce3007d83d"
+  integrity sha512-X14H74M8SVFkStmP1NDOMh0OjLB3mU2dwUeM71zyITJHkm08MASwwTcydW6YuGcNW1RUlVq1cQY2yWijv4zKUQ==
   dependencies:
     chalk "^4.1.2"
     cint "^8.2.1"
