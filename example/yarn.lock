@@ -1405,9 +1405,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.113"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.113.tgz#f4c095d9eff03cbf9d320fe0d870a9d6e4b93632"
-  integrity sha512-czWZtwzhjjQhTOr+eEinBJ+hN4VaQ1TdL9Da1bcV+lr7Vt9zOlTLMs1pmdOJfiED3/+k0YBIZ0YNVKD15Gc+Zw==
+  version "0.2.114"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.114.tgz#9460a47045789bb43aee6f1b352b36ce79403b33"
+  integrity sha512-wopSu92xrcOpiM5NrlAhONm1KGA4JIIXij64mjEpC+OiEPvXPp7RaZ+PH1lonWrOV6l9etGouQ31O+2n7YEYDQ==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1615,9 +1615,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.5:
-  version "10.0.108"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.108.tgz#ef28b9bd102b18d749a8a871526caa43f8638263"
-  integrity sha512-A5sZMVWEblwtPBAOScOt8lBn2epTUljGy/sVfHi7juLnSNSZd2qaO7t62qvbIWJEpH047uYGd755PomB+sXeHA==
+  version "10.0.109"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.109.tgz#8f665a231f23546a4cd66e707f5e7d0e7943387e"
+  integrity sha512-jnalQa5GGD8G34rfOxYMr7B7rY4Q6W7UGwUdxyMM4bKwZEEDTh0TL8eFPUA/G6O3oL3rBm16lP/Ijm3Nn06uxg==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -3993,9 +3993,9 @@ lowercase-keys@^2.0.0:
   integrity sha512-tqNXrS78oMOE73NMxK4EMLQsQowWf8jKooH9g7xPavRT706R6bkQJ6DY2Te7QukaZsulxa30wQ7bk0pm4XiHmA==
 
 lru-cache@^7.4.0, lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.8.0.tgz#649aaeb294a56297b5cbc5d70f198dcc5ebe5747"
-  integrity sha512-AmXqneQZL3KZMIgBpaPTeI6pfwh+xQ2vutMsyqOu1TBdEXFZgpG/80wuJ531w2ZN7TI0/oc8CPxzh/DKQudZqg==
+  version "7.8.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.8.1.tgz#68ee3f4807a57d2ba185b7fd90827d5c21ce82bb"
+  integrity sha512-E1v547OCgJvbvevfjgK9sNKIVXO96NnsTsFPBlg4ZxjhsJSODoH9lk8Bm0OxvHNm6Vm5Yqkl/1fErDxhYL8Skg==
 
 make-dir@^3.0.0:
   version "3.1.0"
