@@ -775,9 +775,9 @@
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/prettier@^2.0.0":
-  version "2.4.4"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.4.tgz#5d9b63132df54d8909fce1c3f8ca260fdd693e17"
-  integrity sha512-ReVR2rLTV1kvtlWFyuot+d1pkpG2Fw/XKE3PDAdj57rbM97ttSp9JZ2UsP+2EHTylra9cUf6JA7tGwW1INzUrA==
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.6.0.tgz#efcbd41937f9ae7434c714ab698604822d890759"
+  integrity sha512-G/AdOadiZhnJp0jXCaBQU449W2h716OW/EoXeYkCytxKL06X1WCXB4DZpp8TpZ8eyIJVS1cw4lrlkkSYU21cDw==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1405,9 +1405,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.114"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.114.tgz#9460a47045789bb43aee6f1b352b36ce79403b33"
-  integrity sha512-wopSu92xrcOpiM5NrlAhONm1KGA4JIIXij64mjEpC+OiEPvXPp7RaZ+PH1lonWrOV6l9etGouQ31O+2n7YEYDQ==
+  version "0.2.115"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.115.tgz#696f35c32fbe53d2c760ea8d280fd8ed9b316e4d"
+  integrity sha512-q8unffIOO+aPMeOt594pObfsA6REG5+3A/+EMbD8jCXpTRBeqRkFn/wlOmsLy6OTRv8NF+6qM9BuDBfk87nJAg==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1615,9 +1615,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.5:
-  version "10.0.109"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.109.tgz#8f665a231f23546a4cd66e707f5e7d0e7943387e"
-  integrity sha512-jnalQa5GGD8G34rfOxYMr7B7rY4Q6W7UGwUdxyMM4bKwZEEDTh0TL8eFPUA/G6O3oL3rBm16lP/Ijm3Nn06uxg==
+  version "10.0.110"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.110.tgz#f5563efca14648ddb7c633dc1b4369ac30f743fb"
+  integrity sha512-Ojh53qbHi5XxkOFd7acUQebVzEn00KXF93YRwd5vii7tiVrkjgufWPl5NgdhNmvmC/lcQ1w8ke77PN37gQdgoQ==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
