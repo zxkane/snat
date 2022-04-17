@@ -1406,9 +1406,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.120"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.120.tgz#a30442fe75aab29277421c15050fa203ea09936e"
-  integrity sha512-YYpe3MpHw6llf1GNnrljFcrhOCpvbRj8gjOUP6lAaSR/CmUI9G7CfKk8nBejP18op2v5KtqZgoIq7LJrjgBeSg==
+  version "0.2.121"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.121.tgz#37abfbd1160abd7c3d433ad6aed28c21db50dc84"
+  integrity sha512-5MR3Sq60pPkVug+VyG8ab+hwrCBq5wJVGmi7gGEyneOlXFx5qza9DOunDdhaallRDGUde2vG+Tz/YgCHsF7sLg==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1616,9 +1616,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.5:
-  version "10.0.115"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.115.tgz#f077848b33d001ac9e804111f5f8e1d0f6df1771"
-  integrity sha512-BZfiDjilEzfq+y8hNGRbh5yIYa+mK6ZAO172Q03pvN47Fe2a2PxzA1Y6dNCP+AKcajAiyzHjYg/hw98XheZh5A==
+  version "10.0.116"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.116.tgz#fb1401e72249c472eef1bb6cf43b2235f319b67f"
+  integrity sha512-caA9ggK0N/wZ6Bj7Co/+3dWkXh9mq0TUr1VbLk7HBy9fgafIYwywD4e6J4zympulK0zVrq17JbeZB1HAIQTu/Q==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -1867,9 +1867,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.110"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.110.tgz#269208d7cf7e32123b1d87bf4e6e1fd9ac7ff51d"
-  integrity sha512-TvHZrkj9anfWkxgblHlNr4IMQdm2N6D0o8Wu1BDpSL/RKT4DHyUt/tvDFtApgZ+LGFL3U9EO4LRZ1eSlQ8xMYA==
+  version "1.4.111"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.111.tgz#897613f6504f3f17c9381c7499a635b413e4df4e"
+  integrity sha512-/s3+fwhKf1YK4k7btOImOzCQLpUjS6MaPf0ODTNuT4eTM1Bg4itBpLkydhOzJmpmH6Z9eXFyuuK5czsmzRzwtw==
 
 emittery@^0.7.1:
   version "0.7.2"
