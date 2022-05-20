@@ -164,12 +164,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     module: 'zxkane.cdk_construct_simple_nat',
   },
 });
-project.package.addField('resolutions', 
-  Object.assign({}, project.package.manifest['resolutions'] ?? {}, {
-  'set-value': '^4.0.1',
-  'ansi-regex': '^5.0.1',
-  'colors': '1.4.0',
-}));
+project.package.addField('resolutions',
+  Object.assign({}, project.package.manifest.resolutions ?? {}, {
+    'set-value': '^4.0.1',
+    'ansi-regex': '^5.0.1',
+    'colors': '1.4.0',
+  }));
 
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade && npx projen');
