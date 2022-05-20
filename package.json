@@ -56,7 +56,7 @@
     "jsii-pacmak": "^1.59.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^12",
-    "projen": "^0.56.19",
+    "projen": "^0.56.20",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.6.4"
@@ -145,6 +145,7 @@
     ]
   },
   "resolutions": {
+    "@types/prettier": "2.6.0",
     "set-value": "^4.0.1",
     "ansi-regex": "^5.0.1",
     "colors": "1.4.0"
