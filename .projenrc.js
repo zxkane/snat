@@ -165,11 +165,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
 });
 project.package.addField('resolutions',
-  Object.assign({}, project.package.manifest.resolutions ?? {}, {
+  Object.assign({}, project.package.manifest.resolutions ? project.package.manifest.resolutions : {}, {
     'set-value': '^4.0.1',
     'ansi-regex': '^5.0.1',
     'colors': '1.4.0',
-  }));
+  })
+);
 
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
 project.upgradeWorkflow.postUpgradeTask.exec('yarn --cwd example upgrade && npx projen');
@@ -208,11 +209,11 @@ project.release.publisher.addPublishJob((_branch, branchOptions) => {
   return {
     name: 'npm_github',
     publishTools: {},
-    prePublishSteps: options.prePublishSteps ?? [],
+    prePublishSteps: options.prePublishSteps ?  options.prePublishSteps : [],
     run: project.release.publisher.publibCommand('publib-npm'),
     registryName: 'npm-github',
     env: {
-      NPM_DIST_TAG: branchOptions.npmDistTag ?? options.distTag ?? 'latest',
+      NPM_DIST_TAG: branchOptions.npmDistTag ? branchOptions.npmDistTag : (options.distTag ? options.distTag : 'latest'),
       NPM_REGISTRY: options.registry,
     },
     permissions: {
@@ -247,12 +248,14 @@ const examplePrj = new awscdk.AwsCdkTypeScriptApp({
     'cdk.context.json',
   ],
 });
-examplePrj.package.addField('resolutions', {
-  'pac-resolver': '^5.0.0',
-  'set-value': '^4.0.1',
-  'ansi-regex': '^5.0.1',
-  'json-schema': '^0.4.0',
-  'colors': '1.4.0',
-});
+examplePrj.package.addField('resolutions',
+  Object.assign({}, examplePrj.package.manifest.resolutions ? examplePrj.package.manifest.resolutions : {}, {
+    'pac-resolver': '^5.0.0',
+    'set-value': '^4.0.1',
+    'ansi-regex': '^5.0.1',
+    'json-schema': '^0.4.0',
+    'colors': '1.4.0',
+  })
+);
 
 project.synth();
