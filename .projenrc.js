@@ -169,7 +169,7 @@ project.package.addField('resolutions',
     'set-value': '^4.0.1',
     'ansi-regex': '^5.0.1',
     'colors': '1.4.0',
-  })
+  }),
 );
 
 project.postCompileTask.exec('cp src/snat.* src/runonce.sh lib/');
@@ -209,7 +209,7 @@ project.release.publisher.addPublishJob((_branch, branchOptions) => {
   return {
     name: 'npm_github',
     publishTools: {},
-    prePublishSteps: options.prePublishSteps ?  options.prePublishSteps : [],
+    prePublishSteps: options.prePublishSteps ? options.prePublishSteps : [],
     run: project.release.publisher.publibCommand('publib-npm'),
     registryName: 'npm-github',
     env: {
@@ -255,7 +255,7 @@ examplePrj.package.addField('resolutions',
     'ansi-regex': '^5.0.1',
     'json-schema': '^0.4.0',
     'colors': '1.4.0',
-  })
+  }),
 );
 
 project.synth();
