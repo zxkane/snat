@@ -805,9 +805,9 @@
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 "@types/node@*":
-  version "17.0.39"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.39.tgz#3652d82e2a16b4ea679d5ea3143b816c91b7e113"
-  integrity sha512-JDU3YLlnPK3WDao6/DlXLOgSNpG13ct+CwIO17V8q0/9fWJyeMJJ/VyZ1lv8kDprihvZMydzVwf0tQOqGiY2Nw==
+  version "17.0.40"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.40.tgz#76ee88ae03650de8064a6cf75b8d95f9f4a16090"
+  integrity sha512-UXdBxNGqTMtm7hCwh9HtncFVLrXoqA3oJW30j6XWp5BH/wu3mVeaxo7cq5benFdBw34HB3XDT2TRPI7rXZ+mDg==
 
 "@types/node@^14":
   version "14.18.20"
@@ -1393,9 +1393,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.161"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.161.tgz#d4665ec6371323894ad95377da989645b98d5750"
-  integrity sha512-1ualSP0qSkl0sT4z+JsSUNEBZzPuqO+KP39F+Rq1K1X0oFZ0UMoqZk4dRxOEhoqddtD0JyX1nhE+3fM7NZlGTA==
+  version "0.2.162"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.162.tgz#64f25b0f345d6c92eacae6d233441f7b718821d2"
+  integrity sha512-PbfC9hO4GPJBytJveEbjBxBSe56gQHX3k+IrLzuwhuNFGP+FHyJ4rYB3+pxFrXqXkhC1VjoAWtC6LpUEO/ejlA==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1576,9 +1576,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.26"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.26.tgz#a3d1e7bfd45c0d1ed9728ce38a82cb3e932f6518"
-  integrity sha512-Pvkez/igQ9lQLBNFr0FIHzJ4761XpchLV06lLQH2c0kCA10WqGrKBFOgEchT7260VrNVQQ1uBo7R0szphKYvZw==
+  version "10.1.27"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.27.tgz#346eb2c530404f8badcd57da869d5d2529d5da86"
+  integrity sha512-OZwFH5VTPlPg5/PODDhusBPfRUw2OYVamuUJsoVIxdHfb/F8KSY6d4EKcQiwSU+xSSfTRtBjGCbty/ZkMEzqfg==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
