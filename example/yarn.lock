@@ -1393,9 +1393,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.168"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.168.tgz#3239b0378ec1db7701fbb745c3bede45b86249a0"
-  integrity sha512-a4ifwY+h80hdxS6PvVlI4WleFwgikQeDDhUbDxK6mlc/INgkYBGvV1chhOscFE56Djh/izySMl2uqbyw9zpAFw==
+  version "0.2.169"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.169.tgz#66cdd3bba0c11319965906c26bafce760bb2a638"
+  integrity sha512-jTSigoloKMtqSaUgwCRfu82G6YaB0J1JVRlwhjaxnAJl2F0TGxzCdsQxpqAh0ui29fJLobH1beq0Pi5SzGoNOg==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1576,9 +1576,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.35"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.35.tgz#fe20b3f60541c4898dca5ebf39b1186b2ac23e53"
-  integrity sha512-ak/ml4xdnsLiaKAUFnYQiwGMA1yOgdcnNr7KlfhAbhM9Sq1rvb/TPzF6Jdgi9wivjJVtnUuNRgbZ7+JJJrK2cw==
+  version "10.1.36"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.36.tgz#33aca274b44ffe3d6e3537498e1b11635cf3a104"
+  integrity sha512-6yJOPlPJ5/LHWyFJ7h/26CAiDhblqaOGOSsSqvZR6jzjc1RWY+J6I7I/vzyM1iTrP7ZlWWHuC5NBEwQOp3X87w==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -5416,7 +5416,7 @@ walker@^1.0.7:
 webidl-conversions@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
-  integrity sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=
+  integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
@@ -5443,7 +5443,7 @@ whatwg-mimetype@^2.3.0:
 whatwg-url@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
-  integrity sha1-lmRU6HZUYuN2RNNib2dCzotwll0=
+  integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
   dependencies:
     tr46 "~0.0.3"
     webidl-conversions "^3.0.0"
@@ -5506,7 +5506,7 @@ wrap-ansi@^7.0.0:
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
-  integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+  integrity sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==
 
 write-file-atomic@^3.0.0:
   version "3.0.3"
@@ -5536,7 +5536,7 @@ xml-name-validator@^3.0.0:
 xml@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/xml/-/xml-1.0.1.tgz#78ba72020029c5bc87b8a81a3cfcd74b4a2fc1e5"
-  integrity sha1-eLpyAgApxbyHuKgaPPzXS0ovweU=
+  integrity sha512-huCv9IH9Tcf95zuYCsQraZtWnJvBtLVE0QHMOs8bWyZAFZNDcYjsPq1nEx8jKA9y+Beo9v+7OBPRisQTjinQMw==
 
 xmlbuilder2@^2.4.1:
   version "2.4.1"
