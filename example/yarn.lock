@@ -1393,9 +1393,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.175"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.175.tgz#8a8fa451e4f97e4b6206947557fa4acdfaa06da7"
-  integrity sha512-h/jrqVrhw1aMf7yFynpW1GFdZYeXVN23cvQ+28OmfEUrOfv2/v9cepXI8tdRCcpncCPV6L0UPfaRr9GBAfdwxw==
+  version "0.2.176"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.176.tgz#f5005b326c94b789aeaa672da2d08f28d4eb0bc5"
+  integrity sha512-L8jZN/opFslUFqAal1Zw0/D++cCB4KyhFkz5qbgeQo1qejTR0lqG6lkiDRRFTt8asX612CCFnpcdkDcuvLD1tw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
