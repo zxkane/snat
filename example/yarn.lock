@@ -1352,9 +1352,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.181"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.181.tgz#c473f63a08284e3148eda54343720f5504b2a6ab"
-  integrity sha512-k+cg5yYxgKEc7Zexp95lMXRGCo8gPk9AO7JlwnaWOySAVrWF4l98MzhWWw1tv21sHHLtBa3QcnnvAV811SLX9Q==
+  version "0.2.182"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.182.tgz#ea13db4fdb28b60408afd9a1ad5976990565c0f5"
+  integrity sha512-NFP8l0V/pXmWF4fUrXAV6mMwV2bBPkCDn1e5SSAf6Rm+znuaNTiPbP003sMMFI2OIDKuu9b6gV6Uzf4yEMuurw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -4101,9 +4101,9 @@ npmlog@^6.0.0:
     set-blocking "^2.0.0"
 
 nwsapi@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
-  integrity sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.1.tgz#10a9f268fbf4c461249ebcfe38e359aa36e2577c"
+  integrity sha512-JYOWTeFoS0Z93587vRJgASD5Ut11fYl5NyihP3KrYBvMe1FRRs6RN7m20SA/16GM4P6hTnZjT+UmDOt38UeXNg==
 
 object-inspect@^1.12.0, object-inspect@^1.9.0:
   version "1.12.2"
