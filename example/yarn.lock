@@ -1175,9 +1175,9 @@ at-least-node@^1.0.0:
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
 aws-cdk-lib@^2.0.0:
-  version "2.37.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.37.1.tgz#8ff0dbb784236cb5c201fe2e2de41222d83bac87"
-  integrity sha512-TN9PkfxGvwpODOBedhmCHUFMwvrNBJIadY42BYyOerk1Hw9bOT5R3phqhm4ujzJDHKXtdgRNFRg1zw6spRodjg==
+  version "2.38.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.38.1.tgz#e96ee1362c86260786b3d808f593ca5edd813b29"
+  integrity sha512-vEgJBUzL1yqlSMYGjipl+eRwy900x3RmbVzTcxKdCZvhtBMQ1hqJAMgVswvoyA5EnvfELLlz9ufm+qdKGs9DxQ==
   dependencies:
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
@@ -1190,9 +1190,9 @@ aws-cdk-lib@^2.0.0:
     yaml "1.10.2"
 
 aws-cdk@^2.0.0:
-  version "2.37.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.37.1.tgz#e253ce36aa8bf52ce18a628d83c68012eabd6acf"
-  integrity sha512-TqYhLiFqMEoFqGPubhD7GAXat9lRxA+nVrKQl3Ukyk92SnY/y0BZUpUaddM8IA6lL+RAPbrnEYV2slhu38I+Vw==
+  version "2.38.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.38.1.tgz#285273b5507241712bcc1e5b40eb05a21f3bebfd"
+  integrity sha512-bIHRCkmbXBmJWw1Gq5UsAUUYKABuE/ah1iAA14hXLS8+9AJlF/Ptn+NsUCt9K5v17cRqtUoeaOAMAPrZs8l+YA==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1423,9 +1423,9 @@ camelcase@^7.0.0:
   integrity sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==
 
 caniuse-lite@^1.0.30001370:
-  version "1.0.30001377"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001377.tgz#fa446cef27f25decb0c7420759c9ea17a2221a70"
-  integrity sha512-I5XeHI1x/mRSGl96LFOaSk528LA/yZG3m3iQgImGujjO8gotd/DL8QaI1R1h1dg5ATeI2jqPblMpKq4Tr5iKfQ==
+  version "1.0.30001378"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001378.tgz#3d2159bf5a8f9ca093275b0d3ecc717b00f27b67"
+  integrity sha512-JVQnfoO7FK7WvU4ZkBRbPjaot4+YqxogSDosHv0Hv5mWpUESmN+UubMU6L/hGz8QlQ2aY5U0vR6MOs6j/CXpNA==
 
 case@1.6.3:
   version "1.6.3"
@@ -1433,9 +1433,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.227"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.227.tgz#2ac619bfc959bf74697762d9e1a573f0d2a73238"
-  integrity sha512-LWe+Yoe+Bn9SnZoTvtGm0S99NoZk67+labBjQuB1htsinD5ApCka4GlDVR9OsfQLnmlVCSwqxKkk5j/5314q3g==
+  version "0.2.228"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.228.tgz#1cff9f93d4a44ed8ff1bcd5ed004ada080089f1c"
+  integrity sha512-lptzveeVRHeq+hdAaU3SOLBVe3KIHT1gKvKmOntylPmu4dGqFTo7XH0+um1dzoCsxgh+RyhwjJWUJ8hEexxN3A==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1626,9 +1626,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.77"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.77.tgz#c74d850f1ca4ffcf0850c2a4f72240de8c792aea"
-  integrity sha512-iaNAYLf65IKdAX1lMgCQHbxmmDrrfKECTqQzedUOxTMZlKmaxWpwgKwTTk2OTOA+2ypqzEzePWPLeYDGYXBO6g==
+  version "10.1.79"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.79.tgz#7ac8b367184d8702ad0adff2c460f4c1acdbd535"
+  integrity sha512-cOuogoNSY9LhyuihEjQI98IU/hH1iAKh4xL30HY2wVD8VnCzrfLiga5f+0/MDyk++I6XO9/NYnENdFH3RXbJww==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -1841,9 +1841,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.202:
-  version "1.4.222"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.222.tgz#2ba24bef613fc1985dbffea85df8f62f2dec6448"
-  integrity sha512-gEM2awN5HZknWdLbngk4uQCVfhucFAfFzuchP3wM3NN6eow1eDU0dFy2kts43FB20ZfhVFF0jmFSTb1h5OhyIg==
+  version "1.4.224"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.224.tgz#ecf2eed395cfedcbbe634658ccc4b457f7b254c3"
+  integrity sha512-dOujC5Yzj0nOVE23iD5HKqrRSDj2SD7RazpZS/b/WX85MtO6/LzKDF4TlYZTBteB+7fvSg5JpWh0sN7fImNF8w==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -3914,9 +3914,9 @@ minipass-collect@^1.0.2:
     minipass "^3.0.0"
 
 minipass-fetch@^2.0.3:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/minipass-fetch/-/minipass-fetch-2.1.0.tgz#ca1754a5f857a3be99a9271277246ac0b44c3ff8"
-  integrity sha512-H9U4UVBGXEyyWJnqYDCLp1PwD8XIkJ4akNHp1aGVI+2Ym7wQMlxDKi4IB4JbmyU+pl9pEs/cVrK6cOuvmbK4Sg==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/minipass-fetch/-/minipass-fetch-2.1.1.tgz#9b39c047cf10af9bfa6f3a4d25ed88444be27a4c"
+  integrity sha512-/kgtXVGS10PTFET6dAbOBWQtgH+iDiI4NhRqAftojRlsOJhk0y45sVVxqCaRQC+AMFH7JkHiWpuKJKQ+mojKiA==
   dependencies:
     minipass "^3.1.6"
     minipass-sized "^1.0.3"
@@ -5258,9 +5258,9 @@ type-fest@^1.0.1:
   integrity sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==
 
 type-fest@^2.13.0:
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.18.0.tgz#fdef3a74e0a9e68ebe46054836650fb91ac3881e"
-  integrity sha512-pRS+/yrW5TjPPHNOvxhbNZexr2bS63WjrMU8a+VzEBhUi9Tz1pZeD+vQz3ut0svZ46P+SRqMEPnJmk2XnvNzTw==
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.18.1.tgz#a94f068c60b5a2d6beccccffa711210d7dd99b38"
+  integrity sha512-UKCINsd4qiATXD6OIlnQw9t1ux/n2ld+Nl0kzPbCONhCaUIS/BhJbNw14w6584HCQWf3frBK8vmWnGZq/sbPHQ==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
