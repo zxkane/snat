@@ -321,9 +321,9 @@
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
 "@humanwhocodes/config-array@^0.10.4":
-  version "0.10.4"
-  resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.4.tgz#01e7366e57d2ad104feea63e72248f22015c520c"
-  integrity sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.5.tgz#bb679745224745fff1e9a41961c1d45a49f81c04"
+  integrity sha512-XVVDtp+dVvRxMoxSiSfasYaG02VEe1qH5cKgMQJWhol6HwzbcqoCMJi8dAGoYAO57jhUyhI6cWuRiTcRaDaYug==
   dependencies:
     "@humanwhocodes/object-schema" "^1.2.1"
     debug "^4.1.1"
@@ -1175,9 +1175,9 @@ at-least-node@^1.0.0:
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
 aws-cdk-lib@^2.0.0:
-  version "2.42.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.42.1.tgz#a006c7d6cdcd75d7169c4b1c52dd5ee624705ff6"
-  integrity sha512-12KyAXhtKKCpTbwbs/HAYbIeIcB6RGd9mhHWrZA+6RpccXGwrDjFo36xAwmYMrUT+9FVewd703lNy+L3adRxbA==
+  version "2.43.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.43.0.tgz#df4340f7285be62fd9f09f7e9137368da63290df"
+  integrity sha512-r7wJXOFskOz4ksFE1oILLlQRATkhMeju4aSUafp8JcGh+mSVacXmA2h5oA2py1UbsSSJkLR8gU4CGSaGfDpjaA==
   dependencies:
     "@balena/dockerignore" "^1.0.2"
     case "1.6.3"
@@ -1190,9 +1190,9 @@ aws-cdk-lib@^2.0.0:
     yaml "1.10.2"
 
 aws-cdk@^2.0.0:
-  version "2.42.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.42.1.tgz#a15c5f29034ea50875593f738d38396e0fbefece"
-  integrity sha512-+/mFl2TAT1ybpmTdrq24rc2vVBnJgH8rcOeSKOCY2kdQ8KcMUgT+pTJqJUXz4KJ42ZXhbqrt1KWrDTlTJ134FQ==
+  version "2.43.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.43.0.tgz#46957c284602254ab31f95c75a27c3e5edcdcdf6"
+  integrity sha512-9qDHl5/EXK6rUsrjm4tz9/8tb3F/QgYuohdFaaOojVbBXjilVdwKVPXTpB4V4Oqkn2yivIUR/26zfm60k4y4hw==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1423,9 +1423,9 @@ camelcase@^7.0.0:
   integrity sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==
 
 caniuse-lite@^1.0.30001400:
-  version "1.0.30001407"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001407.tgz#92281a6ee67cb90bfd8a6a1201fcc2dc19b60a15"
-  integrity sha512-4ydV+t4P7X3zH83fQWNDX/mQEzYomossfpViCOx9zHBSMV+rIe3LFqglHHtVyvNl1FhTNxPxs3jei82iqOW04w==
+  version "1.0.30001409"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001409.tgz#6135da9dcab34cd9761d9cdb12a68e6740c5e96e"
+  integrity sha512-V0mnJ5dwarmhYv8/MzhJ//aW68UpvnQBXv8lJ2QUsvn2pHcmAuNtu8hQEDz37XnA1iE+lRR9CIfGWWpgJ5QedQ==
 
 case@1.6.3:
   version "1.6.3"
@@ -1433,9 +1433,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.249"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.249.tgz#89005a2a792bbd290c22504335b9737c5473794d"
-  integrity sha512-cM+WhjXckt0yVB8f4wwmK9JnssRZFfB640StAXxKwUuGEWrxgZiNqa9TM/akTTxUsSuELOgSI/0jJt9RKuKnig==
+  version "0.2.250"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.250.tgz#0b410f3e7697bfa21142b9ffb42beb747d4badb7"
+  integrity sha512-2MoQNDYBfwPyOto9v36tSMXGt075/0PlBO9za1lzorpk1tzDD0fXTy7PiDVAjNblCPQ1d0tQBZ5G2ryaaq9Zww==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1618,9 +1618,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.107"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.107.tgz#a5c0a840b9510b8a363e33e9d47f921520bbfb20"
-  integrity sha512-ewB60glRfBrzIlyujDJzIL/TWRhwwxtS579nOOqmvqaEKHtNgzHnDPBsq/vvvFpwZIRHs1ZUvtWPvxCg/2Ee6Q==
+  version "10.1.108"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.108.tgz#6417608a01c29ec4b2197e7fb1c30a89aa036008"
+  integrity sha512-WfVXhurLliVGxqeDeVIT1dZmgwcpQpcCFzeN6BIClAjYGl7ax+lyslaqqJPqJT+XfPuYkCZT2i9Uc3gtySZJCA==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.8.0"
@@ -2348,9 +2348,9 @@ fastq@^1.6.0:
     reusify "^1.0.4"
 
 fb-watchman@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.1.tgz#fc84fb39d2709cf3ff6d743706157bb5708a8a85"
-  integrity sha512-DkPJKQeY6kKwmuMretBhr7G6Vodr7bFwDYTXIkfG1gjvNpaxBTQV3PbXg6bR1c1UP4jPOX0jHUbbHANL9vRjVg==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/fb-watchman/-/fb-watchman-2.0.2.tgz#e9524ee6b5c77e9e5001af0f85f3adbb8623255c"
+  integrity sha512-p5161BqbuCaSnB8jIbzQHOlpgsPmK5rJVDfDKO91Axs5NC1uu3HRQm6wt9cd9/+GtQQIO53JdGXXoyDpTAsgYA==
   dependencies:
     bser "2.1.1"
 
