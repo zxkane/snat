@@ -848,9 +848,9 @@
     "@types/node" "*"
 
 "@types/node@*":
-  version "18.7.20"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.20.tgz#d9442de7b5cb166476340b4271b15300fe058a39"
-  integrity sha512-adzY4vLLr5Uivmx8+zfSJ5fbdgKxX8UMtjtl+17n0B1q1Nz8JEmE151vefMdpD+1gyh+77weN4qEhej/O7budQ==
+  version "18.7.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.21.tgz#63ee6688070e456325b6748dc492a7b948593871"
+  integrity sha512-rLFzK5bhM0YPyCoTC8bolBjMk7bwnZ8qeZUBslBfjZQou2ssJdWslx9CZ8DGM+Dx7QXQiiTVZ/6QO6kwtHkZCA==
 
 "@types/node@^14":
   version "14.18.30"
@@ -1433,9 +1433,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.253"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.253.tgz#b3d4a7341e08ae7595746e0692e35a715eca7fa0"
-  integrity sha512-dHsrHTaL33CWLm7/oWwhalvNN13p9qaaY204YQSt6ZqXPfte5KTZSXh4io2T2Iu0dvOPvDvp+ljSsa3bXA/C5g==
+  version "0.2.254"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.254.tgz#40248db6b8162cbb6ecd24cbaf132a25e751a717"
+  integrity sha512-KCulOmbwhZ3kJUgijssyccKVXlXV6FxTFqKzI5csqPNGSglROKkCYYipUAZOfyZ0Vo7LX1OXu0ZX0LlGM6fViw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
