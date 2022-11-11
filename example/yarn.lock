@@ -1438,9 +1438,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.295"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.295.tgz#7b16de439b6a431bd0aa2b71380a66073accfb5f"
-  integrity sha512-tfFmIls9+4+lwev+OAbI3IohZVyhgGPZsNcZlp5IUJIb5dDeN07gpsVGCURKE65gR/RgxOy3CLtCIWsJR2frMQ==
+  version "0.2.296"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.296.tgz#4480df286c8920fa0b511644372bccad07a70ea5"
+  integrity sha512-DwmQ+n2baUDdPh0207gZq0kz0PIhCqQhbtqtUIdgCgd4xuu3S/ogjI5g+SVXTAEmrRK971DEnaWm0pMBt+8mhA==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1616,9 +1616,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.154"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.154.tgz#9ac3ee1305c4cecc7bced3d4097fa9886f3ccc65"
-  integrity sha512-JStQT84+NhsfamESRExZoGzpq/f/gpq9xpzgtQNOzungs42Gy8kxjfU378MnVoRqwCHwk0vLN37HZjgH5tJo2A==
+  version "10.1.155"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.155.tgz#dcef1545f3fd6ec379702ee0d52aa27c9cffccaa"
+  integrity sha512-AM8HdZ1GQbOLBmnIU5ybyerNeNn9iEZSZZra+2BWuAhyaA+zJb9oxwxD3isM2uxZviB5NHGhZI83plmhOuh29A==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
