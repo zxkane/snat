@@ -1438,9 +1438,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.297"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.297.tgz#d4a1d765849d40819c482c6989fe37b73e8b8c70"
-  integrity sha512-QeI8fz0kauZ8bN3L6QD+BHaM01OszL+bvPozU1c6zGb3vbrto6fJb9NN8XgTEM4ryt5f7vlUTXG45t6wCNHDMQ==
+  version "0.2.298"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.298.tgz#89a2d7da63e825bd30800d93f7fed7dc52b91f41"
+  integrity sha512-jkgKxTrUIJyL4ONuuYaQSxIhe/7OuOu5L7geiHN5Q8wRVvNN0u8N8xUg6h3BNvGiIrgMhorZRvdHIyCcDO4neQ==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1616,9 +1616,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.156"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.156.tgz#3ccd82b7f07e8921d015f1ae9317f851ff6b87d4"
-  integrity sha512-BTZ3Kyt++/YFlph/ioqbDhzSKVMqHRHvc99FxU4b705ZP6s2IkDxMLCMinC70USMTJWFbO1p02Egux7sk4q07A==
+  version "10.1.157"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.157.tgz#0c226b006f6a3d217740c68b5b72cf6da4798639"
+  integrity sha512-GEIYHVB2J96MGo/7Au8ImQ54E8OnnnoUpXfcwqO0x/Rw2jVUEiFmSwKP/LTcOUF0tqnU5daHjoeaPnTb7S6nrw==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
@@ -4103,9 +4103,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.3.22"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.3.22.tgz#119c61ef919ec3cd79cdf3422e1da9042a10b42a"
-  integrity sha512-GDqBHVduJuLInhEsgQ+BDCBr4C5oUnyja3OKNzJc1AX1utEd+tTjYvUnmZNeNE5WDizLCzKoy/3MA8+ionJypA==
+  version "16.3.25"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.3.25.tgz#58217d203040191c752cee2a35428aeb54f97a28"
+  integrity sha512-zrjx6P7LGHYS5e3TNuSqkWQc9m1KLjJIxFERGANN+xEY826NQYG08RwucUD9nRxIlRE9PsGCcMsJJTYJu1DHbA==
   dependencies:
     chalk "^5.1.2"
     cli-table "^0.3.11"
