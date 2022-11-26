@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.9":
-  version "2.2.17"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.17.tgz#d3405bc0f329fbcdac9e93d74da60e4bc1052cf7"
-  integrity sha512-tTCipAuHDtwOgWcdLfVpm2ZHWmWs4uk+z3RNMyR8Rhy8Gwd0Xzl8KV8q7pG50mvtF1uTmxh74K99fVIkXb9xsA==
+  version "2.2.18"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.18.tgz#972535a01b3abf5b02657b18f786c374cbc099a5"
+  integrity sha512-yEbAoHA0IcTDw17swJUiRns9QDQR6+mF8J3hQqZ1S8KaK+dz8v0cVOhx+nv4EPyZYo3HDvphSX+sasbXUmVwoA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -21,9 +21,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.15":
-  version "2.0.23"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.23.tgz#eded785817f8dab5463c9c44e8365a50c3068d86"
-  integrity sha512-ywRZR7fQvMFGWdWpme4LeHckLPTzwZSj9WhMd4fTVnjUfb7iNZoWdT8dgyqa4DOgQCxUZLrQiEmw9zl/b+QtWA==
+  version "2.0.24"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.24.tgz#14c7c4b30008a462dd2c21fe511c6e8702c2d412"
+  integrity sha512-DW5p6hbcdUUA9a8yO4s8vymUKYIbo+ajxbQiVf+NhqqCgSCTTgswIb9trTPCmi/Y4L2+SQZtkFMrFwPOC1NASg==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
   version "7.18.6"
@@ -1456,9 +1456,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.309"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.309.tgz#dfd9c3b5000a9914b7b0d27be8e834b2f947d75d"
-  integrity sha512-3Mb3hzjaiy0HDm3XX7DjFfwHgv5GD/6jvtMaF8iVt8uHurv3ByBxT18AuNGJV0RnBng4gDINqA7tjUmaXRLyiw==
+  version "0.2.310"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.310.tgz#e564be8ee4996dbbc8403bdcd41f4e93fc680a88"
+  integrity sha512-lX7CJu54UjldVN4szZvAHxaYXEWTFjHnAjB43r5xv5b7IkVu9gfwLiwo/ag3GmOY/lKkT2cQzW0Z8Rwes1HH6Q==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1634,9 +1634,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.169"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.169.tgz#6136bd5e7ff977c0c5272a6d013896069d66a974"
-  integrity sha512-tFZhYBFZr7yg/HX0FT8iyQZvuGdcrSwXgSh7+JkdSkqbNDQylWJuAfIjg+CsfPR7J2JxwUDClN07Sc3LMDtSGQ==
+  version "10.1.170"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.170.tgz#4c50f2e93fe02aba9ac862f6ceb960aaa68251ec"
+  integrity sha512-kFEwQ/iqn/DzpHR+BJcn6cQjGaPwmICeaPUjjbPgq7GL7i8twcyRXb1337NdVsnxBQT1g8AOFdWh20LTomGLUw==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
@@ -3989,9 +3989,9 @@ minipass-sized@^1.0.3:
     minipass "^3.0.0"
 
 minipass@^3.0.0, minipass@^3.1.1, minipass@^3.1.6:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/minipass/-/minipass-3.3.4.tgz#ca99f95dd77c43c7a76bf51e6d200025eee0ffae"
-  integrity sha512-I9WPbWHCGu8W+6k1ZiGpPu0GkoKBeorkfKNuAFBNS1HNFJvke82sxvI5bzcCNpWPorkOO5QQ+zomzzwRxejXiw==
+  version "3.3.6"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-3.3.6.tgz#7bba384db3a1520d18c9c0e5251c3444e95dd94a"
+  integrity sha512-DxiNidxSEK+tHG6zOIklvNOwm3hvCrbUrdtzY74U6HKTJxvIDfOUL5W5P2Ghd3DTkhhKPYGqeNUIh5qcM4YBfw==
   dependencies:
     yallist "^4.0.0"
 
