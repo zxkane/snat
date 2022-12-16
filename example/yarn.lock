@@ -1381,12 +1381,12 @@ cacache@^16.1.0:
     unique-filename "^2.0.0"
 
 cacache@^17.0.0:
-  version "17.0.3"
-  resolved "https://registry.yarnpkg.com/cacache/-/cacache-17.0.3.tgz#9ba14e0e50eca763ae7e2ee89036a948a13035ed"
-  integrity sha512-pwsIK/grdM0cHpfVaNFxMdzElBtLJGsVPE+JnxqXP1l40O01Z1mfDE8MbRTuwomGq/UwEtGisOylutOEVJxEqg==
+  version "17.0.4"
+  resolved "https://registry.yarnpkg.com/cacache/-/cacache-17.0.4.tgz#5023ed892ba8843e3b7361c26d0ada37e146290c"
+  integrity sha512-Z/nL3gU+zTUjz5pCA5vVjYM8pmaw2kxM7JEiE0fv3w77Wj+sFbi70CrBruUWH0uNcEdvLDixFpgA2JM4F4DBjA==
   dependencies:
     "@npmcli/fs" "^3.1.0"
-    fs-minipass "^2.1.0"
+    fs-minipass "^3.0.0"
     glob "^8.0.1"
     lru-cache "^7.7.1"
     minipass "^4.0.0"
@@ -1456,9 +1456,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.327"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.327.tgz#3a3ccc35fae3948bd5452437f7d3950a5bf90ffa"
-  integrity sha512-Bkl32/+bPOWbOeH8vZchZ9J5pFthEr4xifo83pCWc2WnvSWcWNyWmBhTAkLrGMy5ijJOFWJM9gcLnGLQ9BY9WQ==
+  version "0.2.328"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.328.tgz#a55c1d6aafacb36fdeee36bd3f782e1a39efb5b1"
+  integrity sha512-RzoJPLY493zFwDcerupu7o20IQeVTeaQC/6fxxWb8dmHn97OKCO1PJiC8rg3+DypPEUnGO1gkAbwudRHIw+GMg==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1634,9 +1634,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.189"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.189.tgz#a701517dbb0070098e94e822567c4fe7d694fdf5"
-  integrity sha512-xBwsjkgzZVqND1qHH6JQcROtJSlJsdYYHv4Spmipf2KVGXk4v70OGfvT2vTSWXvIoivxhnzPhEPKnMmFDheCmA==
+  version "10.1.190"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.190.tgz#a3c5a497bff4c4a835738137b51967ff07bc97c1"
+  integrity sha512-wGMEBsIKp/tP+b2q3XEtIh/KJPZ2uk7G2XyEbGVEatOo6OQHFhXfBi9BCk8725zuWYP/gZUQJfAvd7KZ+lY5Yw==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
@@ -2448,6 +2448,13 @@ fs-minipass@^2.0.0, fs-minipass@^2.1.0:
   integrity sha512-V/JgOLFCS+R6Vcq0slCuaeWEdNC3ouDlJMNIsacH2VtALiu9mV4LPrHc5cDl8k5aw6J8jwgWWpiTo5RYhmIzvg==
   dependencies:
     minipass "^3.0.0"
+
+fs-minipass@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-3.0.0.tgz#8e6ed2b4e1ba44077cae69971393068a1bbeeed6"
+  integrity sha512-EUojgQaSPy6sxcqcZgQv6TVF6jiKvurji3AxhAivs/Ep4O1UpS8TusaxpybfFHZ2skRhLqzk6WR8nqNYIMMDeA==
+  dependencies:
+    minipass "^4.0.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
