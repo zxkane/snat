@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.30":
-  version "2.2.32"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.32.tgz#fadf6e992883e92f870b78a75e268b7b6d0e123e"
-  integrity sha512-DdxlGfCSRy+UPMGBhaZC8wBxhe9NTxOgjoNQsRF/N70P9zAQsRdGqexUrLNt8stvFadCxtuWXte64lVW/lCc+Q==
+  version "2.2.33"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.33.tgz#d33a2e841c5ddc6259a0c9c370a8d83ba849d2e2"
+  integrity sha512-iP3R1h9WAmg8Vn6YiFNgZZWgHZg1zddpIVW815sgxLlaonWXqORTp2xwu7zZhsq8Xi8oGC7ga7ZwY3qLGXl5qw==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -1456,9 +1456,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.330"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.330.tgz#05ab67608f32998474a5f705ca6fecb7ce68d41a"
-  integrity sha512-AzRN0KGQOJN37Xl6xJ7fMxvO62eUBPLOE1JVFqM7WG0cHwgo6+rUXl896iZ0KOFAaurafxSSKsSOtjB7BdLDxw==
+  version "0.2.331"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.331.tgz#bfd5b9b4cc9920df13e19d49555223445b41f922"
+  integrity sha512-SH+d4rleeJbZTitMb0Sdzv3SfLo3IsyDbsIsLVM/97YoPH1PjQyh2djWkP2OFubtvDy/G16nUzn2t2rZolE9bw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1634,9 +1634,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.192"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.192.tgz#e93f671037058b266951c1cac9894c6b7f8d2080"
-  integrity sha512-hupw4oWfKZ2O7Lq0GF0I6l3Mm/cwA0v/LP7nJhynqhh2csvMpbi53h1ltfVnSnTbLmCnA+aiQ0SWjqFaR4wIDg==
+  version "10.1.193"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.193.tgz#227ae08f6e7472104038485337f89fe0ee6b9e96"
+  integrity sha512-J9KGMLKwPaa6L3lryi447sxnzwZA+Zu2cfkPEODNIelXfCmaDI8teqp4DPZ8xxBaQV+fJfLeaSReC8j+FEVyeg==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
