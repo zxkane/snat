@@ -1472,9 +1472,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.353"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.353.tgz#10e3c1c5639e838994885edc30a9fa874a106089"
-  integrity sha512-Cbh8kOBOmPwWv++go1jr3mK824nM41/GLrnNu9VgYQb69PHd0WSCHh2R9Lk4i8cMTPfixLO76WLWMWtLNRISlg==
+  version "0.2.354"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.354.tgz#a26ac653badcd3e63b2f12fe42eceea1026e1ba3"
+  integrity sha512-/MHS9y4fF/MT1MFYf8kvPraYs/6PLXJR9ejK4rHCsBDZm+EokRnwalj+Kd7Sx7NFWpbOGzNv+PNRqQ2CBRm8Gw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1650,9 +1650,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.221"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.221.tgz#92408486486910e48b5a57f2e2d0181e2a2db53a"
-  integrity sha512-6kkZxR79lyvv8VlhKsjMRJkpnIb09C4tcI3pgWNIIaHrwWA98yfTjQnQfbwhyGltVuq6ItQfXo+o4+TfSAA+aA==
+  version "10.1.222"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.222.tgz#bc5d99b9b0aad8c6168d4382195b5bcaba31fb61"
+  integrity sha512-ILgomocuxiX5ueouLSGUD6A1nGAYQ/SPWZ6UbMKGvrxDeFh35NvI0T+4WlDJQqDVTotOpHwdlQqIZ4S18/ZSRw==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
@@ -4009,9 +4009,9 @@ minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
     brace-expansion "^1.1.7"
 
 minimatch@^5.0.1, minimatch@^5.1.2:
-  version "5.1.4"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.4.tgz#4e2d39d872684e97b309a9104251c3f1aa4e9d1c"
-  integrity sha512-U0iNYXt9wALljzfnGkhFSy5sAC6/SCR3JrHrlsdJz4kF8MvhTRQNiC59iUi1iqsitV7abrNAJWElVL9pdnoUgw==
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.6.tgz#1cfcb8cf5522ea69952cd2af95ae09477f122a96"
+  integrity sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==
   dependencies:
     brace-expansion "^2.0.1"
 
