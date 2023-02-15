@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.52":
-  version "2.2.66"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.66.tgz#063ae1aa38e54d9b26d77ed6b15de768d5fa1ac3"
-  integrity sha512-MdC2UpjDVi0ePQkXZg938/FZvK5pu0o2im9legoojmNZNKGssqpscz5gPISeZhrW124WI8IF+6hYPkHVYnod2w==
+  version "2.2.67"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.67.tgz#3b382760beea1e403e3e58b8e04ec46bd11d4d65"
+  integrity sha512-d3V26C26SGdG0wMeuXDdoPA4CZJQgHS53fqmIuSUNw83vMBullJSUGLxNvk2LzdWcuftSpMUqIUKLKxFzDEMIA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -21,9 +21,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.42":
-  version "2.0.55"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.55.tgz#7ce3254e3efdf228bc4f28a6e99932ebbdc70baf"
-  integrity sha512-wqw3I/Bdy3SURLiGKtU47Fkz6OnSPsNs9O0FlkJyBFWVh4e5kMe1BfEmc3kZ/QukvKxI+Fnqk9Yz8tui0goqiQ==
+  version "2.0.56"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.56.tgz#dd45d54626c2c09e566db336756a53360c36a495"
+  integrity sha512-gmne4sTHeGfsnqyrpmMgp4VpNRRoaCrJIyEhcmokYL3qiE+qkeAJVVWXM7cL1rC05WjsG93IIg9Hw09g2VZRlA==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
   version "7.18.6"
@@ -1463,9 +1463,9 @@ camelcase@^7.0.0:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001451"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001451.tgz#2e197c698fc1373d63e1406d6607ea4617c613f1"
-  integrity sha512-XY7UbUpGRatZzoRft//5xOa69/1iGJRBlrieH6QYrkKLIFn3m7OVEJ81dSrKoy2BnKsdbX5cLrOispZNYo9v2w==
+  version "1.0.30001452"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001452.tgz#dff7b8bb834b3a91808f0a9ff0453abb1fbba02a"
+  integrity sha512-Lkp0vFjMkBB3GTpLR8zk4NwW5EdRdnitwYJHDOOKIU85x4ckYCPQ+9WlVvSVClHxVReefkUMtWZH2l9KGlD51w==
 
 case@1.6.3:
   version "1.6.3"
@@ -1473,9 +1473,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.380"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.380.tgz#6cec1d9e2cf306aa8ed80c054c0305c7a6c1ccc0"
-  integrity sha512-2Ry66oq7IJecTd4XLGgdRN82l+sxPplXmlOepG/hDSpRblQYQdrYSMUNGn2Iii0I4d+dTclk8qLubFZIS1fZdg==
+  version "0.2.381"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.381.tgz#6ae17a9c285097bba109ac38bbe1229fb60f11f9"
+  integrity sha512-ze2cO2mgmjXp/kdVDdreB0zfQpz6CsPE2QbyQzpC6o8TsLQN6pQMBsdDGMmI/2YvoV5DNB60oxULO8tvGITPDQ==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1651,9 +1651,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.1.249"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.249.tgz#2eef9dc0b22a37e88b8e939fe4da1cde7edd7324"
-  integrity sha512-xttf/MWHfvMyOjg88CYymlC7RZCP7kF6knA1xtJgDfhvel11uYUhomEGxuQiqy6BOvKyKxJUBaGl8jfp8s1MLA==
+  version "10.1.250"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.250.tgz#ec9cfa8d1c91c386e1831e1484a605063c59fbe3"
+  integrity sha512-eF71tcgvo6jMO/NlPFWuUpJ0VrpA9kvRvusIFLPjfV6h75epVQPwyhPoVlS0hHFQsujQJNXMLltaeRZSGhILcw==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
