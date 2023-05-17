@@ -169,6 +169,7 @@ project.package.addField('resolutions',
     'set-value': '^4.0.1',
     'ansi-regex': '^5.0.1',
     'colors': '1.4.0',
+    '@types/babel__traverse': '7.18.2',
   }),
 );
 
