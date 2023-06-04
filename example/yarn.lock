@@ -1546,9 +1546,9 @@ camelcase@^7.0.1:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001489:
-  version "1.0.30001492"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001492.tgz#4a06861788a52b4c81fd3344573b68cc87fe062b"
-  integrity sha512-2efF8SAZwgAX1FJr87KWhvuJxnGJKOnctQa8xLOskAXNXq8oiuqgl6u1kk3fFpsp3GgvzlRjiK1sl63hNtFADw==
+  version "1.0.30001494"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001494.tgz#3e56e04a48da7a79eae994559eb1ec02aaac862f"
+  integrity sha512-sY2B5Qyl46ZzfYDegrl8GBCzdawSLT4ThM9b9F+aDYUrAG2zCOyMbd2Tq34mS1g4ZKBfjRlzOohQMxx28x6wJg==
 
 case@1.6.3:
   version "1.6.3"
@@ -1556,9 +1556,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.447"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.447.tgz#948defcf7d0a892484e805145c2d5e1e827c51c5"
-  integrity sha512-1UhdNRFoaLC/kk83Mi+JfrAgHq4BlLPZSM8SVVaGYCjpB3G2elXwjC15On8QVoA8lMhLTOAd4v+0x0djVXtPOw==
+  version "0.2.448"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.448.tgz#f743a90f550bdad6fb15f8e475eb9873dbc16e45"
+  integrity sha512-mseh74JbdqRXfDuCLhvA+c0NoSfU6idIJaybIvkGCn2/mUUZSCqLw0qNIZBcskXkEvkBg0s7DofZqQJbgeV/QA==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1736,9 +1736,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.2.40"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.40.tgz#d8defedb0fe9217e596dcb114994ff6cf28cb70c"
-  integrity sha512-Ml5/U7B/fNpdSEBJydZ2PCEOgaOVKp789n2fh/36HDZDXTBOdIsC1XRbxQBbO5qTHIEyknV6CQy47n+wx9ZMzA==
+  version "10.2.41"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.41.tgz#090e725b84d2da59ddb9e5c782f9678a0c49257a"
+  integrity sha512-csg/lxYKHA3meQX4JWs7EiTAtVYl681jTl8VxCK7jMfzbH5RzRsCA09HwYzslarQcFCSZyUMcgHVvZhUyABjAA==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
