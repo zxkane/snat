@@ -778,9 +778,9 @@
   integrity sha512-a31EnjuIDSX8IXBUib3cYLDRlPMU36AWX4xS8ysLaNu4ZzUesDiPt83pgrW2X1YLMe5L2HbDyaKK5BrL4cNKaQ==
 
 "@sindresorhus/is@^5.2.0":
-  version "5.4.0"
-  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-5.4.0.tgz#b1bfbd6024311ade045093b424536cefcc8e3a42"
-  integrity sha512-Ggh6E9AnMpiNXlbXfFUcWE9qm408rL8jDi7+PMBBx7TMbwEmiqAiSmZ+zydYwxcJLqPGNDoLc9mXDuMDBZg0sA==
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-5.4.1.tgz#c4383ce702fb90531c3d310506bab89e70427c53"
+  integrity sha512-axlrvsHlHlFmKKMEg4VyvMzFr93JWJj4eIfXY1STVuO2fsImCa7ncaiG5gC8HKOX590AW5RtRsC41/B+OfrSqw==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.6"
@@ -1556,9 +1556,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.448"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.448.tgz#f743a90f550bdad6fb15f8e475eb9873dbc16e45"
-  integrity sha512-mseh74JbdqRXfDuCLhvA+c0NoSfU6idIJaybIvkGCn2/mUUZSCqLw0qNIZBcskXkEvkBg0s7DofZqQJbgeV/QA==
+  version "0.2.449"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.449.tgz#2f7875cac4a3fc0b7f3044e510481bd06dc88362"
+  integrity sha512-ouywNMHrXImbaYyn1QQM2l9CEF+fpDDtEChqZmUWtSgkc3Itb5ZG08qlDhAiYSRv0pY3NL6IicAtzMj2CtT0+A==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1736,9 +1736,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^10.0.5:
-  version "10.2.41"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.41.tgz#090e725b84d2da59ddb9e5c782f9678a0c49257a"
-  integrity sha512-csg/lxYKHA3meQX4JWs7EiTAtVYl681jTl8VxCK7jMfzbH5RzRsCA09HwYzslarQcFCSZyUMcgHVvZhUyABjAA==
+  version "10.2.42"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.42.tgz#881d1746dbb747586adb702b70d8c502b5c796da"
+  integrity sha512-QTy50blEmjrHexraR4JmxJtA7YCQ2p/IaDXiXNfy8lYNYnWQbp5YbAhDG1BSYvoRRgru/kB9CTlGtiLd9x3aUQ==
 
 convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
