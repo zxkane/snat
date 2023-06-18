@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.177":
-  version "2.2.192"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.192.tgz#d2bedcd45a8407da9b2339bfec67964e63ef8229"
-  integrity sha512-kabo2WJR1lMh8ER2MYUdiN0inYIO8+K/ken6obNcdxIKf9d1llP8wlfU3JwNMv5IkNqoVWLPToZ8D2dCL2VAPQ==
+  version "2.2.193"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.193.tgz#e98f973273a5f5cc7ffff8e7f69b33d4d2135ffe"
+  integrity sha512-liDhF15WsW2/w7q20o4WQtuxOTkIk+XYKhQ9E4g6A59sJQi56x1Lo4pHLepm3lMAY3Hu43Uz/rQ6FjQt4wsuiw==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.2"
@@ -1510,9 +1510,9 @@ camelcase@^7.0.1:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001503:
-  version "1.0.30001503"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001503.tgz#88b6ff1b2cf735f1f3361dc1a15b59f0561aa398"
-  integrity sha512-Sf9NiF+wZxPfzv8Z3iS0rXM1Do+iOy2Lxvib38glFX+08TCYYYGR5fRJXk4d77C4AYwhUjgYgMsMudbh2TqCKw==
+  version "1.0.30001504"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001504.tgz#eaf77e5c852dfa5f82c4924468c30602ac53744a"
+  integrity sha512-5uo7eoOp2mKbWyfMXnGO9rJWOGU8duvzEiYITW+wivukL7yHH4gX9yuRaobu6El4jPxo6jKZfG+N6fB621GD/Q==
 
 case@1.6.3:
   version "1.6.3"
@@ -1520,9 +1520,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.461"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.461.tgz#815ef0907a63c745d9d63f3851a1c477971fb9d4"
-  integrity sha512-jHiHrTwX3NLLV4Kzt4FS1eoTbHmP30Jx3zlMZjCseXCMCSEnH1Vr4Xt5bWZYDKd/QR/VZq3nOrfJ6HI3Ul8Klg==
+  version "0.2.462"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.462.tgz#8cb56b3178de1f909d2ca655bbd7d4bf140c7b42"
+  integrity sha512-Xx2I1d5UzNuny1wSdq6Uc/TgI80SCqNZC4xrY/KXFHxpbkS1eYKDlKM8BNhCPHFjE+2BURoiidxWgw7Ov2kyPg==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
