@@ -11,9 +11,9 @@
     "@jridgewell/trace-mapping" "^0.3.9"
 
 "@aws-cdk/asset-awscli-v1@^2.2.177":
-  version "2.2.197"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.197.tgz#65667326241dca10071023baaf0068b6ed90d810"
-  integrity sha512-gUM22fkas3lxVG5v1WW0I2CsnTLj2v7gRm/31fnAGTYnzP60BsYVWa0Vi99b2Qz3D3RXxOlGKaO+dQR7r2GqIg==
+  version "2.2.198"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.198.tgz#7a7cddbbc33c6f42b4e6457296dc40c5926d27c3"
+  integrity sha512-RfOMXFMyZ5Ca8ytB3/vs6srFH5HVV4M2JS9Wsb/uXPEpSblEmuf31iGVfN6Q+xRoNPm8icsquCRQ79JBqH4yjA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.2"
@@ -1264,9 +1264,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-cdk-lib@^2.0.0:
-  version "2.84.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.84.0.tgz#cb08033f5cfba5aed3c0b0cb11a46fc1cbe1586c"
-  integrity sha512-4zLtCLCIs5Ia4WRGqiXRwxSkpGaNy3NxMexO9qYHSuIYpqf4sHObzZ0tDHZCFL5Wkui3sCu3OLQWrRHrr93HvA==
+  version "2.85.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.85.0.tgz#09a577799b63107d3128c2755ee02acedc580e5d"
+  integrity sha512-u+ypK8XEMRH3tGRMSmcbPYxLet7xBdGIztUkMcPtlNJGhS/vxqh12yYkem3g3zzmHwdX8OPLSnlZ2sIuiIqp/g==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.177"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
@@ -1283,9 +1283,9 @@ aws-cdk-lib@^2.0.0:
     yaml "1.10.2"
 
 aws-cdk@^2.0.0:
-  version "2.84.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.84.0.tgz#59890df8555b0179630af72a131fbf201dc0967b"
-  integrity sha512-XypGsMW+H6DLLIPt4zG5KWv1FuUlpS6jqEROxg5maJFFsRaQnMkfgXP/ZT1IELyIWCYAZl6xD1rz7WRS3yMueA==
+  version "2.85.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.85.0.tgz#edf2cc6ffdeb20b9bea94897a00ba25d53b400c0"
+  integrity sha512-duRE5rvP9Qu5iUNgA6+knHKsQ7xI6yKMUxyARTveYEzW/qDHD0RWKRu+pDbbwXLlzcr25oKGPjC3dM0ui2beKg==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1510,9 +1510,9 @@ camelcase@^7.0.1:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001503:
-  version "1.0.30001505"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001505.tgz#10a343e49d31cbbfdae298ef73cb0a9f46670dc5"
-  integrity sha512-jaAOR5zVtxHfL0NjZyflVTtXm3D3J9P15zSJ7HmQF8dSKGA6tqzQq+0ZI3xkjyQj46I4/M0K2GbMpcAFOcbr3A==
+  version "1.0.30001506"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001506.tgz#35bd814b310a487970c585430e9e80ee23faf14b"
+  integrity sha512-6XNEcpygZMCKaufIcgpQNZNf00GEqc7VQON+9Rd0K1bMYo8xhMZRAo5zpbnbMNizi4YNgIDAFrdykWsvY3H4Hw==
 
 case@1.6.3:
   version "1.6.3"
@@ -1520,9 +1520,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.465"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.465.tgz#9610e8978adf6f85c46a9f2965c61ed6566a94ef"
-  integrity sha512-/ekpSIe/Y41kQXdc4EXrQ1PYzc0fd27X13IS6UHZ84RtUAC2+LLa0O754BNppWonmcbRJkqxWLECzi/mvVF+/A==
+  version "0.2.466"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.466.tgz#d2f67da371e4c48a9ecaa863247e34d6f0e1ae08"
+  integrity sha512-/DzrDXEyh9cluFEkM4cPZquptz5MdcVAAEErialZ43OfmMgyOgn0wA4S7EXQj5i4yIZ/oIzTks2nFuCyHSwlnA==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1906,9 +1906,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.431:
-  version "1.4.435"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.435.tgz#761c34300603b9f1234f0b6155870d3002435db6"
-  integrity sha512-B0CBWVFhvoQCW/XtjRzgrmqcgVWg6RXOEM/dK59+wFV93BFGR6AeNKc4OyhM+T3IhJaOOG8o/V+33Y2mwJWtzw==
+  version "1.4.436"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.436.tgz#2aa6e1644693d25cb438a873fba72ec901e1be30"
+  integrity sha512-aktOxo8fnrMC8vOIBMVS3PXbT1nrPQ+SouUuN7Y0a+Rw3pOMrvIV92Ybnax7x4tugA+ZpYA5fOHTby7ama8OQQ==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -2660,9 +2660,9 @@ glob-parent@^6.0.2:
     is-glob "^4.0.3"
 
 glob@^10.2.2, glob@^10.2.5:
-  version "10.2.7"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-10.2.7.tgz#9dd2828cd5bc7bd861e7738d91e7113dda41d7d8"
-  integrity sha512-jTKehsravOJo8IJxUGfZILnkvVJM/MOfHRs8QcXolVef2zNI9Tqyy5+SeuOAZd3upViEZQLyFpQhYiHLrMUNmA==
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-10.3.0.tgz#763d02a894f3cdfc521b10bbbbc8e0309e750cce"
+  integrity sha512-AQ1/SB9HH0yCx1jXAT4vmCbTOPe5RQ+kCurjbel5xSCGhebumUv+GJZfa1rEqor3XIViqwSEmlkZCQD43RWrBg==
   dependencies:
     foreground-child "^3.1.0"
     jackspeak "^2.0.3"
