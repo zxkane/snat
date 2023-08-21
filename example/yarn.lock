@@ -1554,9 +1554,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.524"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.524.tgz#5547e5a2b97cb2782b70bb0b0224918d2bacbed2"
-  integrity sha512-MdLyUTS7bufZNq5p67ujTjAK1Usjp8bII+9+Miz3ti1/I56siLyxIMSKXtDQUrgKHQoZdeUPgtyNeez0b6CHiQ==
+  version "0.2.525"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.525.tgz#c2ff839462fbf8e73d1e023a0a0aad9cbe2e31d1"
+  integrity sha512-BdN7gbF6L47hUCgr0rSjFxPi07OWo+u3hVtgPdCAzgu5cEewwYOWbYLef3vs5Q92lYL3BKzKziiXDp+5pawCvw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -5180,9 +5180,9 @@ source-map@^0.7.3:
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 spawn-please@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/spawn-please/-/spawn-please-2.0.1.tgz#13d76566ca5e9ac0537a90853ca4f53f27489ae0"
-  integrity sha512-W+cFbZR2q2mMTfjz5ZGvhBAiX+e/zczFCNlbS9mxiSdYswBXwUuBUT+a0urH+xZZa8f/bs0mXHyZsZHR9hKogA==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/spawn-please/-/spawn-please-2.0.2.tgz#41912d82fe9504dd5a5424d2b4834e9a6cea56e0"
+  integrity sha512-KM8coezO6ISQ89c1BzyWNtcn2V2kAVtwIXd3cN/V5a0xPYc1F/vydrRc01wsKFEQ/p+V1a4sw4z2yMITIXrgGw==
   dependencies:
     cross-spawn "^7.0.3"
 
