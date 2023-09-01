@@ -179,58 +179,6 @@ project.testTask.exec('yarn test', {
   cwd: 'example',
 });
 
-const target = 'js';
-const REPO_TEMP_DIRECTORY = '.repo';
-const options = {
-  registry: 'npm.pkg.github.com',
-  prePublishSteps: [
-    {
-      name: 'Prepare Repository',
-      run: `mv ${project.artifactsDirectory} ${REPO_TEMP_DIRECTORY}`,
-    },
-    {
-      name: 'Install Dependencies',
-      run: `cd ${REPO_TEMP_DIRECTORY} && ${project.package.installCommand}`,
-    },
-    {
-      name: 'Update package name',
-      run: `cd ${REPO_TEMP_DIRECTORY} && sed -i "1,5s/\\"cdk-construct-simple-nat\\"/\\"@zxkane\\/cdk-construct-simple-nat\\"/g" package.json`,
-    },
-    {
-      name: `Create ${target} artifact`,
-      run: `cd ${REPO_TEMP_DIRECTORY} && npx projen package:js`,
-    },
-    {
-      name: `Collect ${target} Artifact`,
-      run: `mv ${REPO_TEMP_DIRECTORY}/${project.artifactsDirectory} ${project.artifactsDirectory}`,
-    },
-  ],
-};
-project.release.publisher.addPublishJob((_branch, branchOptions) => {
-  return {
-    name: 'npm_github',
-    publishTools: {},
-    prePublishSteps: options.prePublishSteps ? options.prePublishSteps : [],
-    run: project.release.publisher.publibCommand('publib-npm'),
-    registryName: 'npm-github',
-    env: {
-      NPM_DIST_TAG: branchOptions.npmDistTag ? branchOptions.npmDistTag : (options.distTag ? options.distTag : 'latest'),
-      NPM_REGISTRY: options.registry,
-    },
-    permissions: {
-      contents: github.workflows.JobPermission.READ,
-      packages: github.workflows.JobPermission.WRITE,
-    },
-    workflowEnv: {
-      NPM_TOKEN: '${{ secrets.ZXKANE_GITHUB_REGISTRY }}',
-      // if we are publishing to AWS CodeArtifact, pass AWS access keys that will be used to generate NPM_TOKEN using AWS CLI.
-      AWS_ACCESS_KEY_ID: undefined,
-      AWS_SECRET_ACCESS_KEY: undefined,
-      AWS_ROLE_TO_ASSUME: undefined,
-    },
-  };
-});
-
 const examplePrj = new awscdk.AwsCdkTypeScriptApp({
   cdkVersion: cdkVersion,
   name: 'simple-nat-example',

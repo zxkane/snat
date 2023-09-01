@@ -146,39 +146,3 @@ jobs:
           TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         run: npx -p publib@latest publib-pypi
-  release_npm_github:
-    name: Publish to npm-github
-    needs: release
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-    if: needs.release.outputs.latest_commit == github.sha
-    steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.20.0
-      - name: Download build artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-          path: dist
-      - name: Restore build artifact permissions
-        run: cd dist && setfacl --restore=permissions-backup.acl
-        continue-on-error: true
-      - name: Prepare Repository
-        run: mv dist .repo
-      - name: Install Dependencies
-        run: cd .repo && yarn install --check-files --frozen-lockfile
-      - name: Update package name
-        run: cd .repo && sed -i "1,5s/\"cdk-construct-simple-nat\"/\"@zxkane\/cdk-construct-simple-nat\"/g" package.json
-      - name: Create js artifact
-        run: cd .repo && npx projen package:js
-      - name: Collect js Artifact
-        run: mv .repo/dist dist
-      - name: Release
-        env:
-          NPM_DIST_TAG: latest
-          NPM_REGISTRY: npm.pkg.github.com
-          NPM_TOKEN: ${{ secrets.ZXKANE_GITHUB_REGISTRY }}
-        run: npx -p publib@latest publib-npm
