@@ -1300,9 +1300,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-cdk-lib@^2.0.0:
-  version "2.95.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.95.0.tgz#7ae678719311a9de76ef1c05ebcbe6b3341b556f"
-  integrity sha512-2G8QAldRI2Fa/ThaMyO04iLu9lER5AYKgrWshJ59L6JT4XraRTqh8sjti+ew4I6ADk6Zaprh2YcLRS2wTcICzA==
+  version "2.95.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.95.1.tgz#624321c7c0b6e6417a9f1bdbc07bd7fc2fee5eee"
+  integrity sha512-FQlnW3+c1j2W7hmu+QMSiWnBgbW1Lhn1ZpBQ6cwYZa97rII1zlEyTowAfzQk6szPIzUhJv5xK03nWZtvCvpAWw==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.200"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1319,9 +1319,9 @@ aws-cdk-lib@^2.0.0:
     yaml "1.10.2"
 
 aws-cdk@^2.0.0:
-  version "2.95.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.95.0.tgz#86cb33ebd88dd607747ddf1e3283e2fe51a5c0e0"
-  integrity sha512-3BBb9S6Wp5wC+zOZghuIC+Eu4pH0rOJAKUHTlaVUND1ePOxlEcxs2+Rww5jGTksi491q2WLwy8DiuymArhjA/w==
+  version "2.95.1"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.95.1.tgz#b1972bb6ee89a5af85468bea0b8a9f1499199712"
+  integrity sha512-KUJ63n2cB6qxpsHARmMWDhu8VITA7rKvYybbfS7BaBpXl4Tb9Bt/mEAY1EeVeyO/mpInvSRpMpdjyqE0kNAKtA==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1546,9 +1546,9 @@ camelcase@^7.0.1:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001517:
-  version "1.0.30001529"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001529.tgz#c1f2a411e85fdaace4b1560e1bad078b00ac3181"
-  integrity sha512-n2pUQYGAkrLG4QYj2desAh+NqsJpHbNmVZz87imptDdxLAtjxary7Df/psdfyDGmskJK/9Dt9cPnx5RZ3CU4Og==
+  version "1.0.30001532"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001532.tgz#c6a4d5d2da6d2b967f0ee5e12e7f680db6ad2fca"
+  integrity sha512-FbDFnNat3nMnrROzqrsg314zhqN5LGQ1kyyMk2opcrwGbVGpHRhgCWtAgD5YJUqNAiQ+dklreil/c3Qf1dfCTw==
 
 case@1.6.3:
   version "1.6.3"
@@ -1556,9 +1556,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.541"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.541.tgz#273f587a46fa01ff9085c83de776a6aa139647ee"
-  integrity sha512-+73S1ZHGxT6TBE7bpQwYCLfrZsDa0FdbTVOn3nroJQZcxaxL2TqQ0+f7fvH3TFpFzBYCh4iCh1qlGgr50m4moQ==
+  version "0.2.542"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.542.tgz#bf3f4d9fb1f094cc780693c59cc19abdf5c5d7f1"
+  integrity sha512-w12w+IkmNvod87MHBSAFTQHYnvJbit/nhMHag9rXMRFpKAbeOfwLXlvScqyHfYxssnnyqvhiAFEJgjk+wnvjMw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
