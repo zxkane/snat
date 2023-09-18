@@ -1556,9 +1556,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.549"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.549.tgz#85ad38123d89c24287d0ebb16fcd622ea3515cb6"
-  integrity sha512-Tn3jLqQZ4/8cHPidSAMYRSqZIBakfWfdUzZlAGb1ogsMWu7biMhvPkjbhqnnEzgdY20Eyrgd1fdkyOHwSC+IbQ==
+  version "0.2.550"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.550.tgz#be756c55831ccd11693911f0736e9f69f30fb40d"
+  integrity sha512-awP8EwG+vHecTec5JN4I29L31aPcOUYqELIVGispmgO3BXVHbtMD8OnSVIZ1GLsuD0uBQINFdvJZl8jkaOaE+A==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -4303,9 +4303,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.14.3"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.3.tgz#c2fdf1fe438a96e6258ceeb38f835024cf55d732"
-  integrity sha512-iviPM0LiTFGUtk+kMtcMVLNeGuSORThj9Cho7GV/Z2l5dMdXFrcgIarMSr6d6f1wYJJBIthuNdJWXZ4NH5VPEg==
+  version "16.14.4"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.4.tgz#561e97e92079ae4dbab9d9cbeb424d292ca01bae"
+  integrity sha512-PKg1wv3vno75/9qgRLqV2huBO7eukOlW+PmIGl7LPXjElfYTUTWUtaMOdOckImaSj4Uqe46W/zMbMFZQp5dHRQ==
   dependencies:
     chalk "^5.3.0"
     cli-table3 "^0.6.3"
