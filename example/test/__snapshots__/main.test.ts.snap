@@ -494,6 +494,30 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
+    "VpcPrivateSubnet1Routev420291341932765DA26F": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "20.29.134.19/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet1Routev42029134233239F61B31": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "20.29.134.23/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet1ENI19CFC6EA2",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet1RouteTableB2C5B500",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
     "VpcPrivateSubnet1Routev4208722521232CD3A0917": Object {
       "Properties": Object {
         "DestinationCidrBlock": "20.87.225.212/32",
@@ -827,6 +851,30 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
+    "VpcPrivateSubnet2Routev420291341932DCA6EA2A": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "20.29.134.19/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
+    "VpcPrivateSubnet2Routev420291342332C2F47A39": Object {
+      "Properties": Object {
+        "DestinationCidrBlock": "20.29.134.23/32",
+        "NetworkInterfaceId": Object {
+          "Ref": "VpcPublicSubnet2ENI1B54F9B30",
+        },
+        "RouteTableId": Object {
+          "Ref": "VpcPrivateSubnet2RouteTableA678073B",
+        },
+      },
+      "Type": "AWS::EC2::Route",
+    },
     "VpcPrivateSubnet2Routev4208722521232B0D03C59": Object {
       "Properties": Object {
         "DestinationCidrBlock": "20.87.225.212/32",
@@ -972,7 +1020,7 @@ Object {
       },
       "Type": "AWS::EC2::NatGateway",
     },
-    "VpcPublicSubnet1NatInstance57B636B8e988a9413f8af2d6": Object {
+    "VpcPublicSubnet1NatInstance57B636B87d3120f4d3c468ed": Object {
       "CreationPolicy": Object {
         "ResourceSignal": Object {
           "Count": 1,
@@ -1044,7 +1092,7 @@ User=sshuttle
 Restart=always
 Type=forking
 WorkingDirectory=/home/sshuttle
-ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 192.30.252.0/22 185.199.108.0/22 140.82.112.0/20 143.55.64.0/20 20.201.28.151/32 20.205.243.166/32 20.87.225.212/32 20.248.137.48/32 20.207.73.82/32 20.27.177.113/32 20.200.245.247/32 20.175.192.147/32 20.233.83.145/32 20.201.28.152/32 20.205.243.160/32 20.87.225.214/32 20.248.137.50/32 20.207.73.83/32 20.27.177.118/32 20.200.245.248/32 20.175.192.146/32 20.233.83.149/32
+ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 192.30.252.0/22 185.199.108.0/22 140.82.112.0/20 143.55.64.0/20 20.201.28.151/32 20.205.243.166/32 20.87.225.212/32 20.248.137.48/32 20.207.73.82/32 20.27.177.113/32 20.200.245.247/32 20.175.192.147/32 20.233.83.145/32 20.29.134.23/32 20.201.28.152/32 20.205.243.160/32 20.87.225.214/32 20.248.137.50/32 20.207.73.83/32 20.27.177.118/32 20.200.245.248/32 20.175.192.146/32 20.233.83.149/32 20.29.134.19/32
 ExecStop=killall sshuttle
 [Install]
 WantedBy=multi-user.target
@@ -1192,7 +1240,7 @@ systemctl restart amazon-ssm-agent.service",
               "",
               Array [
                 "#!/bin/bash
-# fingerprint: 3156247c25e5b7a6
+# fingerprint: 325e01cc876eb1ca
 (
   set +e
   /opt/aws/bin/cfn-init -v --region ",
@@ -1203,7 +1251,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet1NatInstance57B636B8e988a9413f8af2d6 -c default
+                " --resource VpcPublicSubnet1NatInstance57B636B87d3120f4d3c468ed -c default
   /opt/aws/bin/cfn-signal -e $? --region ",
                 Object {
                   "Ref": "AWS::Region",
@@ -1212,7 +1260,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet1NatInstance57B636B8e988a9413f8af2d6
+                " --resource VpcPublicSubnet1NatInstance57B636B87d3120f4d3c468ed
   cat /var/log/cfn-init.log >&2
 )",
               ],
@@ -1391,7 +1439,7 @@ systemctl restart amazon-ssm-agent.service",
       },
       "Type": "AWS::EC2::NatGateway",
     },
-    "VpcPublicSubnet2NatInstance746890A70ceb637b62aee23b": Object {
+    "VpcPublicSubnet2NatInstance746890A729d19eec778ed455": Object {
       "CreationPolicy": Object {
         "ResourceSignal": Object {
           "Count": 1,
@@ -1463,7 +1511,7 @@ User=sshuttle
 Restart=always
 Type=forking
 WorkingDirectory=/home/sshuttle
-ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 192.30.252.0/22 185.199.108.0/22 140.82.112.0/20 143.55.64.0/20 20.201.28.151/32 20.205.243.166/32 20.87.225.212/32 20.248.137.48/32 20.207.73.82/32 20.27.177.113/32 20.200.245.247/32 20.175.192.147/32 20.233.83.145/32 20.201.28.152/32 20.205.243.160/32 20.87.225.214/32 20.248.137.50/32 20.207.73.83/32 20.27.177.118/32 20.200.245.248/32 20.175.192.146/32 20.233.83.149/32
+ExecStart=/usr/local/bin/sshuttle -D --listen 0.0.0.0:0 -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/sshuttle/.ssh/id_rsa_remote' -r $REMOTE_HOST 192.30.252.0/22 185.199.108.0/22 140.82.112.0/20 143.55.64.0/20 20.201.28.151/32 20.205.243.166/32 20.87.225.212/32 20.248.137.48/32 20.207.73.82/32 20.27.177.113/32 20.200.245.247/32 20.175.192.147/32 20.233.83.145/32 20.29.134.23/32 20.201.28.152/32 20.205.243.160/32 20.87.225.214/32 20.248.137.50/32 20.207.73.83/32 20.27.177.118/32 20.200.245.248/32 20.175.192.146/32 20.233.83.149/32 20.29.134.19/32
 ExecStop=killall sshuttle
 [Install]
 WantedBy=multi-user.target
@@ -1611,7 +1659,7 @@ systemctl restart amazon-ssm-agent.service",
               "",
               Array [
                 "#!/bin/bash
-# fingerprint: a9a998f5f160291f
+# fingerprint: f4b60a91cc9b1a96
 (
   set +e
   /opt/aws/bin/cfn-init -v --region ",
@@ -1622,7 +1670,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet2NatInstance746890A70ceb637b62aee23b -c default
+                " --resource VpcPublicSubnet2NatInstance746890A729d19eec778ed455 -c default
   /opt/aws/bin/cfn-signal -e $? --region ",
                 Object {
                   "Ref": "AWS::Region",
@@ -1631,7 +1679,7 @@ systemctl restart amazon-ssm-agent.service",
                 Object {
                   "Ref": "AWS::StackName",
                 },
-                " --resource VpcPublicSubnet2NatInstance746890A70ceb637b62aee23b
+                " --resource VpcPublicSubnet2NatInstance746890A729d19eec778ed455
   cat /var/log/cfn-init.log >&2
 )",
               ],
