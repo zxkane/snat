@@ -1548,9 +1548,9 @@ camelcase@^7.0.1:
   integrity sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==
 
 caniuse-lite@^1.0.30001541:
-  version "1.0.30001547"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001547.tgz#d4f92efc488aab3c7f92c738d3977c2a3180472b"
-  integrity sha512-W7CrtIModMAxobGhz8iXmDfuJiiKg1WADMO/9x7/CLNin5cpSbuBjooyoIUVB5eyCc36QuTVlkVa1iB2S5+/eA==
+  version "1.0.30001549"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001549.tgz#7d1a3dce7ea78c06ed72c32c2743ea364b3615aa"
+  integrity sha512-qRp48dPYSCYaP+KurZLhDYdVE+yEyht/3NlmcJgVQ2VMGt6JL36ndQ/7rgspdZsJuxDPFIo/OzBT2+GmIJ53BA==
 
 case@1.6.3:
   version "1.6.3"
@@ -1558,9 +1558,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.575"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.575.tgz#9cc865efd33beba875d5e94386199ed2ebc5cafc"
-  integrity sha512-cH0YgUQIyvBkjCUbWHkplLxc6DYjlBaDe+OA9K5y/gshUmAmH9urH69iA4jv2S3vDiaTR0EC/WvXf78PCFUxrg==
+  version "0.2.576"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.576.tgz#f7ff6cbbad475d7171895b47a5939c8bdea18070"
+  integrity sha512-eHJHDfCsULpRgNKJi7ugSNofD0bMBzPO4su2c59sROusUTHfFexdLk5QMg5sAdHeUKwxcMpyrIRNbGUg62GYSw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
