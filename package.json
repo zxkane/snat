@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27",
-    "@types/mustache": "^4.2.3",
+    "@types/mustache": "^4.2.4",
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
@@ -55,7 +55,7 @@
     "jsii-pacmak": "^1.90.0",
     "jsii-rosetta": "1.x",
     "npm-check-updates": "^16",
-    "projen": "^0.75.1",
+    "projen": "^0.75.2",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9.5"
