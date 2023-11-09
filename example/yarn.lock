@@ -1330,9 +1330,9 @@ available-typed-arrays@^1.0.5:
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
 
 aws-cdk-lib@^2.0.0:
-  version "2.104.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.104.0.tgz#e81a3f2689d42f27ee354ef1e6ae19caf21a2949"
-  integrity sha512-gD5KD2j8C5ff7j4RTA5ajFDNnpw4EvVhWMgWWrOyIEa9OkndEXwzhvCvwbEpwmgSUvnmsmbiHTBaLg8KVP+yKA==
+  version "2.105.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.105.0.tgz#9cf71716c8c54495fbdfc00d613ff6ddc7c44782"
+  integrity sha512-pByAPfRyOzF+AVz56aLUPLhYiRZzfIjyV9Bf2t0X3cpwVW21zVC+8GrQcQwy+zWgFGg3Gx6IVFNio3t8awHXHA==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.200"
     "@aws-cdk/asset-kubectl-v20" "^2.1.2"
@@ -1349,9 +1349,9 @@ aws-cdk-lib@^2.0.0:
     yaml "1.10.2"
 
 aws-cdk@^2.0.0:
-  version "2.104.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.104.0.tgz#67bda59aae58837b88f9923938d664a78076e2b8"
-  integrity sha512-JuCafR5D1lnMKA88JUYhvRYeguozAWneC/n6kR1FUG+kXtXxpEqOxP91118dfJZYRw7FMIkHW8ewddvLwaCy5g==
+  version "2.105.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.105.0.tgz#748d2d08e3d78de2752fcb1d7a6c7d8bed6ad042"
+  integrity sha512-3ji+HNlCJUJ3o9h430gdRhocmeQrpM49fibXpvj3rvzBwuyWSTe2t8uohMPScSMETv59sHOlZpOdAEd+WwkuHQ==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -1611,9 +1611,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.600"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.600.tgz#252f436fdba6339a4d2b66d1f2f679c0387156a4"
-  integrity sha512-yY9dwvE9j4UDs5pNtfLI5JL64NzOwa8jTYCXLL3cl8j9invWWMmy43XKi4A4wv3jmyEUZpWaNPRGtpHTD4Lyvg==
+  version "0.2.601"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.601.tgz#ad3700f0459676476431bf2d8728cc3d84e8b10b"
+  integrity sha512-b5pFA39OI6NTHC/fYHbckVDDn8IRsca47eKu7qkiVUMbUJj8epCirCoG1Qa/DPAPVGdCMS6nUCNt3wYwb+u/2g==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -3353,9 +3353,9 @@ isobject@^3.0.1:
   integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
 
 istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.1.tgz#c680fd1544600460367af5811866c34c44c6f3b1"
-  integrity sha512-opCrKqbthmq3SKZ10mFMQG9dk3fTa3quaOLD35kJa5ejwZHd9xAr+kLuziiZz2cG32s4lMZxNdmdcEQnTDP4+g==
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-3.2.2.tgz#2d166c4b0644d43a39f04bf6c2edd1e585f31756"
+  integrity sha512-O8dpsF+r0WV/8MNRKfnmrtCWhuKjxrq2w+jpzBL5UZKTi2LeVWnWOmWRxFlesJONmc+wLAGvKQZEOanko0LFTg==
 
 istanbul-lib-instrument@^5.0.4, istanbul-lib-instrument@^5.1.0:
   version "5.2.1"
