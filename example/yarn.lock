@@ -1611,9 +1611,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.611"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.611.tgz#60fd3fafd53275ede1123aca0963717e4f9c6e99"
-  integrity sha512-RepUDOqHaDrx0y6uWKYV4H82dm51IMXVN+32lf/7jjojV7Ik685Rx8gGdcIu9TIA8Mb/2RjqrgJJ2GwOzvJNPQ==
+  version "0.2.612"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.612.tgz#22e360024a5e30cfbdb2945f72767cb2ca2f66f2"
+  integrity sha512-DJV4s3cYQeM6HoXKhUbrT97nYZK4UyW1pBHbaQFDSSknzr/q8IWargwbyjgDD5SduWh8xEMTe/mJ5CpFCwG2eA==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -4091,11 +4091,9 @@ lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
 "lru-cache@^9.1.1 || ^10.0.0":
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.2.tgz#34504678cc3266b09b8dfd6fab4e1515258271b7"
-  integrity sha512-Yj9mA8fPiVgOUpByoTZO5pNrcl5Yk37FcSHsUINpAsaBIEZIuqcCclDZJCVxqQShDsmYX8QG63svJiTbOATZwg==
-  dependencies:
-    semver "^7.3.5"
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.3.tgz#b40014d7d2d16d94130b87297a04a1f24874ae7c"
+  integrity sha512-B7gr+F6MkqB3uzINHXNctGieGsRTMwIBgxkp0yq/5BwcuDzD4A8wQpHQW6vDAm1uKSLQghmRdD9sKqf2vJ1cEg==
 
 make-dir@^4.0.0:
   version "4.0.0"
@@ -4422,9 +4420,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.14.6"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.6.tgz#8a1b743398795e66b427ac31f9a73fe2704045d6"
-  integrity sha512-sJ6w4AmSDP7YzBXah94Ul2JhiIbjBDfx9XYgib15um2wtiQkOyjE7Lov3MNUSQ84Ry7T81mE4ynMbl/mGbK4HQ==
+  version "16.14.11"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.11.tgz#aef5248d04cc5abdf6ee2e1edc4a3f7fd20e6f29"
+  integrity sha512-0MMWGbGci22Pu77bR9jRsy5qgxdQSJVqNtSyyFeubDPtbcU36z4gjEDITu26PMabFWPNkAoVfKF31M3uKUvzFg==
   dependencies:
     chalk "^5.3.0"
     cli-table3 "^0.6.3"
