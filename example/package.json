@@ -34,7 +34,6 @@
     "eslint-plugin-import": "^2.22.1",
     "jest": "^27",
     "jest-junit": "^15",
-    "npm-check-updates": "^16",
     "projen": "^0.23.2",
     "ts-jest": "^27",
     "ts-node": "^9",
