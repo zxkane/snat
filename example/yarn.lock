@@ -1301,9 +1301,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.655"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.655.tgz#24b8128141e439dfca2c7c08fb321e11d64308d2"
-  integrity sha512-jgeFH+nUoTeN1D00S7jxZkQrCGZRW5t0t9iRniPWEtE4jcd8K6hqeysNTm67mVl9bNm2Mkcaf1ppp52YnHjTNA==
+  version "0.2.656"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.656.tgz#fc3fb91530e92df9ab805832c80740d28e4590d5"
+  integrity sha512-JL/X4ANjQzlOooX6Cd9O6QpD16A95rTsGkr+i2ubdiyTcodnYT1+AFLov7W0cPr8tiWBswnWBlunUnTfpB0Ddw==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"
@@ -1593,9 +1593,9 @@ domexception@^2.0.1:
     webidl-conversions "^5.0.0"
 
 electron-to-chromium@^1.4.601:
-  version "1.4.616"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.616.tgz#4bddbc2c76e1e9dbf449ecd5da3d8119826ea4fb"
-  integrity sha512-1n7zWYh8eS0L9Uy+GskE0lkBUNK83cXTVJI0pU3mGprFsbfSdAc15VTFbo+A+Bq4pwstmL30AVcEU3Fo463lNg==
+  version "1.4.617"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.617.tgz#3b0dde6c54e5f0f26db75ce6c6ae751e5df4bf75"
+  integrity sha512-sYNE3QxcDS4ANW1k4S/wWYMXjCVcFSOX3Bg8jpuMFaXt/x8JCmp0R1Xe1ZXDX4WXnSRBf+GJ/3eGWicUuQq5cg==
 
 emittery@^0.8.1:
   version "0.8.1"
