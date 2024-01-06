@@ -26,11 +26,11 @@
     "target": "ES2019"
   },
   "include": [
-    ".projenrc.js",
     "src/**/*.ts",
     "test/**/*.ts",
     "src/*.sh",
-    "src/snat.service"
+    "src/snat.service",
+    ".projenrc.js"
   ],
   "exclude": [
     "node_modules",
