@@ -1,4 +1,4 @@
-const { awscdk, github } = require('projen');
+const { awscdk, github, javascript } = require('projen');
 
 const cdkVersion = '2.0.0';
 
@@ -149,6 +149,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     ignoreProjen: false,
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
+      schedule: javascript.UpgradeDependenciesSchedule.WEEKLY,
     },
   },
   autoApproveUpgrades: true,
