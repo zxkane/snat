@@ -270,6 +270,53 @@ describe('Simple NAT construct', () => {
     })).toStrictEqual({});
   });
 
+
+  test('create NAT instances for aws routes excluding IPv6 address', () => {
+
+    const stack = new Stack();
+    const vpc = new Vpc(stack, 'VPC-2');
+
+    new SimpleNAT(stack, 'nat', {
+      vpc,
+    }).withAwsRoutes({
+      excludeIPv6: true,
+      awsProps: {
+        awsRegion: 'ap-south-1',
+        awsService: 'AMAZON',
+      },
+    });
+
+    const awsMeta: {
+      syncToken: string;
+      createDate: string;
+      prefixes: [
+        {
+          ip_prefix:string;
+          region:string;
+          service:string;
+          network_border_group:string;
+        }
+      ];
+      ipv6_prefixes: [
+        {
+          ipv6_prefix:string;
+          region:string;
+          service:string;
+          network_border_group:string;
+        }
+      ];
+
+    } = fetch('https://ip-ranges.amazonaws.com/ip-ranges.json').json();
+    const ipV6 = awsMeta.ipv6_prefixes.filter(prefix => prefix.ipv6_prefix );
+    expect(ipV6.length).toBeGreaterThan(0);
+
+    expect(Template.fromStack(stack).findResources('AWS::EC2::Route', {
+      Properties: {
+        DestinationIpv6CidrBlock: Match.anyValue(),
+      },
+    })).toStrictEqual({});
+  });
+
   test('create NAT instances for cloudflare routes', () => {
 
     const stack = new Stack();
