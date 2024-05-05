@@ -20,8 +20,8 @@ jobs:
           node-version: 20.x
       - name: Install dependencies
         run: yarn install --check-files && yarn --cwd example/ install --check-files
-      - name: Run unit tests
-        run: npx projen test
+      - name: Run build and unit tests
+        run: npx projen compile && npx projen test
       - name: Configure sonarqube
         env:
           SONARQUBE_URL: http://localhost:9000
@@ -53,3 +53,17 @@ jobs:
           sonar-host-url: http://sonarqube:9000
           sonar-token: ${{ env.SONARQUBE_TOKEN }}
           github-token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+      - name: Set up Sonar Quality Gate
+        uses: zxkane/sonar-quality-gate@master
+        if: always()
+        env:
+          DEBUG: true
+          GITHUB_TOKEN: ${{ secrets.PROJEN_GITHUB_TOKEN }}
+          GIT_URL: "https://api.github.com"
+          GIT_TOKEN: ${{ secrets.PROJEN_GITHUB_TOKEN }} 
+          SONAR_URL: http://sonarqube:9000
+          SONAR_TOKEN: ${{ env.SONARQUBE_TOKEN }}
+          SONAR_PROJECT_KEY: pr-${{ github.event.pull_request.number }}
+        with:
+          login: ${{ env.SONARQUBE_TOKEN }}
+          skipScanner: true
