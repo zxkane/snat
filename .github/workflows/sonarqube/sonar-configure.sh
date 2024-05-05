@@ -184,7 +184,7 @@ else
         status_code=$(echo "$token_gen_resp" | sed 's/^.*HTTPSTATUS://')
         if [ "$status_code" -eq 200 ]; then
             token=$(echo "$response_body" | jq -r '.token')
-            echo "SONARQUBE_TOKEN=${token}:" >> $GITHUB_ENV
+            echo "SONARQUBE_TOKEN=${token}" >> $GITHUB_ENV
             info  "admin-ci-token generated."
         else
             error "admin-ci-token generation failed."

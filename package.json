@@ -38,7 +38,7 @@
   "devDependencies": {
     "@types/jest": "^27",
     "@types/mustache": "^4.2.5",
-    "@types/node": "^16 <= 16.18.78",
+    "@types/node": "^18 <= 18.11.19",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "aws-cdk-lib": "2.0.0",
@@ -84,7 +84,7 @@
     "nat"
   ],
   "engines": {
-    "node": ">= 16.20.0"
+    "node": ">= 20.12.2"
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",

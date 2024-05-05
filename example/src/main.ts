@@ -139,7 +139,7 @@ const env = vpcId ? {
   region: process.env.CDK_DEFAULT_REGION,
 } : undefined;
 
-new SimpleNATStack(app, 'simple-nat-stack', {
+new SimpleNATStack(app, 'simple-nat-stack', { //NOSONAR
   env: env,
 });
 

@@ -109,7 +109,7 @@ export class SimpleNAT extends Resource {
   constructor(scope: Construct, id: string, props: SimpleNATProps) {
     super(scope, id);
 
-    var subnets;
+    let subnets;
     try {
       subnets = props.vpc.selectSubnets(props.natSubnetsSelection ?? {
         subnetType: SubnetType.PUBLIC,
