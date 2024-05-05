@@ -14,6 +14,14 @@ jobs:
           - 9000:9000
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+      - name: Install dependencies
+        run: yarn install --check-files && yarn --cwd example/ install --check-files
+      - name: Run unit tests
+        run: npx projen test
       - name: Configure sonarqube
         env:
           SONARQUBE_URL: http://localhost:9000
@@ -24,31 +32,24 @@ jobs:
         uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_HOST_URL: http://sonarqube:9000
+          SONAR_TOKEN: ${{ env.SONARQUBE_TOKEN }}
         with:
           args: >
-            -Dsonar.login=admin
-            -Dsonar.password=${{ secrets.SONARQUBE_ADMIN_PASSWORD }}
             -Dsonar.projectKey=pr-${{ github.event.pull_request.number }}
       # Check the Quality Gate status.
-      # - name: SonarQube Quality Gate check
-      #   id: sonarqube-quality-gate-check
-      #   uses: sonarsource/sonarqube-quality-gate-action@master
-      #   # Force to fail step after specific time.
-      #   timeout-minutes: 10
-      #   env:
-      #     DEBUG: "true"
-      #     SONAR_TOKEN: ${{ env.SONARQUBE_TOKEN }}
-      #     SONAR_HOST_URL: http://localhost:9000
-
+      - name: SonarQube Quality Gate check
+        id: sonarqube-quality-gate-check
+        uses: sonarsource/sonarqube-quality-gate-action@master
+        # Force to fail step after specific time.
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ env.SONARQUBE_TOKEN }}
+          SONAR_HOST_URL: http://localhost:9000
       - uses: phwt/sonarqube-quality-gate-action@v1
         id: quality-gate-check
+        if: always()
         with:
           sonar-project-key: pr-${{ github.event.pull_request.number }}
           sonar-host-url: http://sonarqube:9000
           sonar-token: ${{ env.SONARQUBE_TOKEN }}
           github-token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
-
-      - name: Output result
-        run: |
-          echo "${{ steps.quality-gate-check.outputs.project-status }}"
-          echo "${{ steps.quality-gate-check.outputs.quality-gate-result }}"  
