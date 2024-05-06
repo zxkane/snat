@@ -1,5 +1,5 @@
 import { App, Stack, StackProps, Arn, Aws } from 'aws-cdk-lib';
-import { Vpc, GatewayVpcEndpointAwsService, SubnetType, InstanceType, InstanceSize, InstanceClass, MachineImage, AmazonLinuxCpuType, AmazonLinuxGeneration } from 'aws-cdk-lib/aws-ec2';
+import { Vpc, GatewayVpcEndpointAwsService, SubnetType, InstanceType, InstanceSize, InstanceClass, MachineImage, AmazonLinuxCpuType } from 'aws-cdk-lib/aws-ec2';
 import { Role, ServicePrincipal, PolicyDocument, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { SimpleNAT } from 'cdk-construct-simple-nat';
 import { Construct } from 'constructs';
@@ -91,8 +91,7 @@ export class SimpleNATStack extends Stack {
         onePerAz: true,
       },
       instanceType: InstanceType.of(InstanceClass.T4G, InstanceSize.MICRO),
-      machineImage: MachineImage.latestAmazonLinux({
-        generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
+      machineImage: MachineImage.latestAmazonLinux2({
         cpuType: AmazonLinuxCpuType.ARM_64,
       }),
       customScripts: `#!/bin/bash -x

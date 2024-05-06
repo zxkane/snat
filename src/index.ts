@@ -6,9 +6,10 @@ import {
   IVpc, SubnetSelection, Instance, InstanceClass, InstanceSize,
   InstanceType, SubnetType, Peer, SecurityGroup, ISecurityGroup, Port,
   CfnRoute, ISubnet, Subnet, RouterType, AddRouteOptions,
-  MachineImage, AmazonLinuxGeneration, AmazonLinuxStorage, AmazonLinuxCpuType,
+  MachineImage, AmazonLinuxStorage, AmazonLinuxCpuType,
   CfnNetworkInterface, CfnEIP, CfnEIPAssociation,
   CloudFormationInit, InitConfig, InitFile, InitPackage, InitCommand, IMachineImage, OperatingSystemType,
+  KeyPair,
 } from 'aws-cdk-lib/aws-ec2';
 import { ManagedPolicy, Role, ServicePrincipal, PolicyStatement, IRole } from 'aws-cdk-lib/aws-iam';
 import { Construct } from 'constructs';
@@ -92,7 +93,7 @@ export interface RouteProps {
 }
 
 /**
- * Simple NAT instaces construct.
+ * Simple NAT instances construct.
  */
 export class SimpleNAT extends Resource {
 
@@ -121,8 +122,7 @@ export class SimpleNAT extends Resource {
 
     if (!subnets.hasPublic) {throw new Error('The custom NAT subnet selection MUST select PUBLIC subnets.');}
 
-    const machineImage = props.machineImage ?? MachineImage.latestAmazonLinux({
-      generation: AmazonLinuxGeneration.AMAZON_LINUX_2,
+    const machineImage = props.machineImage ?? MachineImage.latestAmazonLinux2({
       storage: AmazonLinuxStorage.GENERAL_PURPOSE,
       cpuType: AmazonLinuxCpuType.X86_64,
     });
@@ -166,7 +166,7 @@ export class SimpleNAT extends Resource {
         ],
       });
       eip.applyRemovalPolicy(RemovalPolicy.RETAIN);
-      new CfnEIPAssociation(sub as Subnet, 'EIPAssocation', {
+      new CfnEIPAssociation(sub as Subnet, 'EIPAssociation', {
         allocationId: eip.attrAllocationId,
         networkInterfaceId: eni.ref,
       });
@@ -197,7 +197,7 @@ export class SimpleNAT extends Resource {
         vpcSubnets: { subnets: [sub] },
         securityGroup: this._securityGroup,
         role,
-        keyName: props.keyName,
+        keyPair: props.keyName ? KeyPair.fromKeyPairName(this, 'KeyPair', props.keyName) : undefined,
         init: CloudFormationInit.fromConfigSets({
           configSets: {
             default: ['yumPreinstall', 'config'],
@@ -225,7 +225,7 @@ export class SimpleNAT extends Resource {
     }
 
     this._routeMappingSubnets = props.vpc.selectSubnets(props.privateSubnetsSelection ?? {
-      subnetType: SubnetType.PRIVATE_WITH_NAT,
+      subnetType: SubnetType.PRIVATE_WITH_EGRESS,
     }).subnets.reduce((routeMapping, sub) => {
       if (routeMapping.has(sub.routeTable.routeTableId)) {
         routeMapping.get(sub.routeTable.routeTableId).push(sub);
@@ -354,14 +354,15 @@ export class SimpleNAT extends Resource {
 }
 
 function routerTypeToPropName(routerType: RouterType) {
-  return ({
-    [RouterType.EGRESS_ONLY_INTERNET_GATEWAY]: 'egressOnlyInternetGatewayId',
-    [RouterType.GATEWAY]: 'gatewayId',
-    [RouterType.INSTANCE]: 'instanceId',
-    [RouterType.NAT_GATEWAY]: 'natGatewayId',
-    [RouterType.NETWORK_INTERFACE]: 'networkInterfaceId',
-    [RouterType.VPC_PEERING_CONNECTION]: 'vpcPeeringConnectionId',
-  })[routerType];
+  switch (routerType) {
+    case RouterType.EGRESS_ONLY_INTERNET_GATEWAY: return 'egressOnlyInternetGatewayId';
+    case RouterType.GATEWAY: return 'gatewayId';
+    case RouterType.INSTANCE: return 'instanceId';
+    case RouterType.NAT_GATEWAY: return 'natGatewayId';
+    case RouterType.NETWORK_INTERFACE: return 'networkInterfaceId';
+    case RouterType.VPC_PEERING_CONNECTION: return 'vpcPeeringConnectionId';
+    default: throw new Error('Unsupported router type');
+  }
 }
 
 /**
