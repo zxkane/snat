@@ -8,8 +8,8 @@ Object {
       "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
       "Type": "AWS::SSM::Parameter::Value<String>",
     },
-    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
-      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2",
+    "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amikernel510hvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter": Object {
+      "Default": "/aws/service/ami-amazon-linux-latest/amzn2-ami-kernel-5.10-hvm-x86_64-gp2",
       "Type": "AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>",
     },
   },
@@ -22,17 +22,7 @@ Object {
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
               "Principal": Object {
-                "Service": Object {
-                  "Fn::Join": Array [
-                    "",
-                    Array [
-                      "ec2.",
-                      Object {
-                        "Ref": "AWS::URLSuffix",
-                      },
-                    ],
-                  ],
-                },
+                "Service": "ec2.amazonaws.com",
               },
             },
           ],
@@ -347,7 +337,7 @@ Object {
       },
       "Type": "AWS::EC2::EIP",
     },
-    "VPC1PublicSubnet1EIPAssocationCD855459": Object {
+    "VPC1PublicSubnet1EIPAssociationCE101DF8": Object {
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -386,6 +376,10 @@ Object {
       "Type": "AWS::EC2::NetworkInterface",
     },
     "VPC1PublicSubnet1NATGatewayB7E64907": Object {
+      "DependsOn": Array [
+        "VPC1PublicSubnet1DefaultRoute3BB42B51",
+        "VPC1PublicSubnet1RouteTableAssociationD9E6793D",
+      ],
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -546,7 +540,7 @@ systemctl restart amazon-ssm-agent.service",
           "Ref": "VPC1PublicSubnet1NatInstanceInstanceProfileA1B4EFD4",
         },
         "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amikernel510hvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "InstanceType": "t3.micro",
         "SecurityGroupIds": Array [
@@ -697,7 +691,7 @@ systemctl restart amazon-ssm-agent.service",
       },
       "Type": "AWS::EC2::Route",
     },
-    "VPC1PublicSubnet2EIPAssocation52F1244C": Object {
+    "VPC1PublicSubnet2EIPAssociationBAE0E726": Object {
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -876,7 +870,7 @@ systemctl restart amazon-ssm-agent.service",
           "Ref": "VPC1PublicSubnet2NatInstanceInstanceProfile0A732A8B",
         },
         "ImageId": Object {
-          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
+          "Ref": "SsmParameterValueawsserviceamiamazonlinuxlatestamzn2amikernel510hvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter",
         },
         "InstanceType": "t3.micro",
         "SecurityGroupIds": Array [

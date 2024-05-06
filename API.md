@@ -4,7 +4,7 @@
 
 Name|Description
 ----|-----------
-[SimpleNAT](#cdk-construct-simple-nat-simplenat)|Simple NAT instaces construct.
+[SimpleNAT](#cdk-construct-simple-nat-simplenat)|Simple NAT instances construct.
 
 
 **Structs**
@@ -18,7 +18,7 @@ Name|Description
 
 ## class SimpleNAT  <a id="cdk-construct-simple-nat-simplenat"></a>
 
-Simple NAT instaces construct.
+Simple NAT instances construct.
 
 __Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable), [IResource](#aws-cdk-lib-iresource), [IDependable](#constructs-idependable), [IConstruct](#constructs-iconstruct)
 __Extends__: [Resource](#aws-cdk-lib-resource)

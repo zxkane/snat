@@ -1067,7 +1067,7 @@ available-typed-arrays@^1.0.7:
   dependencies:
     possible-typed-array-names "^1.0.0"
 
-aws-cdk-lib@^2.0.0:
+aws-cdk-lib@^2.140.0:
   version "2.140.0"
   resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.140.0.tgz#87a7d3d439d7e25895bb1ff19f2596180f7a440f"
   integrity sha512-wepu+u63LTxnIfW/IPr+V5Mx1T9jq8HRxhPynYPQKFYaKfOV+6HtJGxkuAEg2CWXk0rx2Btal/BCLjYQovI92Q==
@@ -1087,7 +1087,7 @@ aws-cdk-lib@^2.0.0:
     table "^6.8.2"
     yaml "1.10.2"
 
-aws-cdk@^2.0.0:
+aws-cdk@^2.140.0:
   version "2.140.0"
   resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.140.0.tgz#8e6284dbb229bdb8ba4a6f525dff8cbb95b08443"
   integrity sha512-5NzmXFqjGYiTFZ+jgWBQJvrjhMIlYMoNTOwgvzHj2YnP9LhEsr60IdRGiXYD9CZyR79Hr3VQNbjcgO35bvW9/w==
@@ -1266,9 +1266,9 @@ case@1.6.3:
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
 cdk-construct-simple-nat@^0.2:
-  version "0.2.718"
-  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.718.tgz#59a8ce135dab6c4b6d4682875a1bb617935de735"
-  integrity sha512-zcL6WuFlmre2/u0qFbsyD4EoN1PIbvT7Y4cL8XFf2jI/v40LV0bUb6eKdG0i6kySKvuznet2DAV9TY/y01hOUw==
+  version "0.2.720"
+  resolved "https://registry.yarnpkg.com/cdk-construct-simple-nat/-/cdk-construct-simple-nat-0.2.720.tgz#ba5f3efcd19a0fadde9bd471d0506cc61a55e1f3"
+  integrity sha512-eUAlTLJmMmAnD3ZKTMVPbouzt/gIbYBybwjY/GjC9eDsIznF2v2MtbJuZOXMxT0SYhWlmHtHli1mgk8m3kQ2+A==
   dependencies:
     mustache "^4.2.0"
     sync-fetch "^0.3.0"

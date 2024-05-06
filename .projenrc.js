@@ -1,6 +1,6 @@
 const { awscdk, github, javascript } = require('projen');
 
-const cdkVersion = '2.0.0';
+const cdkVersion = '2.140.0';
 
 const tsCustomConfig = {
   exclude: ['example'],
