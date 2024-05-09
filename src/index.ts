@@ -97,7 +97,7 @@ export interface RouteProps {
  */
 export class SimpleNAT extends Resource {
 
-  static readonly Ipv6Regex = '^s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:)))(%.+)?s*(\/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?$';
+  static readonly Ipv6Regex = '^s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]d|1dd|[1-9]?d)(.(25[0-5]|2[0-4]d|1dd|[1-9]?d)){3}))|:)))(%.+)?s*(/([0-9]|[1-9][0-9]|1[0-1][0-9]|12[0-8]))?$';
 
   private gateways: PrefSet<NATInstance> = new PrefSet<NATInstance>();
   private _securityGroup: ISecurityGroup;
@@ -238,7 +238,7 @@ export class SimpleNAT extends Resource {
     Tags.of(this).add('construct', 'simple-nat');
   }
 
-  public addV4Route(v4CIDR: string): SimpleNAT {
+  public addV4Route(v4CIDR: string): this {
     // Add routes to them in the private subnets
     for (const [routeId, subnets] of this._routeMappingSubnets) {
       this._configureSubnet(routeId, subnets, v4CIDR);
@@ -246,7 +246,7 @@ export class SimpleNAT extends Resource {
     return this;
   }
 
-  public addV6Route(v6CIDR: string): SimpleNAT {
+  public addV6Route(v6CIDR: string): this {
     // Add routes to them in the private subnets
     for (const [routeId, subnets] of this._routeMappingSubnets) {
       this._configureSubnet(routeId, subnets, undefined, v6CIDR);
@@ -257,7 +257,7 @@ export class SimpleNAT extends Resource {
   /**
    * Add Github IPs to route table
    */
-  public withGithubRoute(props?: RouteProps): SimpleNAT {
+  public withGithubRoute(props?: RouteProps): this {
     const githubMeta = fetch('https://api.github.com/meta').json();
     for (const cidr of githubMeta.git) {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
@@ -275,7 +275,7 @@ export class SimpleNAT extends Resource {
   /**
    * Add Google IPs to route table
    */
-  public withGoogleRoute(props?: RouteProps): SimpleNAT {
+  public withGoogleRoute(props?: RouteProps): this {
     const googleMeta = fetch('https://www.gstatic.com/ipranges/goog.json').json();
     const excludeIPv6 = props?.excludeIPv6 ?? false;
     for (const cidr of googleMeta.prefixes) {
@@ -292,7 +292,7 @@ export class SimpleNAT extends Resource {
    *
    * See https://www.cloudflare.com/ips/ for details
    */
-  public withCloudflareRoute(props?: RouteProps): SimpleNAT {
+  public withCloudflareRoute(props?: RouteProps): this {
     const ipV4 = fetch('https://www.cloudflare.com/ips-v4').text().split(/\r?\n/);
     for (const cidr of ipV4) {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
@@ -311,10 +311,10 @@ export class SimpleNAT extends Resource {
     return this;
   }
 
-  private _configureSubnet(_routeId: string, subnets: Subnet[], v4CIDR?: string, v6CIDR?: string) : SimpleNAT {
+  private _configureSubnet(_routeId: string, subnets: Subnet[], v4CIDR?: string, v6CIDR?: string) : this {
     const az = subnets[0].availabilityZone;
     const natInstance = this.gateways.pick(az);
-    this._addRoute(`Route-${v4CIDR ? 'v4-' + v4CIDR?.replace(/[\./]/gi, '-') : 'v6-' + v6CIDR?.replace(/[:/]/gi, '-')}`, subnets[0], {
+    this._addRoute(`Route-${v4CIDR ? 'v4-' + v4CIDR?.replace(/[./]/gi, '-') : 'v6-' + v6CIDR?.replace(/[:/]/gi, '-')}`, subnets[0], {
       destinationCidrBlock: v4CIDR,
       destinationIpv6CidrBlock: v6CIDR,
       routerType: RouterType.NETWORK_INTERFACE,
@@ -331,7 +331,7 @@ export class SimpleNAT extends Resource {
 
     new CfnRoute(subnet as Subnet, id, {
       routeTableId: subnet.routeTable.routeTableId,
-      destinationCidrBlock: options.destinationCidrBlock || (options.destinationIpv6CidrBlock === undefined ? '0.0.0.0/0' : undefined),
+      destinationCidrBlock: options.destinationCidrBlock ?? (options.destinationIpv6CidrBlock === undefined ? '0.0.0.0/0' : undefined),
       destinationIpv6CidrBlock: options.destinationIpv6CidrBlock,
       [routerTypeToPropName(options.routerType)]: options.routerId,
     });
