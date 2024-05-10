@@ -9,7 +9,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     services:
       sonarqube:
-        image: public.ecr.aws/docker/library/sonarqube:9.9.0-community
+        image: public.ecr.aws/docker/library/sonarqube:10-community
         ports:
           - 9000:9000
     steps:
