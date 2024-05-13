@@ -1090,7 +1090,7 @@ Object {
       },
       "Type": "AWS::EC2::Route",
     },
-    "VpcPublicSubnet1EIPAssocation158EAA22": Object {
+    "VpcPublicSubnet1EIPAssociation92F324B2": Object {
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -1521,7 +1521,7 @@ systemctl restart amazon-ssm-agent.service",
       },
       "Type": "AWS::EC2::EIP",
     },
-    "VpcPublicSubnet2EIPAssocation584A511B": Object {
+    "VpcPublicSubnet2EIPAssociationC290F0E1": Object {
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
