@@ -51,8 +51,12 @@
     "colors": "1.4.0"
   },
   "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
+    "coverageProvider": "v8",
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.ts?(x)",
       "<rootDir>/@(test|src)/**/*(*.)@(spec|test).ts?(x)"
