@@ -1,4 +1,3 @@
-/* eslint @typescript-eslint/no-require-imports: "off" */
 import * as fs from 'fs';
 import * as path from 'path';
 import { Resource, RemovalPolicy, Duration, Tags, Annotations } from 'aws-cdk-lib';
@@ -90,6 +89,12 @@ export interface RouteProps {
    * @default - false
    */
   readonly excludeIPv6?: boolean;
+
+  /** mandatory for AWS regions */
+  readonly awsProps?:{
+    awsRegion:string;
+    awsService:string;
+  };
 }
 
 /**
@@ -282,6 +287,37 @@ export class SimpleNAT extends Resource {
       for (const [routeId, subnets] of this._routeMappingSubnets) {
         if (cidr.ipv4Prefix) {this._configureSubnet(routeId, subnets, cidr.ipv4Prefix);}
         if (cidr.ipv6Prefix && !excludeIPv6) {this._configureSubnet(routeId, subnets, undefined, cidr.ipv6Prefix);}
+      }
+    }
+    return this;
+  }
+
+  /**
+   * Add AWS to route table
+   */
+  public withAwsRoutes(props?: RouteProps): SimpleNAT {
+    const awsMeta = fetch('https://ip-ranges.amazonaws.com/ip-ranges.json').json();
+    const excludeIPv6 = props?.excludeIPv6 ?? false;
+    const ipv4fliteredPrefixList = awsMeta.prefixes.filter((value: { region: string | undefined; service: string | undefined })=>{
+      if (props?.awsProps?.awsRegion==value.region&&
+        props?.awsProps?.awsService==value.service) {return true;} else { return false;}
+    });
+    for (const cidr of ipv4fliteredPrefixList) {
+      for (const [routeId, subnets] of this._routeMappingSubnets) {
+        if (cidr.ip_prefix) {this._configureSubnet(routeId, subnets, cidr.ip_prefix);}
+      }
+    }
+    if (!excludeIPv6) {
+      const ipv6fliteredPrefixList = awsMeta.ipv6_prefixes.filter((value: { region: string | undefined; service: string | undefined })=>{
+        if (props?.awsProps?.awsRegion==value.region&&
+        props?.awsProps?.awsService==value.service) {return true;} else { return false;}
+      });
+
+      for (const cidr of ipv6fliteredPrefixList) {
+        for (const [routeId, subnets] of this._routeMappingSubnets) {
+          if (cidr.ipv6_prefix) {this._configureSubnet(routeId, subnets, undefined, cidr.ipv6_prefix);}
+          //if (cidr.ipv6Prefix && !excludeIPv6) {this._configureSubnet(routeId, subnets, undefined, cidr.ipv6Prefix);}
+        }
       }
     }
     return this;
