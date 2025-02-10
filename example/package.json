@@ -28,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^7",
     "@typescript-eslint/parser": "^7",
     "aws-cdk": "^2.140.0",
-    "esbuild": "^0.14.5",
+    "esbuild": "^0.25.0",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
