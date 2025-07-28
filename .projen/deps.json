@@ -1,8 +1,12 @@
 {
   "dependencies": [
     {
+      "name": "@stylistic/eslint-plugin",
+      "version": "^2",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
-      "version": "^27",
       "type": "build"
     },
     {
@@ -11,17 +15,17 @@
     },
     {
       "name": "@types/node",
-      "version": "^18 <= 18.11.19",
+      "version": "^20",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^7",
+      "version": "^8",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^7",
+      "version": "^8",
       "type": "build"
     },
     {
@@ -44,17 +48,16 @@
     },
     {
       "name": "eslint",
-      "version": "^8",
-      "type": "build"
-    },
-    {
-      "name": "jest-junit",
-      "version": "^15",
+      "version": "^9",
       "type": "build"
     },
     {
       "name": "jest",
-      "version": "^27",
+      "type": "build"
+    },
+    {
+      "name": "jest-junit",
+      "version": "^16",
       "type": "build"
     },
     {
@@ -72,12 +75,12 @@
     },
     {
       "name": "jsii-rosetta",
-      "version": "1.x",
+      "version": "~5.6.0",
       "type": "build"
     },
     {
       "name": "jsii",
-      "version": "1.x",
+      "version": "~5.6.0",
       "type": "build"
     },
     {
@@ -86,7 +89,6 @@
     },
     {
       "name": "ts-jest",
-      "version": "^27",
       "type": "build"
     },
     {
@@ -102,16 +104,6 @@
       "name": "sync-fetch",
       "version": "^0.3.0",
       "type": "bundled"
-    },
-    {
-      "name": "@types/babel__traverse",
-      "version": "7.18.2",
-      "type": "override"
-    },
-    {
-      "name": "@types/prettier",
-      "version": "2.6.0",
-      "type": "override"
     },
     {
       "name": "aws-cdk-lib",
