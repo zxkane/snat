@@ -256,7 +256,7 @@ describe('Simple NAT construct', () => {
         {
           ipv4Prefix?: string;
           ipv6Prefix?: string;
-        }
+        },
       ];
     } = fetch('https://www.gstatic.com/ipranges/goog.json').json();
     const ipV6 = googleMeta.prefixes.filter(prefix => prefix.ipv6Prefix);
